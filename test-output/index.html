@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Free_CRM_PRO_Automation_Test_Suite" class="navigator-link ">
-                    <span>C:\Users\HASSEN\workspace\FreeCRMAutomationTest\resources\testng.xml</span>
+                    <span>C:\Users\HASSEN\workspace\CRM_Automation_Framwork\Config File\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
+                    <span class="method-stats">6 methods, 4 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,6 +108,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.HomePageTest" class="method navigator-link" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,11 +137,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Free_CRM_PRO_Automation_Test_Suite -->
@@ -195,6 +195,46 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-failed -->
+          <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.TestCases.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;btn btn-small&quot;&gt; is not clickable at point (917, 117). Other element would receive the click: &lt;div id=&quot;preloader&quot; style=&quot;opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=104.0.5112.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HASSEN-HP&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\HASSEN\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49351}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c4946243c1c9daa93528bfe469c56f7d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at com.PageObject.LoginPage.login(LoginPage.java:44)
+	at com.TestCases.LoginPageTest.loginTest(LoginPageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-failed -->
           <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -215,25 +255,21 @@
                   <span class="method-name">loginPageTitleTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-passed -->
         </div> <!-- panel Free_CRM_PRO_Automation_Test_Suite -->
         <div panel-name="test-xml-Free_CRM_PRO_Automation_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HASSEN\workspace\FreeCRMAutomationTest\resources\testng.xml</span>
+            <span class="header-content">C:\Users\HASSEN\workspace\CRM_Automation_Framwork\Config File\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Free CRM PRO Automation Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.ExtentReport.ExtentreportListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Free CRM PRO Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.TestCases.LoginPageTest&quot;/&gt;
@@ -281,23 +317,23 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.TestCases.LoginPageTest')
-data.setCell(0, 3, 16048);
+data.setCell(0, 3, 7652);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'CRMLogoImageTest')
 data.setCell(1, 2, 'com.TestCases.LoginPageTest')
-data.setCell(1, 3, 624);
+data.setCell(1, 3, 59);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginPageTitleTest')
 data.setCell(2, 2, 'com.TestCases.LoginPageTest')
-data.setCell(2, 3, 23);
+data.setCell(2, 3, 16);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginPageTitleTest')
 data.setCell(3, 2, 'com.TestCases.HomePageTest')
-data.setCell(3, 3, 3);
+data.setCell(3, 3, 14);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'CRMLogoImageTest')
 data.setCell(4, 2, 'com.TestCases.HomePageTest')
-data.setCell(4, 3, 2);
+data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyUserNameTest')
 data.setCell(5, 2, 'com.TestCases.HomePageTest')
@@ -306,7 +342,7 @@ window.suiteTableData['Free_CRM_PRO_Automation_Test_Suite']= { tableData: data, 
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Free_CRM_PRO_Automation_Test_Suite">
               </div> <!-- times-div-Free_CRM_PRO_Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -339,68 +375,70 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">19916 ms</span>
+                <span class="method-start">17347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">45731 ms</span>
+                <span class="method-start">40164 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">45760 ms</span>
+                <span class="method-start">40184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">47816 ms</span>
+                <span class="method-start">42358 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CRMLogoImageTest</span>
-                <span class="method-start">74116 ms</span>
+                <span class="method-start">81335 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">74742 ms</span>
+                <span class="method-start">81395 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">75443 ms</span>
+                <span class="method-start">83788 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginTest</span>
-                <span class="method-start">117167 ms</span>
+                <span class="method-start">114491 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">133217 ms</span>
+                <span class="method-start">122456 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestCases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">134319 ms</span>
+                <span class="method-start">126143 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">159770 ms</span>
+                <span class="method-start">160312 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CRMLogoImageTest</span>
-                <span class="method-start">160015 ms</span>
+                <span class="method-start">160328 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyUserNameTest</span>
-                <span class="method-start">160020 ms</span>
+                <span class="method-start">160332 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">160023 ms</span>
+                <span class="method-start">160335 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

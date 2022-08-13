@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.Base.BaseClass;
 import com.PageObject.HomePage;
 import com.PageObject.LoginPage;
-import com.Utilites.TestUtils;
+import com.Utils.TestUtils;
 
 public class HomePageTest extends BaseClass {
     HomePage homePage;

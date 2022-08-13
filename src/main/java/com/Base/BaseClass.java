@@ -14,7 +14,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.Utilites.WebEventListener;
+import com.Utils.WebEventListener;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -27,7 +27,7 @@ public class BaseClass {
     public BaseClass() {
         try {
             props=new Properties();
-            FileInputStream ip=new FileInputStream(System.getProperty("user.dir") + "./resources/config.properties");
+            FileInputStream ip=new FileInputStream(System.getProperty("user.dir") + "./Config File/config.properties");
             props.load(ip);
             System.out.println(props.getProperty("url"));
             System.out.println(props.getProperty("browser"));
