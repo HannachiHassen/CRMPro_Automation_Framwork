@@ -3,7 +3,7 @@
 
 # CRMPro_Automation_Framwork
 
-##Getting Started
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -42,8 +42,8 @@ Developing Software
 * git and GITHub Repo (Code Versioning Tool)
 
 ##Features 
-* Webdriver Fire Event/WebEventListener - improved console logs and screenshot on failure Location: src\main\java\com\crm\qa\util 
-* Extent Report Listener with IReporter Interface (available at TestNG) Location: src\main\java\com\qa\ExtentReportListener 
+* Webdriver Fire Event/WebEventListener - improved console logs and screenshot on failure Location: src\main\java\com\Utils\WebEventListener 
+* Extent Report Listener with IReporter Interface (available at TestNG) Location: src\main\java\com\ExtentReport\ExtentReportListener 
 * @CacheLookup implementation improves script performance 
 * Data Driven approach (xml file reader through TestNG Data Provider)
 
@@ -56,7 +56,7 @@ You can update to your browser version by putting the driver file into the drive
 * Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
 
 ##Running Test Cases 
-* You can run test cases per each page object separately from each class in src\main\java\com\crm\PageObject
+* You can run test cases per each page object separately from each class in src\main\java\com\PageObject
 * Or the whole suite through the test runner file located here: \CRM_Automation_Framwork\Config File\testng.xml file.
 
 ##Checking TestNG Reports 
