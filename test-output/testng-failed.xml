@@ -8,21 +8,13 @@
     <classes>
       <class name="com.TestCases.HomePageTest">
         <methods>
-          <include name="loginPageTitleTest"/>
           <include name="initialization"/>
           <include name="CRMLogoImageTest"/>
-          <include name="tearDown"/>
           <include name="verifyUserNameTest"/>
+          <include name="loginPageTitleTest"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.TestCases.HomePageTest -->
-      <class name="com.TestCases.LoginPageTest">
-        <methods>
-          <include name="initialization"/>
-          <include name="setUp"/>
-          <include name="loginTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.TestCases.LoginPageTest -->
     </classes>
   </test> <!-- Free CRM PRO Tests(failed) -->
 </suite> <!-- Failed suite [Free CRM PRO Automation Test Suite] -->

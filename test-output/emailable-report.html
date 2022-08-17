@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -9,9 +9,9 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Free CRM PRO Automation Test Suite</th></tr>
-<tr><td><a href="#t0">Free CRM PRO Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">161,183</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Free CRM PRO Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">30,920</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Free CRM PRO Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Free CRM PRO Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.TestCases.HomePageTest</td><td><a href="#m0">CRMLogoImageTest</a></td><td rowspan="1">1660340224627</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m1">loginPageTitleTest</a></td><td rowspan="1">1660340224611</td><td rowspan="1">14</td></tr><tr class="failedeven"><td><a href="#m2">verifyUserNameTest</a></td><td rowspan="1">1660340224631</td><td rowspan="1">1</td></tr><tr class="failedodd"><td rowspan="1">com.TestCases.LoginPageTest</td><td><a href="#m3">loginTest</a></td><td rowspan="1">1660340178790</td><td rowspan="1">7652</td></tr><tr><th colspan="4">Free CRM PRO Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.TestCases.LoginPageTest</td><td><a href="#m4">CRMLogoImageTest</a></td><td rowspan="1">1660340145634</td><td rowspan="1">59</td></tr><tr class="passedeven"><td><a href="#m5">loginPageTitleTest</a></td><td rowspan="1">1660340104463</td><td rowspan="1">16</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Free CRM PRO Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Free CRM PRO Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.TestCases.HomePageTest</td><td><a href="#m0">CRMLogoImageTest</a></td><td rowspan="1">1660771790496</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m1">loginPageTitleTest</a></td><td rowspan="1">1660771790476</td><td rowspan="1">10</td></tr><tr class="failedeven"><td><a href="#m2">verifyUserNameTest</a></td><td rowspan="1">1660771790502</td><td rowspan="1">3</td></tr></tbody>
 </table>
 <h2>Free CRM PRO Tests</h2><h3 id="m0">com.TestCases.HomePageTest#CRMLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
 	at com.TestCases.HomePageTest.CRMLogoImageTest(HomePageTest.java:37)
@@ -25,31 +25,5 @@
 	at com.TestCases.HomePageTest.verifyUserNameTest(HomePageTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 ... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.TestCases.LoginPageTest#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;btn btn-small&quot;&gt; is not clickable at point (917, 117). Other element would receive the click: &lt;div id=&quot;preloader&quot; style=&quot;opacity: 1;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=104.0.5112.81)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HASSEN-HP&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\HASSEN\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49351}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4946243c1c9daa93528bfe469c56f7d
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
-	at com.sun.proxy.$Proxy17.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy16.click(Unknown Source)
-	at com.PageObject.LoginPage.login(LoginPage.java:44)
-	at com.TestCases.LoginPageTest.loginTest(LoginPageTest.java:42)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.TestCases.LoginPageTest#CRMLogoImageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.TestCases.LoginPageTest#loginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

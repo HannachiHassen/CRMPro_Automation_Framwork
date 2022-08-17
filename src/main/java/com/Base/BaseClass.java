@@ -16,6 +16,8 @@ import org.testng.annotations.BeforeClass;
 
 import com.Utils.WebEventListener;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 	public static WebDriver driver;
     public static Properties props;
@@ -41,14 +43,14 @@ public class BaseClass {
     
     @BeforeClass
     public static void initialization(){
-        if (props.getProperty("browser").equals("chrome")){
-            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "./Drivers/chromedriver.exe");
+        if (props.getProperty("browser").equalsIgnoreCase("chrome")){
+        	WebDriverManager.chromedriver().setup();
             driver=new ChromeDriver();
-        }else if (props.getProperty("browser").equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "./Drivers/geckodriver.exe");
+        }else if (props.getProperty("browser").equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
             driver =new FirefoxDriver();
-        } else if (props.getProperty("browser").equals("edge")) {
-            System.setProperty("webdriver.edge.driver","./FreeCRMAutomationTest/Drivers/msedgedriver.exe");
+        } else if (props.getProperty("browser").equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
             driver =new EdgeDriver();
         }else {
             System.out.println("Path of Driver Executable is not set for any Browser");
@@ -71,7 +73,7 @@ public class BaseClass {
     }
     @AfterClass
     public void tearDown(){
-        driver.quit();
+        driver.close();
     }
 }
 
