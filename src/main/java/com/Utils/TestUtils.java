@@ -38,9 +38,9 @@ public class TestUtils extends ExtentreportListener{
            
             String testMethodName = result.getName();
             String screenshotPath=TestUtils.takeScreenshot(testMethodName, driver);
-            String image=test.addScreenCapture(screenshotPath);
-            	
-            test.log(LogStatus.FAIL, image);           
+            
+            //String image=test.addScreenCapture(screenshotPath);
+            //test.log(LogStatus.FAIL, image);            
                 
             test.log(LogStatus.FAIL,"Test Case failed check screenshot below"+  MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
             //test.fail("details").addScreenCaptureFromPath(screenshotPath);

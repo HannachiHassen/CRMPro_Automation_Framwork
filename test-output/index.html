@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Free CRM PRO Automation Test Suite</span>
+              <span class="suite-name border-failed">Free CRM PRO Automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,36 +93,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,  4 skipped,  </span>
+                    <span class="method-stats">4 methods, 4 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="hide-methods skipped suite-Free_CRM_PRO_Automation_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Free_CRM_PRO_Automation_Test_Suite -->
-                      <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="show-methods skipped suite-Free_CRM_PRO_Automation_Test_Suite"> (show)</a> <!-- show-methods skipped suite-Free_CRM_PRO_Automation_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="hide-methods failed suite-Free_CRM_PRO_Automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Free_CRM_PRO_Automation_Test_Suite -->
+                      <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="show-methods failed suite-Free_CRM_PRO_Automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-Free_CRM_PRO_Automation_Test_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Free_CRM_PRO_Automation_Test_Suite">
+                    <div class="method-list-content failed suite-Free_CRM_PRO_Automation_Test_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.HomePageTest" class="method navigator-link" hash-for-method="CRMLogoImageTest">CRMLogoImageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.HomePageTest" class="method navigator-link" hash-for-method="HomePageTitleTest">HomePageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.FourTest" class="method navigator-link" hash-for-method="testFour">testFour</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" title="com.TestCases.HomePageTest" class="method navigator-link" hash-for-method="verifyUserNameTest">verifyUserNameTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Free_CRM_PRO_Automation_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Free_CRM_PRO_Automation_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -134,9 +134,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Free_CRM_PRO_Automation_Test_Suite" class="panel Free_CRM_PRO_Automation_Test_Suite">
-          <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-skipped">
+          <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.TestCases.FourTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -145,18 +145,18 @@
                   <a name="testFour">
                   </a> <!-- testFour -->
                   <span class="method-name">testFour</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
-	at com.Base.BaseClass.initialization(BaseClass.java:61)
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.TestCases.FourTest.testFour(FourTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 25 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-skipped -->
-          <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-skipped">
+          </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-failed -->
+          <div class="suite-Free_CRM_PRO_Automation_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.TestCases.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -165,15 +165,10 @@
                   <a name="CRMLogoImageTest">
                   </a> <!-- CRMLogoImageTest -->
                   <span class="method-name">CRMLogoImageTest</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
-	at com.Base.BaseClass.initialization(BaseClass.java:61)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.TestCases.HomePageTest.CRMLogoImageTest(HomePageTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-	... 27 more
-... Removed 25 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Verify CRM Logo Image is Present in Home Page)                  </em>
@@ -184,15 +179,10 @@ Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
                   <a name="HomePageTitleTest">
                   </a> <!-- HomePageTitleTest -->
                   <span class="method-name">HomePageTitleTest</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
-	at com.Base.BaseClass.initialization(BaseClass.java:61)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.TestCases.HomePageTest.HomePageTitleTest(HomePageTest.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-	... 27 more
-... Removed 25 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Verify Home Page Title)                  </em>
@@ -203,22 +193,17 @@ Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
                   <a name="verifyUserNameTest">
                   </a> <!-- verifyUserNameTest -->
                   <span class="method-name">verifyUserNameTest</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
-	at com.Base.BaseClass.initialization(BaseClass.java:61)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.TestCases.HomePageTest.verifyUserNameTest(HomePageTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-	... 27 more
-... Removed 25 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Verify User name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-skipped -->
+          </div> <!-- suite-Free_CRM_PRO_Automation_Test_Suite-class-failed -->
         </div> <!-- panel Free_CRM_PRO_Automation_Test_Suite -->
         <div panel-name="test-xml-Free_CRM_PRO_Automation_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -280,24 +265,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testFour')
 data.setCell(0, 2, 'com.TestCases.FourTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 3016);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CRMLogoImageTest')
+data.setCell(1, 1, 'HomePageTitleTest')
 data.setCell(1, 2, 'com.TestCases.HomePageTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 12);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'HomePageTitleTest')
+data.setCell(2, 1, 'CRMLogoImageTest')
 data.setCell(2, 2, 'com.TestCases.HomePageTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 3);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyUserNameTest')
 data.setCell(3, 2, 'com.TestCases.HomePageTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 2);
 window.suiteTableData['Free_CRM_PRO_Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Free_CRM_PRO_Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Free_CRM_PRO_Automation_Test_Suite">
               </div> <!-- times-div-Free_CRM_PRO_Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -325,43 +310,47 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestCases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initialization</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">HomePageTitleTest</span>
-                <span class="method-start">4265 ms</span>
+                <span class="method-start">15334 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">CRMLogoImageTest</span>
-                <span class="method-start">4283 ms</span>
+                <span class="method-start">15366 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserNameTest</span>
-                <span class="method-start">4289 ms</span>
+                <span class="method-start">15376 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4296 ms</span>
+                <span class="method-start">15384 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestCases.FourTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initialization</span>
-                <span class="method-start">4298 ms</span>
+                <span class="method-start">16558 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testFour</span>
-                <span class="method-start">10763 ms</span>
+                <span class="method-start">29822 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10767 ms</span>
+                <span class="method-start">32847 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

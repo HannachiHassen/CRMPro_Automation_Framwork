@@ -5,8 +5,15 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.Utils.TestUtils;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import utilities.ExtentReporter;
 
 public class TestListener extends TestUtils implements ITestListener{		
+	ExtentReports extentReport= ExtentReporter.getExtentReport();
+	ExtentTest extentTest;
+	ThreadLocal<ExtentTest> extentTestThread=new ThreadLocal<ExtentTest>();
 
 	@Override
 	public void onTestStart(ITestResult result) {

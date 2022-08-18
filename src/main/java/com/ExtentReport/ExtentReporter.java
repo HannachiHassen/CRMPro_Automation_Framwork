@@ -21,7 +21,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentreportListener2 implements IReporter {
+public class ExtentReporter {
 	protected ExtentReports extent;
 	protected ExtentTest test;
 	public WebDriver driver;
