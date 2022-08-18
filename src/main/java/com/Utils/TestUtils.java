@@ -27,31 +27,6 @@ public class TestUtils extends ExtentreportListener{
     	FileUtils.copyFile(SourceFile, new File (destinationFilePath));
          
          return destinationFilePath;		
-    }
-    
-  /*@AfterMethod
-    public void down(ITestResult result) throws IOException {	
-		if(result.getStatus()==ITestResult.FAILURE){
-			test.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
-			test.log(LogStatus.FAIL, (Throwable) MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-            test.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report            
-           
-            String testMethodName = result.getName();
-            String screenshotPath=TestUtils.takeScreenshot(testMethodName, driver);
-            
-            //String image=test.addScreenCapture(screenshotPath);
-            //test.log(LogStatus.FAIL, image);            
-                
-            test.log(LogStatus.FAIL,"Test Case failed check screenshot below"+  MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
-            //test.fail("details").addScreenCaptureFromPath(screenshotPath);
-            }
-        	else if(result.getStatus()==ITestResult.SKIP){
-            test.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());
-        	}
-        	else if(result.getStatus()==ITestResult.SUCCESS){
-            test.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
-        	}
-		extentReport.endTest(test);
-        extentReport.flush();
-	}*/
+    }   
+  
 }
