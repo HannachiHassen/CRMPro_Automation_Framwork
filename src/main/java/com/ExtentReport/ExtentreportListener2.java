@@ -30,9 +30,11 @@ public class ExtentreportListener2 implements IReporter {
 	private ExtentReports extent;
 	private ExtentTest test;
 	public WebDriver driver = null;
+	
+	private String outputDirectory;
 
 	
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites) {
 		init();
 
 		for (ISuite suite : suites) {
@@ -68,7 +70,7 @@ public class ExtentreportListener2 implements IReporter {
 		String outputDirectory = System.getProperty("user.dir") + "\\ExtentReports\\";
 		new File(outputDirectory).mkdir();
 		 
-		 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter (outputDirectory);
+		 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter (outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html");
 	     htmlReporter.config().setDocumentTitle("ExtentReports - Created by TestNG Listener");
 	     htmlReporter.config().setReportName("ExtentReports - Created by TestNG Listener");
 	     htmlReporter.config().setTheme(Theme.STANDARD);
