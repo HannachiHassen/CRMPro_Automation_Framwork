@@ -20,16 +20,18 @@ import org.testng.xml.XmlSuite;
 import com.Utils.TestUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
 
-
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.*;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentreportListener2 implements IReporter {
 	private ExtentReports extent;
 	private ExtentTest test;
-	public WebDriver driver = null;
+	public WebDriver driver;
 	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		
@@ -56,14 +58,14 @@ public class ExtentreportListener2 implements IReporter {
 				System.out.println("Test tag name: " + context.getName() +  "\t" +
                         "Test start time: " + context.getStartDate() +  "\t" +
                         "Test end time: " + context.getEndDate() + "\t" +
-                        "Test report output dir: " + context.getOutputDirectory());
+                        "Test report output dir: " + outputDirectory);
 
 				buildTestNodes(context.getPassedTests(), Status.PASS);
 				buildTestNodes(context.getFailedTests(), Status.FAIL);
 				buildTestNodes(context.getSkippedTests(), Status.SKIP);
 			}
 		}
-		System.out.println("Path - " + outputDirectory);
+		System.out.println("Test Report Path - " + outputDirectory);
 		
 		System.out.println(("Extent Reports Test Suite is ending!"));
 		
@@ -97,14 +99,15 @@ public class ExtentreportListener2 implements IReporter {
 	public void down(ITestResult result) throws IOException {
 		
 		if(result.getStatus()==ITestResult.FAILURE){
-			test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
+			//test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
             test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report
             
             String testMethodName=result.getName();
-            String screenshotPath = TestUtils.takeScreenshotAtEndOfTest(testMethodName,driver);
-            test.fail("Test Case failed check screenshot below"+test.addScreenCaptureFromPath(screenshotPath));
-            //extentTest.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
-            //extentTest.fail("details").addScreenCaptureFromPath(screenshotPath);
+            String screenshotPath = TestUtils.takeScreenshotAtEndOfTest(driver,testMethodName);
+            test.fail("Test Case failed check screenshot below"+ test.addScreenCaptureFromPath(screenshotPath));
+            //extenttest.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
+            //extenttest.fail("details").addScreenCaptureFromPath(screenshotPath);
 		}
         else if(result.getStatus()==ITestResult.SKIP){
             test.log(Status.SKIP, "Test Case SKIPPED IS " + result.getName());

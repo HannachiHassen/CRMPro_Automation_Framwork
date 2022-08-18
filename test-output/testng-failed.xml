@@ -15,6 +15,14 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.TestCases.HomePageTest -->
+      <class name="com.TestCases.FourTest">
+        <methods>
+          <include name="testFour"/>
+          <include name="closebrowser"/>
+          <include name="initialization"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.TestCases.FourTest -->
     </classes>
   </test> <!-- Free CRM PRO Tests(failed) -->
 </suite> <!-- Failed suite [Free CRM PRO Automation Test Suite] -->

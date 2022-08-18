@@ -14,7 +14,7 @@ public class TestUtils extends BaseClass{
 	public static long PAGE_LOAD_TIMEOUT=60;
     public static long IMPLICIT_WAIT=30;
 
-    public static String takeScreenshotAtEndOfTest(String testMethodName, WebDriver driver) throws IOException {
+    public static String takeScreenshotAtEndOfTest(WebDriver driver, String testMethodName) throws IOException {
     	//String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         File sourceFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String currentDir=System.getProperty("user.dir");

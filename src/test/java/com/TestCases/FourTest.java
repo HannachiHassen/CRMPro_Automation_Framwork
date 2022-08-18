@@ -11,7 +11,6 @@ import com.Base.BaseClass;
 public class FourTest extends BaseClass{
 	public WebDriver driver;
 	
-	
 	public void setUP() {
 		initialization();
 	}
@@ -22,6 +21,14 @@ public class FourTest extends BaseClass{
 
 		Thread.sleep(3000);
 		Assert.assertTrue(false);
+	}
+	
+	@Test
+	public void test2() throws InterruptedException {
+		System.out.println("TestFour2");
+
+		Thread.sleep(3000);
+		Assert.assertTrue(true);
 	}
 	
 	@AfterMethod
