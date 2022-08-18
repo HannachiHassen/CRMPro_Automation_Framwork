@@ -31,11 +31,19 @@ public class ExtentreportListener2 implements IReporter {
 	private ExtentTest test;
 	public WebDriver driver = null;
 	
-	private String outputDirectory;
-
-	
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites) {
-		init();
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		
+		outputDirectory = System.getProperty("user.dir") + "\\ExtentReports\\";
+		new File(outputDirectory).mkdir();
+		 
+		 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter (outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html");
+	     htmlReporter.config().setDocumentTitle("ExtentReports - Created by TestNG Listener");
+	     htmlReporter.config().setReportName("ExtentReports - Created by TestNG Listener");
+	     htmlReporter.config().setTheme(Theme.STANDARD);
+	     
+	     extent = new ExtentReports();
+	     extent.attachReporter(htmlReporter);
+	     extent.setReportUsesManualConfiguration(true);
 
 		for (ISuite suite : suites) {
 			System.out.println("Suite name - " +suite.getName());
@@ -66,20 +74,6 @@ public class ExtentreportListener2 implements IReporter {
         extent.flush();
 	}
 	
-	private void init() { 
-		String outputDirectory = System.getProperty("user.dir") + "\\ExtentReports\\";
-		new File(outputDirectory).mkdir();
-		 
-		 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter (outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html");
-	     htmlReporter.config().setDocumentTitle("ExtentReports - Created by TestNG Listener");
-	     htmlReporter.config().setReportName("ExtentReports - Created by TestNG Listener");
-	     htmlReporter.config().setTheme(Theme.STANDARD);
-	     
-	     extent = new ExtentReports();
-	     extent.attachReporter(htmlReporter);
-	     extent.setReportUsesManualConfiguration(true);	     
-		}
-
 	private void buildTestNodes(IResultMap tests, Status status) {
 		ExtentTest test;
 
