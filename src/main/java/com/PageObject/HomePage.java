@@ -44,9 +44,15 @@ public class HomePage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public String verifyHomePageTitle() {
-		return driver.getTitle();
+	public String getPageTitle() {
+		String title=driver.getTitle();
+		return title;
 	}
+	
+	public boolean verifyBasePageTitle() {
+        String expectedPageTitle = "Free CRM - CRM software for customer relationship management, sales, and support.";
+        return getPageTitle().contains(expectedPageTitle);
+    }
 
 	public Boolean validateCRMImage() {
 		return freeCRMLogo.isEnabled();

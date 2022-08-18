@@ -18,7 +18,7 @@ import com.Utils.WebEventListener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass {
+public class BaseClass{
 	public static WebDriver driver;
     public static Properties props;
     public static EventFiringWebDriver e_driver;
@@ -72,9 +72,12 @@ public class BaseClass {
 
     }
     @AfterClass
-    public void tearDown(){
-        driver.quit();
-    }
+	public void tearDown() {
+		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}		
+	}   
 }
 
 

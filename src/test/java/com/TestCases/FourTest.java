@@ -22,18 +22,4 @@ public class FourTest extends BaseClass{
 		Thread.sleep(3000);
 		Assert.assertTrue(false);
 	}
-	
-	@Test
-	public void test2() throws InterruptedException {
-		System.out.println("TestFour2");
-
-		Thread.sleep(3000);
-		Assert.assertTrue(true);
-	}
-	
-	@AfterMethod
-	public void closebrowser() {
-		driver.close();
-	}
-
 }

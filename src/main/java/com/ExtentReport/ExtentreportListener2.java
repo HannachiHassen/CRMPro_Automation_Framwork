@@ -1,7 +1,6 @@
 package com.ExtentReport;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -14,23 +13,17 @@ import org.testng.ISuite;
 import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 import org.testng.xml.XmlSuite;
 
-import com.Utils.TestUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.*;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentreportListener2 implements IReporter {
-	private ExtentReports extent;
-	private ExtentTest test;
+	protected ExtentReports extent;
+	protected ExtentTest test;
 	public WebDriver driver;
 	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
@@ -59,24 +52,22 @@ public class ExtentreportListener2 implements IReporter {
                         "Test start time: " + context.getStartDate() +  "\t" +
                         "Test end time: " + context.getEndDate() + "\t" +
                         "Test report output dir: " + outputDirectory);
-
-				buildTestNodes(context.getPassedTests(), Status.PASS);
-				buildTestNodes(context.getFailedTests(), Status.FAIL);
-				buildTestNodes(context.getSkippedTests(), Status.SKIP);
+				
+					buildTestNodes(context.getPassedTests(), Status.PASS);
+					buildTestNodes(context.getFailedTests(), Status.FAIL);
+					buildTestNodes(context.getSkippedTests(), Status.SKIP);					
 			}
 		}
 		System.out.println("Test Report Path - " + outputDirectory);
 		
 		System.out.println(("Extent Reports Test Suite is ending!"));
-		
-		for (String s : Reporter.getOutput()) {
-            extent.setTestRunnerOutput(s);
-        }
-
-        extent.flush();
+		if (extent != null) {
+			extent.flush();
+			((WebDriver) extent).close();
+		}
 	}
 	
-	private void buildTestNodes(IResultMap tests, Status status) {
+	private void buildTestNodes(IResultMap tests, Status status){
 		ExtentTest test;
 
 		if (tests.size() > 0) {
@@ -88,36 +79,13 @@ public class ExtentreportListener2 implements IReporter {
 				if (result.getThrowable() != null) {
 					test.log(status, result.getThrowable());
 				}else {
-					test.log(status,"Test" + status.toString().toLowerCase()+ "ed");
+					test.log(status,"Test " + status.toString().toLowerCase()+ "ed");
 				}
 				test.getModel().setStartTime(getTime(result.getStartMillis()));
-				test.getModel().setEndTime(getTime(result.getEndMillis()));
+				test.getModel().setEndTime(getTime(result.getEndMillis()));					 			
 			}
 		}
-	}
-	
-	public void down(ITestResult result) throws IOException {
-		
-		if(result.getStatus()==ITestResult.FAILURE){
-			//test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-            test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report
-            
-            String testMethodName=result.getName();
-            String screenshotPath = TestUtils.takeScreenshotAtEndOfTest(driver,testMethodName);
-            test.fail("Test Case failed check screenshot below"+ test.addScreenCaptureFromPath(screenshotPath));
-            //extenttest.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
-            //extenttest.fail("details").addScreenCaptureFromPath(screenshotPath);
-		}
-        else if(result.getStatus()==ITestResult.SKIP){
-            test.log(Status.SKIP, "Test Case SKIPPED IS " + result.getName());
-        }
-        else if(result.getStatus()==ITestResult.SUCCESS){
-            test.log(Status.PASS, "Test Case PASSED IS " + result.getName());
-
-        }
-    extent.flush();
-	}
+	}	
 	
 	private Date getTime(long millis) {
 		Calendar calendar = Calendar.getInstance();

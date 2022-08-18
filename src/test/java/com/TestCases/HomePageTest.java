@@ -27,9 +27,10 @@ public class HomePageTest extends BaseClass {
 
     @Test(priority=1, description = "Verify Home Page Title")
 	public void HomePageTitleTest() {
-    	String homePageTitle = homePage.verifyHomePageTitle();
-		Assert.assertEquals(homePageTitle, "Free CRM - CRM software for customer relationship management, sales, and support.", "Home Page Title is not Matched");
-		System.out.println(homePageTitle); 
+    	Assert.assertEquals(homePage.getPageTitle(), homePage.verifyBasePageTitle());
+    	//assertTrue(homePage.verifyBasePageTitle(),"Home Page Title does not Matche"); 
+    	System.out.println(homePage.getPageTitle());	
+		System.out.println(homePage.verifyBasePageTitle()); 
 	}
 	
     @Test(priority=2, description = "Verify CRM Logo Image is Present in Home Page")
