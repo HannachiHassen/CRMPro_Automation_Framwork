@@ -3,6 +3,7 @@
 <suite name="Free CRM PRO Automation Test Suite">
   <listeners>
     <listener class-name="com.ExtentReport.ExtentreportListener" />
+    <listener class-name="com.ExtentReport.TestListener"></listener>
   </listeners>
   
     <test name="Free CRM PRO Tests">

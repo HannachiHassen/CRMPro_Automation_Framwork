@@ -10,41 +10,48 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
-import com.ExtentReport.ExtentreportListener2;
-import com.aventstack.extentreports.Status;
+import com.ExtentReport.ExtentreportListener;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.relevantcodes.extentreports.LogStatus;
 
-public class TestUtils extends ExtentreportListener2{
-	public static WebDriver driver;
+public class TestUtils extends ExtentreportListener{
+	public WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT=60;
     public static long IMPLICIT_WAIT=30;
 
-    public static void takeScreenshotAtEndOfTest(String testMethodName) throws IOException {
-    	//String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        File sourceFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String currentDir=System.getProperty("user.dir");
-        String destinationFilePath=System.getProperty(currentDir + "/Execution Reports/Fail Case ScreenShots/"+ System.currentTimeMillis() +".png" );
-        FileUtils.copyFile(sourceFile, new File (destinationFilePath));
-		
+    public static String takeScreenshot(String testMethodName, WebDriver driver) throws IOException {
+    	File SourceFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    	String destinationFilePath=System.getProperty("user.dir")+ "/Execution Reports/Fail Case ScreenShots/" + testMethodName +".png";
+    	FileUtils.copyFile(SourceFile, new File (destinationFilePath));
+         
+         return destinationFilePath;		
     }
     
-    @AfterMethod
+  @AfterMethod
     public void down(ITestResult result) throws IOException {	
 		if(result.getStatus()==ITestResult.FAILURE){
-			test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
-			//test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-            test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report            
-                    
-            takeScreenshotAtEndOfTest(result.getName());
-            //test.fail("Test Case failed check screenshot below"+ test.addScreenCaptureFromPath(screenshotPath));
-            //extenttest.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
-            //extenttest.fail("details").addScreenCaptureFromPath(screenshotPath);
-		}
-        else if(result.getStatus()==ITestResult.SKIP){
-            test.log(Status.SKIP, "Test Case SKIPPED IS " + result.getName());
-        }
-        else if(result.getStatus()==ITestResult.SUCCESS){
-            test.log(Status.PASS, "Test Case PASSED IS " + result.getName());
-        }
-     extent.flush();
+			test.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
+			test.log(LogStatus.FAIL, (Throwable) MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
+            test.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report            
+           
+            String testMethodName = result.getName();
+            String screenshotPath=TestUtils.takeScreenshot(testMethodName, driver);
+            String image=test.addScreenCapture(screenshotPath);
+            	
+            test.log(LogStatus.FAIL, image);           
+                
+            test.log(LogStatus.FAIL,"Test Case failed check screenshot below"+  MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
+            //test.fail("details").addScreenCaptureFromPath(screenshotPath);
+            }
+        	else if(result.getStatus()==ITestResult.SKIP){
+            test.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());
+        	}
+        	else if(result.getStatus()==ITestResult.SUCCESS){
+            test.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
+        	}
+		extent.endTest(test);
+        extent.flush();
 	}
 }

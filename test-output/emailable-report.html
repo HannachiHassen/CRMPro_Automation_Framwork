@@ -9,25 +9,55 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Free CRM PRO Automation Test Suite</th></tr>
-<tr><td><a href="#t0">Free CRM PRO Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">30,243</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Free CRM PRO Tests</a></td><td class="num">0</td><td class="num attn">4</td><td class="num">0</td><td class="num">0</td><td class="num">10,813</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Free CRM PRO Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Free CRM PRO Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.TestCases.FourTest</td><td><a href="#m0">testFour</a></td><td rowspan="1">1660849869398</td><td rowspan="1">3014</td></tr><tr class="failedodd"><td rowspan="3">com.TestCases.HomePageTest</td><td><a href="#m1">CRMLogoImageTest</a></td><td rowspan="1">1660849856782</td><td rowspan="1">2</td></tr><tr class="failedodd"><td><a href="#m2">HomePageTitleTest</a></td><td rowspan="1">1660849856762</td><td rowspan="1">10</td></tr><tr class="failedodd"><td><a href="#m3">verifyUserNameTest</a></td><td rowspan="1">1660849856789</td><td rowspan="1">2</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Free CRM PRO Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Free CRM PRO Tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.TestCases.FourTest</td><td><a href="#m0">initialization</a></td><td rowspan="1">1660856554240</td><td rowspan="1">6461</td></tr><tr class="failedodd"><td rowspan="1">com.TestCases.HomePageTest</td><td><a href="#m1">initialization</a></td><td rowspan="1">1660856549942</td><td rowspan="1">4226</td></tr><tr><th colspan="4">Free CRM PRO Tests &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.TestCases.FourTest</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1660856560709</td><td rowspan="1">-1660856560709</td></tr><tr class="skippedodd"><td rowspan="1">com.TestCases.HomePageTest</td><td><a href="#m3">tearDown</a></td><td rowspan="1">1660856554238</td><td rowspan="1">-1660856554238</td></tr><tr><th colspan="4">Free CRM PRO Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.TestCases.FourTest</td><td><a href="#m4">testFour</a></td><td rowspan="1">1660856560705</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="3">com.TestCases.HomePageTest</td><td><a href="#m5">CRMLogoImageTest</a></td><td rowspan="1">1660856554225</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m6">HomePageTitleTest</a></td><td rowspan="1">1660856554207</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m7">verifyUserNameTest</a></td><td rowspan="1">1660856554231</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Free CRM PRO Tests</h2><h3 id="m0">com.TestCases.FourTest#testFour</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at com.TestCases.FourTest.testFour(FourTest.java:23)
+<h2>Free CRM PRO Tests</h2><h3 id="m0">com.TestCases.FourTest#initialization</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.TestCases.HomePageTest#CRMLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.TestCases.HomePageTest.CRMLogoImageTest(HomePageTest.java:38)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.TestCases.HomePageTest#initialization</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.TestCases.HomePageTest#HomePageTitleTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.TestCases.HomePageTest.HomePageTitleTest(HomePageTest.java:30)
+Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 27 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.TestCases.FourTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.TestCases.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.TestCases.FourTest#testFour</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.TestCases.HomePageTest#verifyUserNameTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.TestCases.HomePageTest.verifyUserNameTest(HomePageTest.java:45)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.TestCases.HomePageTest#CRMLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 27 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.TestCases.HomePageTest#HomePageTitleTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 27 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.TestCases.HomePageTest#verifyUserNameTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: com/Utils/WebEventListener
+	at com.Base.BaseClass.initialization(BaseClass.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+Caused by: java.lang.ClassNotFoundException: com.Utils.WebEventListener
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 27 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

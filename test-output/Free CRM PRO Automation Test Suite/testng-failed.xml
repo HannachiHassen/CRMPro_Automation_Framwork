@@ -3,7 +3,7 @@
 <suite name="Failed suite [Free CRM PRO Automation Test Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.ExtentReport.ExtentreportListener"/>
-    <listener class-name="com.Utils.TestUtils"/>
+    <listener class-name="com.ExtentReport.TestListener"/>
   </listeners>
   <test thread-count="5" name="Free CRM PRO Tests(failed)">
     <classes>
