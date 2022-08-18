@@ -25,20 +25,20 @@ public class HomePageTest extends BaseClass {
         homePage=loginPage.login(props.getProperty("username"), props.getProperty("password"));
     }
 
-    @Test(priority=1)
-	public void loginPageTitleTest() {
+    @Test(priority=1, description = "Verify Home Page Title")
+	public void HomePageTitleTest() {
     	String homePageTitle = homePage.verifyHomePageTitle();
 		Assert.assertEquals(homePageTitle, "Free CRM - CRM software for customer relationship management, sales, and support.", "Home Page Title is not Matched");
 		System.out.println(homePageTitle); 
 	}
 	
-    @Test(priority=2)
+    @Test(priority=2, description = "Verify CRM Logo Image is Present in Home Page")
 	public void CRMLogoImageTest() {
 		Boolean b = homePage.validateCRMImage();
 		Assert.assertTrue(b);
 	}
     
-    @Test(priority=3)
+    @Test(priority=3, description = "Verify User name")
 	public void verifyUserNameTest(){
 		//testUtil.switchToFrame();
 		Assert.assertTrue(homePage.verifyUserName());

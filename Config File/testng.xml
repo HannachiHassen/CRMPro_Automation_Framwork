@@ -2,13 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Free CRM PRO Automation Test Suite">
   <listeners>
-    <listener class-name="com.ExtentReport.ExtentreportListener" />
+    <listener class-name="com.ExtentReport.ExtentreportListener2" />
   </listeners>
   
     <test name="Free CRM PRO Tests">
         <classes>
-            <!--<class name="com.TestCases.LoginPageTest" /> -->
-            <class name="com.TestCases.HomePageTest" />   
+           
+            <class name="com.TestCases.HomePageTest" /> 
+            
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
