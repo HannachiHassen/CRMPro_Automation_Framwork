@@ -14,7 +14,7 @@ import com.ExtentReport.ExtentreportListener;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class TestUtils extends ExtentreportListener{
 	public WebDriver driver;
@@ -29,7 +29,7 @@ public class TestUtils extends ExtentreportListener{
          return destinationFilePath;		
     }
     
-  @AfterMethod
+  /*@AfterMethod
     public void down(ITestResult result) throws IOException {	
 		if(result.getStatus()==ITestResult.FAILURE){
 			test.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
@@ -51,7 +51,7 @@ public class TestUtils extends ExtentreportListener{
         	else if(result.getStatus()==ITestResult.SUCCESS){
             test.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
         	}
-		extent.endTest(test);
-        extent.flush();
-	}
+		extentReport.endTest(test);
+        extentReport.flush();
+	}*/
 }

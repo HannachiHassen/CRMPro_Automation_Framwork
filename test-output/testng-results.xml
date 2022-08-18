@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-18T17:11:59 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-18T17:12:33 EDT" duration-ms="33713">
+  <suite started-at="2022-08-18T17:52:12 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-18T17:52:55 EDT" duration-ms="42164">
     <groups>
     </groups>
-    <test started-at="2022-08-18T17:11:59 EDT" name="Free CRM PRO Tests" finished-at="2022-08-18T17:12:33 EDT" duration-ms="33713">
+    <test started-at="2022-08-18T17:52:12 EDT" name="Free CRM PRO Tests" finished-at="2022-08-18T17:52:55 EDT" duration-ms="42164">
       <class name="com.TestCases.HomePageTest">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.TestCases.HomePageTest@3c73951]" started-at="2022-08-18T17:11:59 EDT" name="initialization" finished-at="2022-08-18T17:12:14 EDT" duration-ms="15318" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.TestCases.HomePageTest@3059cbc]" started-at="2022-08-18T17:52:12 EDT" name="initialization" finished-at="2022-08-18T17:52:35 EDT" duration-ms="22985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="HomePageTitleTest()[pri:1, instance:com.TestCases.HomePageTest@3c73951]" started-at="2022-08-18T17:12:14 EDT" name="HomePageTitleTest" description="Verify Home Page Title" finished-at="2022-08-18T17:12:14 EDT" duration-ms="12" status="FAIL">
+        <test-method signature="HomePageTitleTest()[pri:1, instance:com.TestCases.HomePageTest@3059cbc]" started-at="2022-08-18T17:52:35 EDT" name="HomePageTitleTest" description="Verify Home Page Title" finished-at="2022-08-18T17:52:35 EDT" duration-ms="15" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -50,7 +50,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageTitleTest -->
-        <test-method signature="CRMLogoImageTest()[pri:2, instance:com.TestCases.HomePageTest@3c73951]" started-at="2022-08-18T17:12:14 EDT" name="CRMLogoImageTest" description="Verify CRM Logo Image is Present in Home Page" finished-at="2022-08-18T17:12:14 EDT" duration-ms="3" status="FAIL">
+        <test-method signature="CRMLogoImageTest()[pri:2, instance:com.TestCases.HomePageTest@3059cbc]" started-at="2022-08-18T17:52:35 EDT" name="CRMLogoImageTest" description="Verify CRM Logo Image is Present in Home Page" finished-at="2022-08-18T17:52:35 EDT" duration-ms="2" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -89,7 +89,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CRMLogoImageTest -->
-        <test-method signature="verifyUserNameTest()[pri:3, instance:com.TestCases.HomePageTest@3c73951]" started-at="2022-08-18T17:12:14 EDT" name="verifyUserNameTest" description="Verify User name" finished-at="2022-08-18T17:12:14 EDT" duration-ms="2" status="FAIL">
+        <test-method signature="verifyUserNameTest()[pri:3, instance:com.TestCases.HomePageTest@3059cbc]" started-at="2022-08-18T17:52:35 EDT" name="verifyUserNameTest" description="Verify User name" finished-at="2022-08-18T17:52:35 EDT" duration-ms="2" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -128,17 +128,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserNameTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.HomePageTest@3c73951]" started-at="2022-08-18T17:12:14 EDT" name="tearDown" finished-at="2022-08-18T17:12:16 EDT" duration-ms="1173" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.HomePageTest@3059cbc]" started-at="2022-08-18T17:52:35 EDT" name="tearDown" finished-at="2022-08-18T17:52:36 EDT" duration-ms="820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.TestCases.HomePageTest -->
       <class name="com.TestCases.FourTest">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.TestCases.FourTest@32b260fa]" started-at="2022-08-18T17:12:16 EDT" name="initialization" finished-at="2022-08-18T17:12:29 EDT" duration-ms="13264" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.TestCases.FourTest@6f46426d]" started-at="2022-08-18T17:52:36 EDT" name="initialization" finished-at="2022-08-18T17:52:51 EDT" duration-ms="14221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@32b260fa]" started-at="2022-08-18T17:12:29 EDT" name="testFour" finished-at="2022-08-18T17:12:32 EDT" duration-ms="3016" status="FAIL">
+        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@6f46426d]" started-at="2022-08-18T17:52:51 EDT" name="testFour" finished-at="2022-08-18T17:52:54 EDT" duration-ms="3016" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -184,7 +184,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFour -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@32b260fa]" started-at="2022-08-18T17:12:32 EDT" name="tearDown" finished-at="2022-08-18T17:12:33 EDT" duration-ms="826" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@6f46426d]" started-at="2022-08-18T17:52:54 EDT" name="tearDown" finished-at="2022-08-18T17:52:55 EDT" duration-ms="1016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

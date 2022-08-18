@@ -8,10 +8,10 @@ import com.Utils.TestUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import utilities.ExtentReporter;
+import com.ExtentReport.ExtentReporter;
 
 public class TestListener extends TestUtils implements ITestListener{		
-	ExtentReports extentReport= ExtentReporter.getExtentReport();
+	ExtentReports extentReport= ExtentReporter.generateReport();
 	ExtentTest extentTest;
 	ThreadLocal<ExtentTest> extentTestThread=new ThreadLocal<ExtentTest>();
 
@@ -31,7 +31,7 @@ public class TestListener extends TestUtils implements ITestListener{
 		String testMethodName = result.getName();
 		try {
 			String screenshotPath=takeScreenshot(testMethodName, driver);
-			test.addScreenCapture(screenshotPath);
+			test.addScreenCaptureFromPath(screenshotPath);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}		
