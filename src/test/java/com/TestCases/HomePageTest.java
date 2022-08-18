@@ -1,6 +1,7 @@
 package com.TestCases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.Base.BaseClass;
@@ -19,10 +20,10 @@ public class HomePageTest extends BaseClass {
     }
 
     public void setUp(){
-        initialization();
+        initializeBrowser();
         testUtils=new TestUtils();
         loginPage = new LoginPage();
-        homePage=loginPage.login(props.getProperty("username"), props.getProperty("password"));
+        homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }
 
     @Test(priority=1, description = "Verify Home Page Title")
@@ -44,5 +45,13 @@ public class HomePageTest extends BaseClass {
 		//testUtil.switchToFrame();
 		Assert.assertTrue(homePage.verifyUserName());
 	}
+    
+    @AfterMethod
+	public void tearDown() {
+		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}		
+	}   
 
 }

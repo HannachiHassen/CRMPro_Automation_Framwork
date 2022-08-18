@@ -20,7 +20,7 @@ public class LoginPageTest extends BaseClass{
 		
 		@BeforeMethod
 		public void setUp() {
-			initialization();
+			initializeBrowser();
 			loginPage = new LoginPage();
 		}
 		
@@ -39,12 +39,15 @@ public class LoginPageTest extends BaseClass{
 		
 		@Test(priority=3)
 		public void loginTest() {
-			homePage = loginPage.login(props.getProperty("username"),props.getProperty("password"));
+			homePage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 		}
 		
 		@AfterMethod
 		public void tearDown() {
-			super.tearDown();
-		}
+			driver.close();
+			if (driver != null) {
+				driver.quit();
+			}		
+		}   
 
 }
