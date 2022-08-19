@@ -18,13 +18,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.xml.XmlSuite;
 
 import com.Base.BaseClass;
-import com.Utils.TestUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -35,7 +33,7 @@ public class ExtentreportListener implements IReporter {
 	public WebDriver driver=null;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-		outputDirectory = System.getProperty("user.dir") + "\\Execution Reports\\";
+		outputDirectory = System.getProperty("user.dir") + "/Execution Reports/";
 		new File(outputDirectory).mkdir();
 
 		ExtentSparkReporter htmlReporter = new ExtentSparkReporter(outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html");

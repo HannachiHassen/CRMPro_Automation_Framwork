@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.Base.BaseClass;
 
 public class FourTest extends BaseClass{
-	public WebDriver driver;
+public WebDriver driver;
 	
 	@BeforeMethod
 	public void setUP() {
@@ -20,12 +20,18 @@ public class FourTest extends BaseClass{
 	@Test
 	public void testFour() throws InterruptedException {
 		System.out.println("TestFour");
-		Thread.sleep(3000);
+	
+		driver.get("http://tutorialsninja.com/demo");
+		
+		Thread.sleep(2000);
 		Assert.assertTrue(false);
 	}
 	
 	@AfterMethod
-	public void closebrowser() {
+	public void tearDown() {
 		driver.close();
-	}
+		if (driver != null) {
+			driver.quit();
+		}		
+	} 
 }
