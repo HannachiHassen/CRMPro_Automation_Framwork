@@ -29,6 +29,9 @@ public class ExtentReporter {
 		extentReport.attachReporter(reporter);
 		extentReport.setSystemInfo("Operating System","Windows 10");
 		extentReport.setSystemInfo("Tested By","Hassen Hannachi");
+        extentReport.setSystemInfo("GUI Testing", "QA");
+        extentReport.setSystemInfo("Application","crmpro.com/index.html");
+        extentReport.setSystemInfo("Browser", "Chrome");
 		
 		System.out.println("Test Report Path - " + outputDirectory);
 		System.out.println(("Extent Reports Test Suite is ending!"));

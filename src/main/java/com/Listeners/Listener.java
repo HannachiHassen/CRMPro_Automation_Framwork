@@ -24,8 +24,9 @@ public WebDriver driver=null;
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		String testMethodName=result.getName();
-		extentTest=extentReport.createTest(testMethodName+ " Execution started");		
+		//String testMethodName=result.getName();
+		//extentTest=extentReport.createTest(testMethodName+ " Execution started");
+		extentTest=extentReport.createTest(result.getTestClass().getName()+ " @ "+ result.getMethod().getMethodName()+ " @ " + result.getMethod().getDescription());
 		extentTestThread.set(extentTest);
 		
 		System.out.println(("*** Running Test Method " + result.getMethod().getMethodName() + "..."));
