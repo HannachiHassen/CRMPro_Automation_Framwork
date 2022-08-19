@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-19T17:56:18 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-19T17:56:39 EDT" duration-ms="20239">
+  <suite started-at="2022-08-19T19:05:14 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-19T19:05:39 EDT" duration-ms="25218">
     <groups>
     </groups>
-    <test started-at="2022-08-19T17:56:18 EDT" name="Free CRM PRO Tests" finished-at="2022-08-19T17:56:39 EDT" duration-ms="20239">
+    <test started-at="2022-08-19T19:05:14 EDT" name="Free CRM PRO Tests" finished-at="2022-08-19T19:05:39 EDT" duration-ms="25218">
       <class name="com.TestCases.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TestCases.HomePageTest@7aaca91a]" started-at="2022-08-19T17:56:18 EDT" name="setUp" finished-at="2022-08-19T17:56:39 EDT" duration-ms="20126" status="FAIL">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TestCases.HomePageTest@44c73c26]" started-at="2022-08-19T19:05:14 EDT" name="setUp" finished-at="2022-08-19T19:05:38 EDT" duration-ms="24865" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -50,7 +50,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="HomePageTitleTest()[pri:1, instance:com.TestCases.HomePageTest@7aaca91a]" started-at="2022-08-19T17:56:39 EDT" name="HomePageTitleTest" description="Verify Home Page Title" finished-at="2022-08-19T17:56:39 EDT" duration-ms="0" status="SKIP">
+        <test-method signature="HomePageTitleTest()[pri:1, instance:com.TestCases.HomePageTest@44c73c26]" started-at="2022-08-19T19:05:39 EDT" name="HomePageTitleTest" description="Verify Home Page Title" finished-at="2022-08-19T19:05:39 EDT" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -93,7 +93,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.HomePageTest@7aaca91a]" started-at="2022-08-19T17:56:39 EDT" name="tearDown" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1660946199120" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.HomePageTest@44c73c26]" started-at="2022-08-19T19:05:39 EDT" name="tearDown" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1660950339219" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

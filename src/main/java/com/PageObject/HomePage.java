@@ -51,9 +51,7 @@ public class HomePage extends BaseClass {
 		return driver.getTitle();
 	}
 
-	public String getPageTitle() {
-		return TestUtils.waitForTitle(driver, driver.getTitle(), 30);
-		
+	public String getPageTitle() {		
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.titleContains("CRMPRO  - CRM software for customer relationship management, sales, and support."));
 		return driver.getTitle();
