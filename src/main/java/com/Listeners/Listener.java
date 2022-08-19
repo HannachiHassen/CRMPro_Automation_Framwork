@@ -14,13 +14,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+
 public class Listener extends BaseClass implements ITestListener{
-    
-public WebDriver driver=null;
+	
+    public WebDriver driver=null;
 	
 	ExtentReports extentReport= ExtentReporter.getExtentReport();
-	ExtentTest extentTest;
-	ThreadLocal<ExtentTest> extentTestThread=new ThreadLocal<ExtentTest>();
+	public ExtentTest extentTest;
+	public static ThreadLocal<ExtentTest> extentTestThread=new ThreadLocal<ExtentTest>();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -28,7 +29,7 @@ public WebDriver driver=null;
 		//extentTest=extentReport.createTest(testMethodName+ " Execution started");
 		extentTest=extentReport.createTest(result.getTestClass().getName()+ " @ "+ result.getMethod().getMethodName()+ " @ " + result.getMethod().getDescription());
 		extentTestThread.set(extentTest);
-		
+		//Log.info(result.getMethod().getMethodName() + " test is starting.");
 		System.out.println(("*** Running Test Method " + result.getMethod().getMethodName() + "..."));
 	}
 

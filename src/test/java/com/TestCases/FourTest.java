@@ -9,10 +9,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.Base.BaseClass;
+import com.Listeners.Listener;
+import com.aventstack.extentreports.Status;
 
 public class FourTest extends BaseClass{
-public WebDriver driver;
-Logger log;
+
+	public WebDriver driver;
+	Logger log;
+
 	
 	@BeforeMethod
 	public void setUP() {
@@ -24,11 +28,14 @@ Logger log;
 		log.debug("Navigated to application URL");
 	}
 	
-	@Test
+	@Test(description = "This is a description for testFour")
 	public void testFour() throws InterruptedException {
 		System.out.println("TestFour");
 		log.info("testFour Method is started");
-	
+		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest testFour method");
+		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started FourTest testFour method ");
+		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+		
 		driver.get("https://classic.crmpro.com/index.html");
 		log.debug("Browser got launched");
 		
