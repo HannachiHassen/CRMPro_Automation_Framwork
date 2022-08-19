@@ -77,14 +77,12 @@
       <artifactId>poi</artifactId>
       <version>5.2.2</version>
     </dependency>    
-  </dependencies>
-  
-  
+  </dependencies>  
 
   <build>
     <resources>
       <resource>
-        <directory>FrameworkProject/Config File</directory>
+        <directory>CRM_Automation_Framework/Config File</directory>
         <filtering>true</filtering>
       </resource>
     </resources>
