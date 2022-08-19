@@ -68,8 +68,12 @@ These instructions will get you a copy of the project up and running on your loc
 * Then populate your config.properties with your account values. 
 * Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
 
+## Convert the Project to TestNG
+
+* Right click on the Project, Select TestNG > Convert to TestNG
+
 ## Running Test Cases 
-* You can run test cases per each page object separately from each class in src\main\java\com\PageObject
+* You can run test cases per each page object separately from each class in src\main\java\com\TestCases
 * Or the whole suite through the test runner file located here: \CRM_Automation_Framwork\Config File\testng.xml file.
 
 ## Checking TestNG Reports 
@@ -81,6 +85,13 @@ These instructions will get you a copy of the project up and running on your loc
 * File name: emailable-report.html 
 * Go to test-output folder -> right click on emailable-report.html -> copy file location -> run index.html file in your browser to see the report.
 
+## Configuring log4j for logs
+* Copy paste the log4j2.xml file here into the Config File Folder 
+* Open the LoginTest and write the logs
+* Add the tags to pom.xml file to specify where exactly log4j file is available in the project
+    - Search for 'Maven filtering' in google 
+    - Add the tags under <build> tag
+* Run the code and observe that the logs will be printed in the logs file
 
 ## Versioning
 

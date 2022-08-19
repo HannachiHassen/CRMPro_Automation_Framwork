@@ -21,7 +21,7 @@ public WebDriver driver;
 	public void testFour() throws InterruptedException {
 		System.out.println("TestFour");
 	
-		driver.get("http://tutorialsninja.com/demo");
+		driver.get("https://classic.crmpro.com/index.html");
 		
 		Thread.sleep(2000);
 		Assert.assertTrue(false);
