@@ -1,5 +1,5 @@
 
-\# Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
 # CRMPro_Automation_Framwork
 
@@ -7,13 +7,15 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 ### Prerequisites
-```
-Developing Software 
-```
-1. Download Java JDK 
-2. Download Eclipse or IntelliJ IDEA
-3. Download Apache Maven
+* Developing Software 
+     - Download Java JDK 
+     - Download Eclipse or IntelliJ IDEA
+     - Download Apache Maven
 
 ## Built With
 
@@ -21,7 +23,17 @@ Developing Software
 * [Eclipse](https://www.eclipse.org/) - Eclipse IDE
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-##Technologies Used:
+## Create a Maven Quick-start Project
+## Add the dependency tags for below:
+
+* WebDriverManger
+* Selenium Java
+* TestNG
+* Log4j (log4j-api and log4j-core)
+* Apache Commons IO
+* ExtentReports
+
+## Technologies Used:
 
 * Eclipse/IntelliJ (Java Editor)  
 * JDK 12 (Java Development Kit) 
@@ -32,7 +44,7 @@ Developing Software
 * Apache POI API (Read-Write utilities for Excel - Test Data Handling) 
 * Browser - Google Chrome/FireFox
 
-##Automation Framework Architecture: 
+## Automation Framework Architecture: 
 * POM (Page Object Model) Design Page Factory API of WebDriver 
 * Maven (Build Automation Tool) 
 * Test Libraries for different UI Pages 
@@ -41,30 +53,31 @@ Developing Software
 * API Jenkins - Continuous Integration Tool 
 * git and GITHub Repo (Code Versioning Tool)
 
-##Features 
+## Features 
 * Webdriver Fire Event/WebEventListener - improved console logs and screenshot on failure Location: src\main\java\com\Utils\WebEventListener 
-* Extent Report Listener with IReporter Interface (available at TestNG) Location: src\main\java\com\ExtentReport\ExtentReportListener 
+* Extent Report Listener with ITestListener Interface (available at TestNG) Location: src\main\java\com\Listeners\Listener 
 * @CacheLookup implementation improves script performance 
 * Data Driven approach (xml file reader through TestNG Data Provider)
 
-##Note Make sure you are using the correct browser version. 
-You can update to your browser version by putting the driver file into the drivers folder at the root of the project.
+## Note Make sure you are using the correct browser version. 
+* You can update to your browser version by putting the driver file into the drivers folder at the root of the project.
+* In this project I use WebDriver Manager dependency in pom.xml, so We don't need to use any driver folder (no need to change the path of the WebDriver each time you clone the project).
 
-##Prerequisites: 
+## Prerequisites: 
 * If config file is not populated set up the account at https://classic.crmpro.com/index.html. 
 * Then populate your config.properties with your account values. 
 * Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
 
-##Running Test Cases 
+## Running Test Cases 
 * You can run test cases per each page object separately from each class in src\main\java\com\PageObject
 * Or the whole suite through the test runner file located here: \CRM_Automation_Framwork\Config File\testng.xml file.
 
-##Checking TestNG Reports 
+## Checking TestNG Reports 
 * Right click on the project name and select "Refresh". 
 * Go to test-output folder -> right click on index.html -> Properties -> copy file location -> run index.html file in your browser to see the report.
 * To see Extent Report do the same for ExtentReport.html file
 
-##Emailable TestNG Report Email 
+## Emailable TestNG Report Email 
 * File name: emailable-report.html 
 * Go to test-output folder -> right click on emailable-report.html -> copy file location -> run index.html file in your browser to see the report.
 
