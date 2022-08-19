@@ -26,8 +26,8 @@ public class HomePageTest extends BaseClass {
     public void setUp(){
         driver=initializeBrowser();
     	driver.get(prop.getProperty("url"));
-        //testUtils=new TestUtils();
-        //loginPage = new LoginPage();
+        testUtils=new TestUtils();
+        loginPage = new LoginPage();
         homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }
 

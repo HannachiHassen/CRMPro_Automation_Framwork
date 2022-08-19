@@ -14,13 +14,13 @@ public class ExtentReporter {
 
 	public static ExtentReports getExtentReport() {
 		try {
-			 outputDirectory = System.getProperty("user.dir") + "/Execution Reports/";
+			 outputDirectory = System.getProperty("user.dir") + "\\Execution Reports\\";
 			 new File(outputDirectory).mkdir();
 		   } catch (Exception e) {
 			e.printStackTrace();
 		   }
 		
-		String extentReportPath = outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html";
+		String extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\HTMLExtentReportTestNG.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(extentReportPath);
 		extentReport = new ExtentReports();
 		
@@ -32,16 +32,15 @@ public class ExtentReporter {
 		
 		extentReport.attachReporter(reporter);
 		
-		extentReport.setSystemInfo("Tested By","Hassen Hannachi");
-		extentReport.setSystemInfo("Browser", "Chrome");
-		extentReport.setSystemInfo("Operating System","Windows");
-		extentReport.setSystemInfo("OS Version", "10");
-		extentReport.setSystemInfo("OS Architecture", "Microsoft");
+		extentReport.setSystemInfo("Tested By","Hassen Hannachi");		
         extentReport.setSystemInfo("GUI Testing", "QA");
         extentReport.setSystemInfo("Application","crmpro.com/index.html");
+        extentReport.setSystemInfo("Browser", "Chrome");
+        extentReport.setSystemInfo("OS Architecture", "Microsoft");
+        extentReport.setSystemInfo("Operating System","Windows");        
         
-        
-        try {
+        try {        	
+        	extentReport.setSystemInfo("OS Version", System.getProperty("os.version"));
         	extentReport.setSystemInfo("JAVA Version", System.getProperty("java.version")); 
             extentReport.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostName());            
         } catch (Exception e) {
