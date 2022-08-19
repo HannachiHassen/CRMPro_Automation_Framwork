@@ -45,6 +45,8 @@ public class Listener extends BaseClass implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		String testMethodName=result.getName();
 		extentTestThread.get().fail(result.getThrowable());
+		extentTestThread.get().log(Status.FAIL, testMethodName + " Test Failed");
+		
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		    /* We can replace the above code with a short one: 
