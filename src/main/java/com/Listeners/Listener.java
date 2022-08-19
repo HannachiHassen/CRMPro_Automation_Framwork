@@ -66,7 +66,7 @@ public class Listener extends BaseClass implements ITestListener{
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		extentTestThread.get().log(Status.SKIP, " Test skipped");
+		extentTestThread.get().log(Status.SKIP, result.getMethod().getMethodName() + " Test skipped");
 		System.out.println("*** Test Method " + result.getMethod().getMethodName() + " Skipped...");
 		
 	}

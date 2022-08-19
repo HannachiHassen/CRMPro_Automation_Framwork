@@ -7,7 +7,7 @@
   
     <test name="Free CRM PRO Tests">
         <classes>
-            <class name="com.TestCases.FourTest"/> 
+            <class name="com.TestCases.HomePageTest"/> 
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

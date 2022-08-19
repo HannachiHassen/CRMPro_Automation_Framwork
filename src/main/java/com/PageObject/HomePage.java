@@ -3,11 +3,14 @@ package com.PageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Base.BaseClass;
+import com.Utils.TestUtils;
 
 public class HomePage extends BaseClass {
-	@FindBy(xpath = "//a[@class='navbar-brand']//img[@class='img-responsive']")
+	@FindBy(xpath = "//img[@src='https://classic.freecrm.com/img/logo.png']")
 	WebElement freeCRMLogo;
 
 	@FindBy(xpath = "//input[@name='username']")
@@ -43,14 +46,21 @@ public class HomePage extends BaseClass {
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
+	
+	public String validateHomePageTitle() {
+		return driver.getTitle();
+	}
 
 	public String getPageTitle() {
-		String title=driver.getTitle();
-		return title;
+		return TestUtils.waitForTitle(driver, driver.getTitle(), 30);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.titleContains("CRMPRO  - CRM software for customer relationship management, sales, and support."));
+		return driver.getTitle();
 	}
 	
 	public boolean verifyBasePageTitle() {
-        String expectedPageTitle = "Free CRM - CRM software for customer relationship management, sales, and support.";
+        String expectedPageTitle = "CRMPRO  - CRM software for customer relationship management, sales, and support.";        							
         return getPageTitle().contains(expectedPageTitle);
     }
 

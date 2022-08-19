@@ -20,12 +20,12 @@ public class ExtentReporter {
 		
 		String extentReportPath = outputDirectory + File.separator + "./Graphic Reports/HTMLExtentReportTestNG.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(extentReportPath);
+		extentReport = new ExtentReports();
 		
 		reporter.config().setDocumentTitle("ExtentReports - CRMPro Automation");
 		reporter.config().setReportName("Test Results");
-		reporter.config().setTheme(Theme.STANDARD);
+		reporter.config().setTheme(Theme.STANDARD);		
 		
-		extentReport = new ExtentReports();
 		extentReport.attachReporter(reporter);
 		extentReport.setSystemInfo("Operating System","Windows 10");
 		extentReport.setSystemInfo("Tested By","Hassen Hannachi");

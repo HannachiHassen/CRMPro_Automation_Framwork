@@ -38,7 +38,6 @@ public class LoginPage extends BaseClass{
 	}
 
 	public HomePage login(String uname , String pwd) {
-
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();

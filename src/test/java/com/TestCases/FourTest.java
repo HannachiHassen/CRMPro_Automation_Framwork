@@ -32,6 +32,7 @@ public class FourTest extends BaseClass{
 	public void testFour() throws InterruptedException {
 		System.out.println("TestFour");
 		log.info("testFour Method is started");
+		
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest testFour method");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started FourTest testFour method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
