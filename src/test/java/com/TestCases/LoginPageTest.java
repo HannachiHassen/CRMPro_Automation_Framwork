@@ -6,12 +6,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.Base.BaseClass;
-import com.PageObject.HomePage;
+import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
 
 public class LoginPageTest extends BaseClass{		
 		LoginPage loginPage;
-		HomePage homePage;
+		LandingPage landingPage;
 		
 		//Initializing PageFactory
 		public LoginPageTest() {
@@ -39,7 +39,7 @@ public class LoginPageTest extends BaseClass{
 		
 		@Test(priority=3)
 		public void loginTest() {
-			homePage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
+			landingPage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 		}
 		
 		@AfterMethod

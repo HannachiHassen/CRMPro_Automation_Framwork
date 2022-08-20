@@ -20,6 +20,7 @@ import com.Utils.WebEventListener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
 public class BaseClass{
 	
     public static EventFiringWebDriver e_driver;
@@ -34,7 +35,7 @@ public class BaseClass{
 		
 		try {
 			 prop=new Properties();
-	         FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "./Config File/config.properties");
+	         FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
 	         prop.load(fis);
 	         System.out.println(prop.getProperty("url"));
 	         System.out.println(prop.getProperty("browser"));
@@ -50,12 +51,15 @@ public class BaseClass{
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("fireforx")) {
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();			
 		} else if(browserName.equalsIgnoreCase("edge")){
 			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
+		}else if (browserName.equalsIgnoreCase("")) {
+			WebDriverManager.phantomjs().setup();
+			
 		} 
 		
 		driver.manage().window().maximize();

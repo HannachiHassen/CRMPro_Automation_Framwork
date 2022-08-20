@@ -36,7 +36,7 @@ public class Listener extends BaseClass implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		String testMethodName=result.getName();
-		extentTestThread.get().log(Status.PASS, testMethodName+ " Test get Passed");
+		extentTestThread.get().log(Status.PASS, testMethodName+ " Test Passed");
 		
 		System.out.println("*** Test Method " + result.getMethod().getMethodName() + " Executed successfully...");	
 	}
@@ -46,6 +46,8 @@ public class Listener extends BaseClass implements ITestListener{
 		String testMethodName=result.getName();
 		extentTestThread.get().fail(result.getThrowable());
 		extentTestThread.get().log(Status.FAIL, testMethodName + " Test Failed");
+		
+		System.out.println("*** Test Method " + result.getMethod().getMethodName() + " Failed...");
 		
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
@@ -60,8 +62,7 @@ public class Listener extends BaseClass implements ITestListener{
 			extentTestThread.get().addScreenCaptureFromPath(screenshotPath, testMethodName);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		System.out.println("*** Test Method " + result.getMethod().getMethodName() + " Failed...");
+		}		
 	}
 
 	@Override
@@ -83,12 +84,12 @@ public class Listener extends BaseClass implements ITestListener{
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("*** Test Suite " + context.getName() + " Started ***");	
+		System.out.println("*** Test Method " + context.getName() + " Started! ***");	
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {		
 		extentReport.flush();
-		System.out.println(("*** Test Suite " + context.getName() + " is ending! ***"));		
+		System.out.println(("*** Test Method " + context.getName() + " Ended! ***"));		
 	}
 }

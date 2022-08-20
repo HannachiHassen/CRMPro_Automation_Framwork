@@ -82,7 +82,7 @@
   <build>
     <resources>
       <resource>
-        <directory>CRM_Automation_Framework/Config File</directory>
+        <directory>CRM_Automation_Framework/resources</directory>
         <filtering>true</filtering>
       </resource>
     </resources>

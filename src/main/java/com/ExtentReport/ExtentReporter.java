@@ -24,8 +24,8 @@ public class ExtentReporter {
 		ExtentSparkReporter reporter = new ExtentSparkReporter(extentReportPath);
 		extentReport = new ExtentReports();
 		
-		reporter.config().setDocumentTitle("ExtentReports - CRMPro Automation");
-		reporter.config().setReportName("Test Results");
+		reporter.config().setDocumentTitle("Test Results");
+		reporter.config().setReportName("ExtentReports - CRMPro Automation");
 		reporter.config().setTheme(Theme.STANDARD);	
 		reporter.config().setEncoding("utf-8");
         reporter.config().setProtocol(Protocol.HTTPS);

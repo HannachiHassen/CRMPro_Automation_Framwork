@@ -1,0 +1,7 @@
+14:52:02.508 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:52:12.147 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:52:13.517 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method is started
+14:52:31.031 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:52:40.327 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:52:59.778 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:53:09.423 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL

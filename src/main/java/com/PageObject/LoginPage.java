@@ -37,12 +37,12 @@ public class LoginPage extends BaseClass{
 		return freeCRMLogo.isEnabled();
 	}
 
-	public HomePage login(String uname , String pwd) {
+	public LandingPage login(String uname , String pwd) {
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 
-		return new HomePage(); //HomePage is the landing page for LoginPage
+		return new LandingPage(); //LandingPage is the landing page for LoginPage
 	}
 }
 

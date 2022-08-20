@@ -1,5 +1,6 @@
 package com.PageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.Base.BaseClass;
 import com.Utils.TestUtils;
 
-public class HomePage extends BaseClass {
+public class LandingPage extends BaseClass {
+	
+	By CRMLog =By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
+	
 	@FindBy(xpath = "//img[@src='https://classic.freecrm.com/img/logo.png']")
 	WebElement freeCRMLogo;
 
@@ -43,27 +47,18 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath = "//div[contains(@class,'intercom-1326a87 e4nbtsn3')]")
 	WebElement interactionChat;
 
-	public HomePage() {
-		PageFactory.initElements(driver, this);
+	
+	public LandingPage() {
+		PageFactory.initElements(driver, this);		
 	}
 	
 	public String validateHomePageTitle() {
 		return driver.getTitle();
 	}
 
-	public String getPageTitle() {		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.titleContains("CRMPRO  - CRM software for customer relationship management, sales, and support."));
-		return driver.getTitle();
-	}
-	
-	public boolean verifyBasePageTitle() {
-        String expectedPageTitle = "CRMPRO  - CRM software for customer relationship management, sales, and support.";        							
-        return getPageTitle().contains(expectedPageTitle);
-    }
-
 	public Boolean validateCRMImage() {
-		return freeCRMLogo.isEnabled();
+		TestUtils.waitForElementPresence(driver, CRMLog, 5);
+		return driver.findElement(CRMLog).isDisplayed();
 	}
 
 	public Boolean verifyUserName() {
@@ -74,5 +69,13 @@ public class HomePage extends BaseClass {
 		return userPasswordLabel.isDisplayed();
 	}
 	
+	public void clickLogInbtn() {
+		loginBtn.click();
+	}
 	
+	public void clickSigninLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(singUpLink));
+		singUpLink.click();
+	}	
 }
