@@ -84,12 +84,12 @@ public class Listener extends BaseClass implements ITestListener{
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("*** Test Method " + context.getName() + " Started! ***");	
+		System.out.println("*** Test " + context.getName() + " Started! ***");	
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {		
 		extentReport.flush();
-		System.out.println(("*** Test Method " + context.getName() + " Ended! ***"));		
+		System.out.println(("*** Test " + context.getName() + " Ended! ***"));		
 	}
 }

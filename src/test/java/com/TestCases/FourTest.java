@@ -33,8 +33,8 @@ public class FourTest extends BaseClass{
 		System.out.println("TestFour");
 		log.info("testFour Method is started");
 		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest testFour method");
-		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started FourTest testFour method ");
+		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
+		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started testFour method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
 		
 		driver.get("https://classic.crmpro.com/index.html");
@@ -47,9 +47,8 @@ public class FourTest extends BaseClass{
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.close();
 		if (driver != null) {
-			driver.quit();
+			driver.close();
 		}		
 	} 
 }

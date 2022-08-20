@@ -17,11 +17,10 @@ public class LandingPage extends BaseClass {
 	@FindBy(xpath = "//img[@src='https://classic.freecrm.com/img/logo.png']")
 	WebElement freeCRMLogo;
 
-	@FindBy(xpath = "//input[@name='username']")
-	WebElement userNameLabel;
-
-	@FindBy(xpath = "//input[@name='password']")
-	WebElement userPasswordLabel;
+	By userNameLabel=By.xpath ("//input[@name='username']");
+	
+	By userPasswordLabel= By.xpath ("//input[@name='password']");
+	
 
 	@FindBy(xpath = "//input[@type='submit']")
 	WebElement loginBtn;
@@ -41,8 +40,9 @@ public class LandingPage extends BaseClass {
 	@FindBy(xpath = "//a[contains(text(),'Contact')]")
 	WebElement contactLink;
 
-	@FindBy(xpath = "//a[contains(@href,'#services')]")
-	WebElement servicesImageLink;
+	//@FindBy(xpath = "//a[contains(@href,'#services')]")
+	@FindBy(css = "mouse")
+	WebElement mouseLink;
 
 	@FindBy(xpath = "//div[contains(@class,'intercom-1326a87 e4nbtsn3')]")
 	WebElement interactionChat;
@@ -61,21 +61,59 @@ public class LandingPage extends BaseClass {
 		return driver.findElement(CRMLog).isDisplayed();
 	}
 
-	public Boolean verifyUserName() {
-		return userNameLabel.isDisplayed();
-	}
+	public WebElement verifyUserName() {
+		return TestUtils.waitForElementPresence(driver, userNameLabel, 30);
+	}	
 
 	public Boolean verifyUserPassword() {
-		return userPasswordLabel.isDisplayed();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.visibilityOf(userPasswordLabel));
+		if (userPasswordLabel.isEnabled()){
+			
+		}
+		return userPasswordLabel.isDisplayed();		
 	}
 	
-	public void clickLogInbtn() {
-		loginBtn.click();
+	public Boolean interactionChat() {
+		return interactionChat.isDisplayed();
+	}
+	
+	public void verifyclickMouseLink() {
+		mouseLink.click();
+	}
+	
+	public void verifyLoginBtn() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.visibilityOf(loginBtn));
+		loginBtn.isDisplayed();
 	}
 	
 	public void clickSigninLink() {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.elementToBeClickable(singUpLink));
-		singUpLink.click();
+	}	
+	
+	public void clickOnPricingLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+		loginBtn.click();
+	}
+	
+	public void clickOnFeaturesLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+		loginBtn.click();
+	}
+	
+	public void clickOnCustomersLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+		loginBtn.click();
+	}
+	
+	public void clickOnContactsLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+		loginBtn.click();
 	}	
 }

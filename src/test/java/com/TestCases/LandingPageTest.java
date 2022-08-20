@@ -50,8 +50,8 @@ public class LandingPageTest extends BaseClass {
     	
     	log.info("verifyTitle Method is started");
 		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest verifyTitle method");
-		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started LandingPageTest verifyTitle method ");
+		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyTitle method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test").assignDevice("Windows HP");
     
     	System.out.println("Landing Page Title :"+ title);	
@@ -62,21 +62,51 @@ public class LandingPageTest extends BaseClass {
 		Boolean b = landingPage.validateCRMImage();
 		Assert.assertTrue(b);
 		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest verifyCRMLogo method");
-		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started LandingPageTest verifyCRMLogo method ");
+		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCRMLogo method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
 	}
     
-    @Test(priority=2, description = "Verify User name")
+    @Test(priority=2, description = "Verify User name box is displayed")
 	public void verifyUserName(){
 		//testUtil.switchToFrame();
-		Assert.assertTrue(landingPage.verifyUserName());
+		Assert.assertTrue(landingPage.verifyUserName().);
 		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest verifyUserName method");
-		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started LandingPageTest verifyUserName method ");
+		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserName method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
 	}
     
+    @Test(priority=3, description = "Verify User password box is displayed")
+   	public void verifyUserPassword(){
+   		//testUtil.switchToFrame();
+   		Assert.assertTrue(landingPage.verifyUserPassword());
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserPassword method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+    
+    @Test(priority=4, description = "Verify Login Button is displayed")
+   	public void verifyLoginBtn(){
+   		//testUtil.switchToFrame();
+   		loginPage=landingPage.verifyLoginBtn();
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyLoginBtn method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+    
+    @Test(priority=4, description = "Verify Login Button is displayed")
+   	public void verifyMouseLink(){
+   		//testUtil.switchToFrame();
+   		Assert.assertTrue(landingPage.clickMouseLink());   		
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyLoginBtn method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+        
     @AfterMethod
 	public void tearDown() {
 		if (driver != null) {

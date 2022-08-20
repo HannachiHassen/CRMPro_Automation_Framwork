@@ -5,9 +5,10 @@
     <listener class-name="com.Listeners.Listener"></listener>
   </listeners>
   
-    <test name="Free CRM PRO Tests">
+    <test name="CRM PRO LandingPage">
         <classes>
-            <class name="com.TestCases.LandingPageTest"/> 
+            <class name="com.TestCases.LandingPageTest"/>
+            <class name="com.TestCases.FourTest"/> 
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
