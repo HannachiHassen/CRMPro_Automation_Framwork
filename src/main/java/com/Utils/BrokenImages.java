@@ -15,6 +15,17 @@ public class BrokenImages extends BaseClass{
     List<WebElement> images = driver.findElements(By.tagName("img"));
     System.out.println("Total number of Images on the Page are " + images.size());
 	
+  //checking the links fetched.
+    for(int index=0;index<images.size();index++){
+    	WebElement image= images.get(index);
+        String imageURL= image.getAttribute("src");
+        System.out.println("URL of Image " + (index+1) + " is: " + imageURL);
+        verifyLinks(imageURL);
+    }
 	}
+	
+	public static void verifyLinks(String linkUrl) {
+		
+    }
 
 }
