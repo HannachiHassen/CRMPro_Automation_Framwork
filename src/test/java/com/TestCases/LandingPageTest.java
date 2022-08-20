@@ -70,8 +70,9 @@ public class LandingPageTest extends BaseClass {
     @Test(priority=2, description = "Verify User name box is displayed")
 	public void verifyUserName(){
 		//testUtil.switchToFrame();
-		Assert.assertTrue(landingPage.verifyUserName().);
-		
+		Assert.assertTrue(landingPage.verifyUserName().isDisplayed());
+		Assert.assertTrue(landingPage.verifyUserName().isEnabled());
+				
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserName method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
@@ -80,7 +81,8 @@ public class LandingPageTest extends BaseClass {
     @Test(priority=3, description = "Verify User password box is displayed")
    	public void verifyUserPassword(){
    		//testUtil.switchToFrame();
-   		Assert.assertTrue(landingPage.verifyUserPassword());
+   		Assert.assertTrue(landingPage.verifyUserPassword().isDisplayed());
+   		Assert.assertTrue(landingPage.verifyUserPassword().isEnabled());
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserPassword method ");
@@ -90,20 +92,33 @@ public class LandingPageTest extends BaseClass {
     @Test(priority=4, description = "Verify Login Button is displayed")
    	public void verifyLoginBtn(){
    		//testUtil.switchToFrame();
-   		loginPage=landingPage.verifyLoginBtn();
-   		
+    	Assert.assertTrue(landingPage.verifyLoginBtn().isDisplayed());   		
+    	Assert.assertTrue(landingPage.verifyLoginBtn().isEnabled());
+    	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyLoginBtn method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
     
-    @Test(priority=4, description = "Verify Login Button is displayed")
+    @Test(priority=5, description = "Verify Login Button is displayed")
    	public void verifyMouseLink(){
    		//testUtil.switchToFrame();
-   		Assert.assertTrue(landingPage.clickMouseLink());   		
+   		Assert.assertTrue(landingPage.verifyclickMouseLink().isDisplayed());
+   		Assert.assertTrue(landingPage.verifyclickMouseLink().isEnabled());
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyLoginBtn method ");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyMouseLink method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+    
+    @Test(priority=6, description = "Verify Login Button is displayed")
+   	public void verifyinteractionChatIcon(){
+   		//testUtil.switchToFrame();
+   		Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
+   		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled()); 
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyinteractionChatIcon method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
         

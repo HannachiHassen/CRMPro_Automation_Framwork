@@ -20,3 +20,22 @@
 15:29:28.714 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
 15:29:28.717 [main] INFO  com.TestCases.FourTest - testFour Method is started
 15:29:28.929 [main] DEBUG com.TestCases.FourTest - Browser got launched
+16:57:53.061 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+16:58:32.437 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+16:58:32.565 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method is started
+16:58:45.209 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+16:59:02.300 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+16:59:20.367 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+16:59:39.250 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+17:00:01.947 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+17:00:40.689 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+17:00:53.871 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+17:01:17.203 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+17:01:30.458 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+17:01:55.777 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+17:02:42.492 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+17:03:01.453 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+17:03:51.844 [main] DEBUG com.TestCases.FourTest - Browser got launched
+17:04:07.319 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+17:04:07.321 [main] INFO  com.TestCases.FourTest - testFour Method is started
+17:04:07.565 [main] DEBUG com.TestCases.FourTest - Browser got launched
