@@ -39,3 +39,59 @@
 17:04:07.319 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
 17:04:07.321 [main] INFO  com.TestCases.FourTest - testFour Method is started
 17:04:07.565 [main] DEBUG com.TestCases.FourTest - Browser got launched
+18:29:47.176 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:29:56.658 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:29:58.088 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method is started
+18:30:24.620 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:30:35.723 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:30:35.725 [main] INFO  com.TestCases.LandingPageTest - verifyCRMLogo Method is started
+18:31:19.563 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:31:36.058 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:31:36.060 [main] INFO  com.TestCases.LandingPageTest - verifyUserName Method is started
+18:31:53.543 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:32:04.078 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:32:04.080 [main] INFO  com.TestCases.LandingPageTest - verifyUserPassword Method is started
+18:32:17.504 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:32:27.049 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:32:27.053 [main] INFO  com.TestCases.LandingPageTest - verifyLoginBtn Method is started
+18:32:40.202 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:32:47.498 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:32:47.500 [main] INFO  com.TestCases.LandingPageTest - verifyMouseLink Method is started
+18:33:29.496 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:33:38.894 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:33:38.896 [main] INFO  com.TestCases.LandingPageTest - verifyinteractionChatIcon Method is started
+18:34:18.755 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:34:26.137 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:34:26.141 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+18:34:42.822 [main] DEBUG com.TestCases.FourTest - Browser got launched
+18:34:52.131 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+18:34:52.133 [main] INFO  com.TestCases.FourTest - testFour Method is started
+18:34:52.367 [main] DEBUG com.TestCases.FourTest - Browser got launched
+18:43:52.964 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:44:03.057 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:44:03.145 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method is started
+18:44:20.908 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:44:31.520 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:44:31.524 [main] INFO  com.TestCases.LandingPageTest - verifyCRMLogo Method is started
+18:44:42.656 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:44:55.091 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:44:55.093 [main] INFO  com.TestCases.LandingPageTest - verifyUserName Method is started
+18:45:07.449 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:45:15.214 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:45:15.217 [main] INFO  com.TestCases.LandingPageTest - verifyUserPassword Method is started
+18:45:26.271 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:45:34.330 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:45:34.333 [main] INFO  com.TestCases.LandingPageTest - verifyLoginBtn Method is started
+18:45:46.827 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:46:00.209 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:46:00.212 [main] INFO  com.TestCases.LandingPageTest - verifyMouseLink Method is started
+18:46:42.315 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:46:53.904 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:46:53.909 [main] INFO  com.TestCases.LandingPageTest - verifyinteractionChatIcon Method is started
+18:47:36.068 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+18:47:44.385 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+18:47:44.390 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+18:47:59.047 [main] DEBUG com.TestCases.FourTest - Browser got launched
+18:48:09.951 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+18:48:09.953 [main] INFO  com.TestCases.FourTest - testFour Method is started
+18:48:10.192 [main] DEBUG com.TestCases.FourTest - Browser got launched

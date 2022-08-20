@@ -34,8 +34,7 @@ public class LandingPage extends BaseClass {
 	By contactLink = By.xpath("//a[contains(text(),'Contact')]");
 
 	// @FindBy(xpath = "//a[contains(@href,'#services')]")
-	@FindBy(css = "mouse")
-	WebElement mouseLink;
+	By mouseLink = By.cssSelector("mouse");	
 
 	By interactionChat = By.xpath("//div[contains(@class,'intercom-1326a87 e4nbtsn3')]");
 
@@ -61,7 +60,7 @@ public class LandingPage extends BaseClass {
 	}
 
 	public WebElement verifyclickMouseLink() {
-		return TestUtils.waitToBeClickable(driver, interactionChat, 30);
+		return TestUtils.waitForElementPresence(driver, mouseLink, 30);
 	}
 	
 	public WebElement verifyChatIcon() {
@@ -73,31 +72,30 @@ public class LandingPage extends BaseClass {
 	}
 
 	public void clickSigninLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(singUpLink));
 	}
 
 	public void clickOnPricingLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
 		
 	}
 
 	public void clickOnFeaturesLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
 		
 	}
 
 	public void clickOnCustomersLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
 		
 	}
 
 	public void clickOnContactsLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
-		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));		
 	}
 }

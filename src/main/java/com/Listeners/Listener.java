@@ -45,7 +45,7 @@ public class Listener extends BaseClass implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		String testMethodName=result.getName();
 		extentTestThread.get().fail(result.getThrowable());
-		extentTestThread.get().log(Status.FAIL, testMethodName + " Test Failed");
+		//extentTestThread.get().log(Status.FAIL, testMethodName + " Test Failed");
 		
 		System.out.println("*** Test Method " + result.getMethod().getMethodName() + " Failed...");
 		

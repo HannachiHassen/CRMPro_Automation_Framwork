@@ -12,6 +12,7 @@ import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
+import com.Utils.Brokenlinks;
 import com.Utils.TestUtils;
 import com.aventstack.extentreports.Status;
 
@@ -37,10 +38,7 @@ public class LandingPageTest extends BaseClass {
     	driver.get(prop.getProperty("url"));
     	log.debug("Navigated to application URL");
     	
-    	landingPage=new LandingPage();
-        //testUtils=new TestUtils();
-        //loginPage = new LoginPage();
-        //landingPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+    	landingPage=new LandingPage();        
     }
 
     @Test(priority=0, description = "Verify Home Page Title")
@@ -59,6 +57,9 @@ public class LandingPageTest extends BaseClass {
 	
     @Test(priority=1, description = "Verify CRM Logo Image is Present in Home Page")
 	public void verifyCRMLogo() {
+    	
+    	log.info("verifyCRMLogo Method is started");
+    	
 		Boolean b = landingPage.validateCRMImage();
 		Assert.assertTrue(b);
 		
@@ -69,6 +70,8 @@ public class LandingPageTest extends BaseClass {
     
     @Test(priority=2, description = "Verify User name box is displayed")
 	public void verifyUserName(){
+    	log.info("verifyUserName Method is started");
+    	
 		//testUtil.switchToFrame();
 		Assert.assertTrue(landingPage.verifyUserName().isDisplayed());
 		Assert.assertTrue(landingPage.verifyUserName().isEnabled());
@@ -80,6 +83,8 @@ public class LandingPageTest extends BaseClass {
     
     @Test(priority=3, description = "Verify User password box is displayed")
    	public void verifyUserPassword(){
+    	log.info("verifyUserPassword Method is started");
+    	
    		//testUtil.switchToFrame();
    		Assert.assertTrue(landingPage.verifyUserPassword().isDisplayed());
    		Assert.assertTrue(landingPage.verifyUserPassword().isEnabled());
@@ -91,6 +96,8 @@ public class LandingPageTest extends BaseClass {
     
     @Test(priority=4, description = "Verify Login Button is displayed")
    	public void verifyLoginBtn(){
+    	log.info("verifyLoginBtn Method is started");
+    	
    		//testUtil.switchToFrame();
     	Assert.assertTrue(landingPage.verifyLoginBtn().isDisplayed());   		
     	Assert.assertTrue(landingPage.verifyLoginBtn().isEnabled());
@@ -100,25 +107,40 @@ public class LandingPageTest extends BaseClass {
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
     
-    @Test(priority=5, description = "Verify Login Button is displayed")
+    @Test(priority=5, description = "Verify Mouse Link is displayed")
    	public void verifyMouseLink(){
-   		//testUtil.switchToFrame();
+    	log.info("verifyMouseLink Method is started");
+    	
    		Assert.assertTrue(landingPage.verifyclickMouseLink().isDisplayed());
    		Assert.assertTrue(landingPage.verifyclickMouseLink().isEnabled());
+   		landingPage.verifyclickMouseLink().click();
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyMouseLink method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
     
-    @Test(priority=6, description = "Verify Login Button is displayed")
+    @Test(priority=6, description = "Verify interaction Chat Icon is displayed")
    	public void verifyinteractionChatIcon(){
-   		//testUtil.switchToFrame();
+    	log.info("verifyinteractionChatIcon Method is started");
+    	
    		Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
    		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled()); 
+   		landingPage.verifyChatIcon().click();
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyinteractionChatIcon method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+    
+    @Test(priority=7, description = "Verify Broken links")
+   	public void verifyBrokenlinks(){
+    	log.info("verifyBrokenlinks Method is started");
+    	
+    	Brokenlinks.myBrokenLinks();
+    	
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
         
