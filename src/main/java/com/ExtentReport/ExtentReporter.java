@@ -22,6 +22,7 @@ public class ExtentReporter {
 		
 		String extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\HTMLExtentReportTestNG.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(extentReportPath);
+		
 		extentReport = new ExtentReports();
 		
 		reporter.config().setDocumentTitle("Test Results");
