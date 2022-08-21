@@ -1,5 +1,7 @@
 package com.TestCases;
 
+import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -14,9 +16,11 @@ import com.Utils.BrokenImages;
 
 import com.aventstack.extentreports.Status;
 
-public class FourTest extends BaseClass{
+public class FourTest{
 
 	public WebDriver driver;
+	public BaseClass baseClass;
+	public Properties prop;
 	Logger log;
 
 	
@@ -24,7 +28,10 @@ public class FourTest extends BaseClass{
 	public void setUP() {
 		log = LogManager.getLogger(FourTest.class.getName());
 		
-		driver = initializeBrowser();
+		baseClass=new BaseClass();		
+		prop = baseClass.initializeProperties();
+		driver = baseClass.initializeBrowser();
+		
 		log.debug("Browser got launched");
 		driver.get(prop.getProperty("url"));
 		log.debug("Navigated to application URL");

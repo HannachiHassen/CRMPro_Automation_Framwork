@@ -6,16 +6,20 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.Base.BaseClass;
 
-public class Brokenlinks extends BaseClass{
+public class Brokenlinks{
+	
+	public static WebDriver driver;	
 
-	public static void myBrokenLinks() {
-		
+	public static void myBrokenLinks() {	
+					
 		String myurl = "";
 	    HttpURLConnection myhuc = null;
 	    int responseCode = 200;

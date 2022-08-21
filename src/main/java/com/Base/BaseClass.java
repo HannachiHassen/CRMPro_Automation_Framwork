@@ -16,6 +16,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import com.Utils.Constants;
 import com.Utils.WebEventListener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -25,15 +26,12 @@ public class BaseClass{
 	
     public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-    public static long PAGE_LOAD_TIMEOUT=60;
-    public static long IMPLICIT_WAIT=30;
           
     public static WebDriver driver;
-    public static Properties prop;
+    public Properties prop;
 	
-	public WebDriver initializeBrowser() {
-		
-		try {
+    public Properties initializeProperties() {
+    	try {
 			 prop=new Properties();
 	         FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
 	         prop.load(fis);
@@ -44,7 +42,11 @@ public class BaseClass{
 			e.printStackTrace();
 		}catch (IOException io) {
 			io.printStackTrace();
-		}		
+		}
+		return prop;		
+    }
+    
+	public WebDriver initializeBrowser() {		
 		
 		String browserName=prop.getProperty("browser");
 		
@@ -64,8 +66,8 @@ public class BaseClass{
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		return driver;
 	}
@@ -73,7 +75,11 @@ public class BaseClass{
 	public static String takeScreenshot(String testMethodName, WebDriver driver) throws IOException {
     	File SourceFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	String destinationFilePath=System.getProperty("user.dir")+ "\\Execution Reports\\FailedTestScreenshots\\" + testMethodName +".png";
-        FileUtils.copyFile(SourceFile, new File (destinationFilePath));
+        try {
+        	FileUtils.copyFile(SourceFile, new File (destinationFilePath));
+		} catch (Exception e) {
+			System.out.println("Capture Failed " + e.getMessage());
+		}    	
        
        return destinationFilePath;
 	}

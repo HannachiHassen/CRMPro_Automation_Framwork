@@ -13,7 +13,7 @@ import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
 import com.Utils.Brokenlinks;
-import com.Utils.TestUtils;
+import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
 public class LandingPageTest extends BaseClass {
@@ -22,14 +22,14 @@ public class LandingPageTest extends BaseClass {
 	
     public LandingPage landingPage;
     public LoginPage loginPage;
-    public TestUtils testUtils;
+    public ElementUtils elementUtils;
     
   //Initializing PageFactory
   	public LandingPageTest() {
   		super();   //Call the Constructor of the Super class - BaseClass
   	}
     
-    @BeforeMethod	
+    @BeforeMethod	//this method will be executed before every @test method
     public void setUp(){
     	log = LogManager.getLogger(LandingPageTest.class.getName());
     	
@@ -144,7 +144,7 @@ public class LandingPageTest extends BaseClass {
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
         
-    @AfterMethod
+    @AfterMethod //--this method will be executed after every test method
 	public void tearDown() {
 		if (driver != null) {
 			driver.close();;

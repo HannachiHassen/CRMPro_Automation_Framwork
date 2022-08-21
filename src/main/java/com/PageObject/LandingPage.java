@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Base.BaseClass;
-import com.Utils.TestUtils;
+import com.Utils.ElementUtils;
 
 public class LandingPage extends BaseClass {
 
@@ -47,28 +47,28 @@ public class LandingPage extends BaseClass {
 	}
 
 	public Boolean validateCRMImage() {
-		TestUtils.waitForElementPresence(driver, CRMLog, 5);
+		ElementUtils.waitForElementPresence(driver, CRMLog, 5);
 		return driver.findElement(CRMLog).isDisplayed();
 	}
 
 	public WebElement verifyUserName() {
-		return TestUtils.waitForElementPresence(driver, userNameLabel, 30);
+		return ElementUtils.waitForElementPresence(driver, userNameLabel, 30);
 	}
 
 	public WebElement verifyUserPassword() {
-		return TestUtils.waitForElementPresence(driver, userPasswordLabel, 30);
+		return ElementUtils.waitForElementPresence(driver, userPasswordLabel, 30);
 	}
 
 	public WebElement verifyclickMouseLink() {
-		return TestUtils.waitForElementPresence(driver, mouseLink, 30);
+		return ElementUtils.waitForElementPresence(driver, mouseLink, 30);
 	}
 	
 	public WebElement verifyChatIcon() {
-		return TestUtils.waitForElementPresence(driver, interactionChat, 30);
+		return ElementUtils.waitForElementPresence(driver, interactionChat, 30);
 	}
 
 	public WebElement verifyLoginBtn() {
-		return TestUtils.waitToBeClickable(driver, loginBtn, 30);
+		return ElementUtils.waitToBeClickable(driver, loginBtn, 30);
 	}
 
 	public void clickSigninLink() {

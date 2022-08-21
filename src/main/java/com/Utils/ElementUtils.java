@@ -8,10 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestUtils{
-	public static long PAGE_LOAD_TIMEOUT=60;
-    public static long IMPLICIT_WAIT=30;
-    
+public class ElementUtils{	    
             
     /**
 	 *  This function will check element presence
