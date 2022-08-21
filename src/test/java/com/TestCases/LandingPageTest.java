@@ -137,7 +137,7 @@ public class LandingPageTest extends BaseClass {
    	public void verifyBrokenlinks(){
     	log.info("verifyBrokenlinks Method is started");
     	
-    	Brokenlinks.myBrokenLinks();
+    	Brokenlinks.myBrokenLinks(prop.getProperty("url"));
     	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");

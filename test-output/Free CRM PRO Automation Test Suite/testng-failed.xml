@@ -9,6 +9,7 @@
       <class name="com.TestCases.FourTest">
         <methods>
           <include name="testFour"/>
+          <include name="verifyBrokenlinks"/>
           <include name="setUP"/>
           <include name="tearDown"/>
         </methods>

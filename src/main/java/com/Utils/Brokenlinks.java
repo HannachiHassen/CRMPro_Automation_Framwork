@@ -16,9 +16,11 @@ import com.Base.BaseClass;
 
 public class Brokenlinks{
 	
-	public static WebDriver driver;	
+	public static WebDriver driver;
+	public BaseClass baseClass;
+	public static Properties prop;
 
-	public static void myBrokenLinks() {	
+	public static void myBrokenLinks(String URL) {	
 					
 		String myurl = "";
 	    HttpURLConnection myhuc = null;

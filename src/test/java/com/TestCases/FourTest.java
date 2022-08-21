@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.Utils.BrokenImages;
-
+import com.Utils.Brokenlinks;
 import com.aventstack.extentreports.Status;
 
 public class FourTest{
@@ -64,6 +64,18 @@ public class FourTest{
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
+	
+	@Test(priority=2, description = "Find broken Links on a web page")
+   	public void verifyBrokenlinks(){
+    	log.info("verifyBrokenlinks Method is started");
+    	
+    	Brokenlinks.myBrokenLinks(prop.getProperty("url"));
+    	
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+	
 	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
