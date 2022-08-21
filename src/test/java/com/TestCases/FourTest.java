@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.Utils.BrokenImages;
-import com.Utils.Brokenlinks;
+import com.Utils.BrokenLinks;
 import com.aventstack.extentreports.Status;
 
 public class FourTest{
@@ -69,7 +69,7 @@ public class FourTest{
    	public void verifyBrokenlinks(){
     	log.info("verifyBrokenlinks Method is started");
     	
-    	Brokenlinks.myBrokenLinks(prop.getProperty("url"));
+    	BrokenLinks.myBrokenLinks();
     	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");

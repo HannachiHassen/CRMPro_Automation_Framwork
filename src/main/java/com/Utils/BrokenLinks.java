@@ -14,13 +14,13 @@ import org.openqa.selenium.WebElement;
 
 import com.Base.BaseClass;
 
-public class Brokenlinks{
+public class BrokenLinks{
 	
 	public static WebDriver driver;
 	public BaseClass baseClass;
 	public static Properties prop;
 
-	public static void myBrokenLinks(String URL) {	
+	public static void myBrokenLinks() {	
 					
 		String myurl = "";
 	    HttpURLConnection myhuc = null;

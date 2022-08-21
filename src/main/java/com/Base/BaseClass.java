@@ -18,6 +18,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.Utils.Constants;
+import com.Utils.Environment;
 import com.Utils.WebEventListener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -32,15 +33,53 @@ public class BaseClass{
     public Properties prop;
 	
     public Properties initializeProperties() {
-    	try {
-			 prop=new Properties();
-	         FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+    	FileInputStream fis=null;
+    	prop=new Properties();
+    	String envName = System.getProperty("env");
+		System.out.println("Running tests on environment: " + envName);
+		//log.info("Running tests on environment: " + envName);
+		
+		if (envName == null) {
+			System.out.println("No env is given ..... hence running it on QA");
+			try {
+				 fis=new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}else {
+			try {
+				switch (envName.toLowerCase()) {
+				case Environment.ENV_QA:
+					fis= new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+					break;
+				case Environment.ENV_DEV:
+					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+					break;
+				case Environment.ENV_STAGE:
+					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+					break;
+				case Environment.ENV_UAT:
+					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+					break;
+				case Environment.ENV_PROD:
+					fis =new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
+					break;
+				default:
+					System.out.println("Please pass the right enviroment value ..."+ envName);
+					
+					throw new FrameworkException();
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}catch (FrameworkException e) {
+				e.printStackTrace();
+			}
+		}
+		
+    	try {	        
 	         prop.load(fis);
 	         System.out.println(prop.getProperty("url"));
 	         System.out.println(prop.getProperty("browser"));
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		}catch (IOException io) {
 			io.printStackTrace();
 		}
