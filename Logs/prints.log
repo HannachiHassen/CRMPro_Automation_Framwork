@@ -95,3 +95,17 @@
 18:48:09.951 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
 18:48:09.953 [main] INFO  com.TestCases.FourTest - testFour Method is started
 18:48:10.192 [main] DEBUG com.TestCases.FourTest - Browser got launched
+19:55:58.229 [main] DEBUG com.TestCases.FourTest - Browser got launched
+19:56:07.110 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+19:56:07.159 [main] INFO  com.TestCases.FourTest - testFour Method is started
+19:56:07.800 [main] DEBUG com.TestCases.FourTest - Browser got launched
+19:56:25.603 [main] DEBUG com.TestCases.FourTest - Browser got launched
+19:56:35.413 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+19:56:35.416 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+20:08:53.742 [main] DEBUG com.TestCases.FourTest - Browser got launched
+20:09:02.549 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+20:09:02.571 [main] INFO  com.TestCases.FourTest - testFour Method is started
+20:09:02.864 [main] DEBUG com.TestCases.FourTest - Browser got launched
+20:09:18.379 [main] DEBUG com.TestCases.FourTest - Browser got launched
+20:09:26.310 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+20:09:26.312 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started

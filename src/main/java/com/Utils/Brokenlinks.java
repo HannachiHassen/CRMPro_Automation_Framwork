@@ -40,18 +40,18 @@ public class Brokenlinks extends BaseClass{
                 System.out.println("This URL is from another domain, skipping it.");
                 continue;
               }
-         try {
+            try {
                 myhuc = (HttpURLConnection)(new URL(myurl).openConnection());
                 myhuc.setRequestMethod("HEAD");
                 myhuc.setConnectTimeout(5000);
                 myhuc.connect();
                 responseCode = myhuc.getResponseCode();
-                if (responseCode >= 400) {
-                  System.out.println(myurl + " This link is broken");
-                }
-                else {
-                  System.out.println(myurl + " This link is valid");
-                }
+                   if (responseCode >= 400) {
+                      System.out.println(myurl + " This link is broken");
+                   }
+                   else {
+                     System.out.println(myurl + " This link is valid");
+                   }
           } catch(MalformedURLException ex) {
              ex.printStackTrace();
            } catch(IOException ex) {
