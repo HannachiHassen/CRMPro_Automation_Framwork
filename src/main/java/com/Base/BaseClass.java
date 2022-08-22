@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -98,6 +99,7 @@ public class BaseClass{
 		String browserName=prop.getProperty("browser");
 		String headless = prop.getProperty("headless");
 		System.out.println("browser name is : " + browserName);
+		//log.info("browser name is : " + browserName);
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -110,7 +112,14 @@ public class BaseClass{
 			}
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();			
+			if (headless.equalsIgnoreCase("yes")) {
+				FirefoxOptions fo=new FirefoxOptions();
+				fo.addArguments("--headless");
+				driver =new FirefoxDriver(fo);
+			}else {
+				driver=new FirefoxDriver();
+			}
+						
 		} else if(browserName.equalsIgnoreCase("edge")){
 			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
