@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -25,17 +26,22 @@ import com.Utils.WebEventListener;
 
 import customexception.FrameworkException;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.DriverManagerType;
-
 
 public class BaseClass{
 	
     public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
           
-    public static WebDriver driver;
+    //public static WebDriver driver;
     public static Properties prop;
+    OptionsManager optionsManager;
 	
+    public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<WebDriver>();
+    
+    public static synchronized WebDriver getDriver() {
+		return tldriver.get();
+	}
+    
     public Properties initializeProperties() {
     	FileInputStream fis=null;
     	prop=new Properties();
@@ -101,15 +107,22 @@ public class BaseClass{
 		System.out.println("browser name is : " + browserName);
 		//log.info("browser name is : " + browserName);
 		
+		optionsManager =new OptionsManager();
+		
 		if (browserName.equalsIgnoreCase("chrome")) {
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				init_remoteDriver("chrome");
+			}else {
 			WebDriverManager.chromedriver().setup();
+			tldriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 			if (headless.equalsIgnoreCase("yes")) {
 				ChromeOptions co=new ChromeOptions();
 				co.addArguments("--headless");
 				driver=new ChromeDriver(co);				
 			}else {
-			driver=new ChromeDriver();
+			   driver=new ChromeDriver();
 			}
+		}
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			if (headless.equalsIgnoreCase("yes")) {
@@ -130,14 +143,19 @@ public class BaseClass{
 			System.out.println(browserName + " is not found, please pass the correct browser....");
 		}
 		
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
-		return driver;
+		return getDriver();
 	}
     
+	private void init_remoteDriver(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	public static String takeScreenshot(String testMethodName, WebDriver driver) throws IOException {
     	File SourceFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	String destinationFilePath=System.getProperty("user.dir")+ "\\Execution Reports\\FailedTestScreenshots\\" + testMethodName +".png";

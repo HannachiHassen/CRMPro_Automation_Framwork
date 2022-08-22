@@ -4,12 +4,15 @@ import java.io.File;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class OptionsManager {
 	private Properties prop;
 	private ChromeOptions co;
+	private FirefoxOptions fo;
 
 	public OptionsManager() {
+		this.prop=prop;
 	}
 	
 	public ChromeOptions getChromeOptions() {
@@ -21,14 +24,17 @@ public class OptionsManager {
 			co.setBrowserVersion(prop.getProperty("browserversion"));
 		}
 		
-		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
-			co.setHeadless(true);
-			co.addArguments("");			
-		}
-		if (Boolean.parseBoolean(prop.getProperty("incognito")))
-			co.addArguments("--incognito");
+		if (prop.getProperty("headless").equals("yes")) co.addArguments("--incognito");
 		return co;
 	}
 	
-
+	public FirefoxOptions getFirefoxOptions() {
+		fo = new FirefoxOptions();
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setCapability("enableVNC", true);
+			fo.setBrowserVersion(prop.getProperty("browserversion"));
+		}
+		if (prop.getProperty("headless").equals("yes")) fo.addArguments("--incognito");
+		return fo;
+	}
 }
