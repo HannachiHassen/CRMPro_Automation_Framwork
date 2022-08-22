@@ -14,13 +14,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.Utils.Constants;
 import com.Utils.Environment;
 import com.Utils.WebEventListener;
 
+import customexception.FrameworkException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -30,12 +30,14 @@ public class BaseClass{
 	public static WebEventListener eventListener;
           
     public static WebDriver driver;
-    public Properties prop;
+    public static Properties prop;
 	
     public Properties initializeProperties() {
     	FileInputStream fis=null;
     	prop=new Properties();
-    	String envName = System.getProperty("env");
+    	
+    	String envName = (prop.getProperty("env"));
+    	
 		System.out.println("Running tests on environment: " + envName);
 		//log.info("Running tests on environment: " + envName);
 		
@@ -66,8 +68,8 @@ public class BaseClass{
 					break;
 				default:
 					System.out.println("Please pass the right enviroment value ..."+ envName);
-					
-					throw new FrameworkException();
+					//log.error("please pass the right environment value..." + envName);
+					throw new FrameworkException("no env found...");
 				}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -78,8 +80,8 @@ public class BaseClass{
 		
     	try {	        
 	         prop.load(fis);
-	         System.out.println(prop.getProperty("url"));
-	         System.out.println(prop.getProperty("browser"));
+	         System.out.println("Page URL : "+ prop.getProperty("url"));
+	         System.out.println("Browser used is :" + prop.getProperty("browser"));
 		}catch (IOException io) {
 			io.printStackTrace();
 		}

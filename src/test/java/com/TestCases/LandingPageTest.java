@@ -12,7 +12,7 @@ import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
-import com.Utils.Brokenlinks;
+import com.Utils.BrokenLinks;
 import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
@@ -137,7 +137,7 @@ public class LandingPageTest extends BaseClass {
    	public void verifyBrokenlinks(){
     	log.info("verifyBrokenlinks Method is started");
     	
-    	Brokenlinks.myBrokenLinks(prop.getProperty("url"));
+    	BrokenLinks.myBrokenLinks();
     	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");

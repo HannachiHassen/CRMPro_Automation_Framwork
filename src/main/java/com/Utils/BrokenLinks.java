@@ -6,19 +6,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.Base.BaseClass;
 
-public class BrokenLinks{
-	
-	public static WebDriver driver;
-	public BaseClass baseClass;
-	public static Properties prop;
+public class BrokenLinks extends BaseClass{
 
 	public static void myBrokenLinks() {	
 					
@@ -30,7 +24,7 @@ public class BrokenLinks{
         List<WebElement> links = driver.findElements(By.tagName("a"));
 
         // This line will print the number of links and the count of links.
-        System.out.println("No of links are "+ links.size()); 
+        System.out.println("Total number of links on the Page are "+ links.size()); 
         
         Iterator < WebElement > myit = links.iterator();
       
