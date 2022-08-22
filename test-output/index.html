@@ -130,10 +130,10 @@
                   <a name="testFour">
                   </a> <!-- testFour -->
                   <span class="method-name">testFour</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.TestCases.FourTest.testFour(FourTest.java:53)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.TestCases.FourTest.testFour(FourTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (This is a description for testFour)                  </em>
@@ -155,6 +155,7 @@
     &lt;listener class-name=&quot;com.Listeners.Listener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;CRM PRO LandingPage&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.TestCases.FourTest&quot;/&gt;
     &lt;/classes&gt;
@@ -200,12 +201,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testFour')
 data.setCell(0, 2, 'com.TestCases.FourTest')
-data.setCell(0, 3, 2271);
+data.setCell(0, 3, 15);
 window.suiteTableData['Free_CRM_PRO_Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Free_CRM_PRO_Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 15 ms</span>
               <div id="times-div-Free_CRM_PRO_Automation_Test_Suite">
               </div> <!-- times-div-Free_CRM_PRO_Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -233,18 +234,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.TestCases.FourTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUP</span>
+                <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testFour</span>
-                <span class="method-start">18902 ms</span>
+                <span class="method-start">25919 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22101 ms</span>
+                <span class="method-start">26314 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 
-public class WebEventListener extends BaseClass implements WebDriverEventListener{
+public class WebEventListener extends BasePage implements WebDriverEventListener{
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
         System.out.println("Before navigating to: '" + url + "'");

@@ -17,7 +17,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.xml.XmlSuite;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -104,7 +104,7 @@ public class ExtentreportListener implements IReporter {
             test.log(Status.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report            
            
             String testMethodName = result.getName();
-            String screenshotPath=BaseClass.takeScreenshot(testMethodName, driver);
+            String screenshotPath=BasePage.takeScreenshot(testMethodName, driver);
             //test.log(Status.FAIL, ("Test Case Failed Check Screenshot below: " + (Markup) test.addScreenCaptureFromPath(screenshotPath, testMethodName)));
                            
             test.log(Status.FAIL,"Test Case failed check screenshot below"+  MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report

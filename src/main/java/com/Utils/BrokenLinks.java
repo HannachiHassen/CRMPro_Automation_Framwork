@@ -9,13 +9,13 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 
-public class BrokenLinks extends BaseClass{
+public class BrokenLinks extends BasePage{
 	
 	public static void myBrokenLinks() {
 		// Storing all elements with a tag in a list of WebElements
-		List<WebElement> links = driver.findElements(By.tagName("a"));
+		List<WebElement> links = getDriver().findElements(By.tagName("a"));
 		System.out.println("Total number of Images on the Page are " + links.size());
 	
 		// checking the links fetched.

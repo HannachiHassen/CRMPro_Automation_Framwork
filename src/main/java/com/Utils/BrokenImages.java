@@ -8,13 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 
-public class BrokenImages extends BaseClass {
+public class BrokenImages extends BasePage {
 
 	public static void validateInvalidImages() {
 		// Storing all elements with img tag in a list of WebElements
-		List<WebElement> images = driver.findElements(By.tagName("img"));
+		List<WebElement> images = getDriver().findElements(By.tagName("img"));
 		System.out.println("Total number of Images on the Page are " + images.size());
 
 		// checking the links fetched.
@@ -26,7 +26,7 @@ public class BrokenImages extends BaseClass {
 
 			// Validate image display using JavaScript executor
 			try {
-				boolean imageDisplayed = (Boolean) ((JavascriptExecutor) driver).executeScript(
+				boolean imageDisplayed = (Boolean) ((JavascriptExecutor) getDriver()).executeScript(
 						"return (typeof arguments[0].naturalWidth !=\"undefined\" && arguments[0].naturalWidth > 0);",
 						image);
 				if (imageDisplayed) {

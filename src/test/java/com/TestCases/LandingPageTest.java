@@ -10,7 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
+import com.Base.BaseTest;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
@@ -19,11 +20,11 @@ import com.Utils.BrokenLinks;
 import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
-public class LandingPageTest extends BaseClass {
+public class LandingPageTest extends BaseTest {
 	public WebDriver driver;
 	Logger log;
 	public Properties prop;
-	public BaseClass baseClass;
+	public BasePage baseClass;
 	
     public LandingPage landingPage;
     public LoginPage loginPage;
@@ -34,11 +35,11 @@ public class LandingPageTest extends BaseClass {
   		super();   //Call the Constructor of the Super class - BaseClass
   	}
     
-    @BeforeMethod	//this method will be executed before every @test method
+    /*@BeforeMethod	//this method will be executed before every @test method
     public void setUp(){
     	log = LogManager.getLogger(LandingPageTest.class.getName());
     	
-    	baseClass=new BaseClass();	
+    	baseClass=new BasePage();	
     	prop = baseClass.initializeProperties();
 		driver = baseClass.initializeBrowser();
 		
@@ -47,7 +48,7 @@ public class LandingPageTest extends BaseClass {
     	log.debug("Navigated to application URL");
     	
     	landingPage=new LandingPage();        
-    }
+    }*/
 
     @Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
@@ -162,10 +163,10 @@ public class LandingPageTest extends BaseClass {
    	}
 	
         
-    @AfterMethod //--this method will be executed after every test method
+    /*@AfterMethod //--this method will be executed after every test method
 	public void tearDown() {
 		if (driver != null) {
 			driver.close();;
 		}		
-	}
+	}*/
 }

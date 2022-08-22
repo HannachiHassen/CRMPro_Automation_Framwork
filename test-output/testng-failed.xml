@@ -5,11 +5,12 @@
     <listener class-name="com.Listeners.Listener"/>
   </listeners>
   <test thread-count="5" name="CRM PRO LandingPage(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.TestCases.FourTest">
         <methods>
           <include name="testFour"/>
-          <include name="setUP"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.TestCases.FourTest -->

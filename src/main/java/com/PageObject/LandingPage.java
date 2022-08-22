@@ -1,16 +1,18 @@
 package com.PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 import com.Utils.ElementUtils;
 
-public class LandingPage extends BaseClass {
+public class LandingPage extends BasePage {
+	private WebDriver driver;
 
 	By CRMLog = By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
 

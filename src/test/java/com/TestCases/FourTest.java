@@ -10,32 +10,31 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
+import com.Base.BaseTest;
 import com.Listeners.Listener;
 import com.Utils.BrokenImages;
 import com.Utils.BrokenLinks;
 import com.aventstack.extentreports.Status;
 
-public class FourTest{
+public class FourTest extends BaseTest{
 
 	public WebDriver driver;
-	public BaseClass baseClass;
+	public BasePage baseClass;
 	public Properties prop;
-	Logger log;
-
 	
-	@BeforeMethod
+	/*@BeforeMethod
 	public void setUP() {
 		log = LogManager.getLogger(FourTest.class.getName());
 		
-		baseClass=new BaseClass();		
+		baseClass=new BasePage();		
 		prop = baseClass.initializeProperties();
-		driver = baseClass.initializeBrowser();
+		driver = baseClass.initializeBrowser(null);
 		
 		log.debug("Browser got launched");
 		driver.get(prop.getProperty("url"));
 		log.debug("Navigated to application URL");
-	}
+	}*/
 	
 	@Test(priority=0, description = "This is a description for testFour")
 	public void testFour() throws InterruptedException {

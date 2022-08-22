@@ -1,12 +1,15 @@
 package com.PageObject;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.Base.BaseClass;
+import com.Base.BasePage;
 
-public class LoginPage extends BaseClass{
+public class LoginPage extends BasePage{
+	
+	private WebDriver driver;
 
 	//Load PageFactory(OR - Object Repository)
 	@FindBy(name="username")

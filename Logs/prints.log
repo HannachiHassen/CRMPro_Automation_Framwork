@@ -98,3 +98,7 @@
 13:23:11.273 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
 13:23:11.287 [main] INFO  com.TestCases.FourTest - testFour Method is started
 13:23:11.523 [main] DEBUG com.TestCases.FourTest - Browser got launched
+16:09:07.073 [main] DEBUG com.Base.BaseTest - Browser got launched
+16:09:25.234 [main] DEBUG com.Base.BaseTest - Navigated to application URL
+17:38:19.234 [main] DEBUG com.Base.BaseTest - Browser got launched
+17:38:34.622 [main] DEBUG com.Base.BaseTest - Navigated to application URL

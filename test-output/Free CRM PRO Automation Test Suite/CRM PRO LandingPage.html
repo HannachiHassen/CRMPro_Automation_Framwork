@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 22 13:22:52 EDT 2022</td>
+<td>Started on:</td><td>Mon Aug 22 17:38:08 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22200 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26369 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.TestCases.FourTest.testFour()'><b>testFour</b><br>Test class: com.TestCases.FourTest<br>Test method: This is a description for testFour</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.TestCases.FourTest.testFour(FourTest.java:53)
+<td><div><pre>java.lang.NullPointerException
+	at com.TestCases.FourTest.testFour(FourTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1943408246", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1943408246'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.TestCases.FourTest.testFour(FourTest.java:53)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1675603360", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1675603360'><pre>java.lang.NullPointerException
+	at com.TestCases.FourTest.testFour(FourTest.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,8 +111,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
-<td>com.TestCases.FourTest@3b8f0a79</td></tr>
+<td>0</td>
+<td>com.TestCases.FourTest@7aaca91a</td></tr>
 </table><p>
 </body>
 </html>

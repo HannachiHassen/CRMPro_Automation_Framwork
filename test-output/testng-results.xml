@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-22T13:22:52 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-22T13:23:14 EDT" duration-ms="22200">
+  <suite started-at="2022-08-22T17:38:08 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-22T17:38:35 EDT" duration-ms="26369">
     <groups>
     </groups>
-    <test started-at="2022-08-22T13:22:52 EDT" name="CRM PRO LandingPage" finished-at="2022-08-22T13:23:14 EDT" duration-ms="22200">
+    <test started-at="2022-08-22T17:38:08 EDT" name="CRM PRO LandingPage" finished-at="2022-08-22T17:38:35 EDT" duration-ms="26369">
       <class name="com.TestCases.FourTest">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T13:22:52 EDT" name="setUP" finished-at="2022-08-22T13:23:11 EDT" duration-ms="18901" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.TestCases.FourTest@7aaca91a]" started-at="2022-08-22T17:38:08 EDT" name="setUp" finished-at="2022-08-22T17:38:34 EDT" duration-ms="25917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T13:23:11 EDT" name="testFour" description="This is a description for testFour" finished-at="2022-08-22T13:23:13 EDT" duration-ms="2271" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@7aaca91a]" started-at="2022-08-22T17:38:34 EDT" name="testFour" description="This is a description for testFour" finished-at="2022-08-22T17:38:34 EDT" duration-ms="15" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at com.TestCases.FourTest.testFour(FourTest.java:53)
+              <![CDATA[java.lang.NullPointerException
+at com.TestCases.FourTest.testFour(FourTest.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,11 +53,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFour -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T13:23:14 EDT" name="tearDown" finished-at="2022-08-22T13:23:14 EDT" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@7aaca91a]" started-at="2022-08-22T17:38:35 EDT" name="tearDown" finished-at="2022-08-22T17:38:35 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
