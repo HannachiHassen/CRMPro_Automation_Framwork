@@ -14,7 +14,6 @@ import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.Utils.BrokenImages;
 import com.Utils.BrokenLinks;
-import com.Utils.GetAllURLs;
 import com.aventstack.extentreports.Status;
 
 public class FourTest{
@@ -38,7 +37,7 @@ public class FourTest{
 		log.debug("Navigated to application URL");
 	}
 	
-	/*@Test(priority=0, description = "This is a description for testFour")
+	@Test(priority=0, description = "This is a description for testFour")
 	public void testFour() throws InterruptedException {
 		System.out.println("TestFour");
 		log.info("testFour Method is started");
@@ -55,27 +54,27 @@ public class FourTest{
 		log.error("Login Test got failed");
 	}
 	
-	@Test(priority=1, description = "Find broken images on a web page")
+	/*@Test(priority=1, description = "Find broken images on a web page")
    	public void verifyBrokenImages(){
     	log.info("verifyBrokenlinks Method is started");
     	
     	BrokenImages.validateInvalidImages();
     	
-   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
-   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
-   	}*/
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenImages method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+   	}
 	
 	@Test(priority=2, description = "Find broken Links on a web page")
    	public void verifyBrokenlinks(){
     	log.info("verifyBrokenlinks Method is started");
-    	GetAllURLs.myBrokenLinks();
-    	//BrokenLinks.myBrokenLinks();
     	
-   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+    	BrokenLinks.myBrokenLinks();
+    	
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
-   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
-   	}
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+   	}*/
 	
 	@AfterMethod
 	public void tearDown() {

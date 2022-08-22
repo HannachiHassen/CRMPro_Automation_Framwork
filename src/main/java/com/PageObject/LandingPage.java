@@ -33,10 +33,9 @@ public class LandingPage extends BaseClass {
 
 	By contactLink = By.xpath("//a[contains(text(),'Contact')]");
 
-	// @FindBy(xpath = "//a[contains(@href,'#services')]")
-	By mouseLink = By.cssSelector("mouse");	
+    By mouseLink = By.xpath ("//span[@class='mouse']");
 
-	By interactionChat = By.xpath("//div[contains(@class,'intercom-1326a87 e4nbtsn3')]");
+	By interactionChat = By.xpath("//div[@class='intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open']");
 
 	public LandingPage() {
 		PageFactory.initElements(driver, this);

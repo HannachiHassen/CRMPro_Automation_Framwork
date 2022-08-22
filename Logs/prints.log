@@ -1,52 +1,89 @@
-18:37:10.102 [main] DEBUG com.TestCases.FourTest - Browser got launched
-18:37:23.973 [main] DEBUG com.TestCases.FourTest - Browser got launched
-18:37:34.037 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-18:37:34.039 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-18:38:00.437 [main] DEBUG com.TestCases.FourTest - Browser got launched
-18:38:09.798 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-18:38:09.799 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:28:27.699 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:28:36.544 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:28:36.580 [main] INFO  com.TestCases.FourTest - testFour Method is started
-19:28:37.627 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:28:51.283 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:28:59.458 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:28:59.460 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:29:20.293 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:29:29.083 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:29:29.086 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:40:10.575 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:40:18.983 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:40:19.006 [main] INFO  com.TestCases.FourTest - testFour Method is started
-19:40:19.251 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:40:35.359 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:40:51.301 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:40:51.303 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:41:23.287 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:41:33.418 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:41:33.420 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:50:26.757 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:50:41.330 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:50:41.349 [main] INFO  com.TestCases.FourTest - testFour Method is started
-19:50:42.195 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:51:10.748 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:51:58.915 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:51:58.919 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:53:12.393 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:53:30.171 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:53:30.173 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-19:57:39.281 [main] DEBUG com.TestCases.FourTest - Browser got launched
-19:57:53.727 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-19:57:53.749 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-20:03:48.195 [main] DEBUG com.TestCases.FourTest - Browser got launched
-20:03:57.761 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-20:03:57.787 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-20:05:03.151 [main] DEBUG com.TestCases.FourTest - Browser got launched
-20:05:18.417 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-20:05:18.442 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-20:10:58.507 [main] DEBUG com.TestCases.FourTest - Browser got launched
-20:11:11.150 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-20:11:11.175 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
-20:14:15.715 [main] DEBUG com.TestCases.FourTest - Browser got launched
-20:14:25.303 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
-20:14:25.327 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+21:28:16.155 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:28:25.588 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:28:25.590 [main] INFO  com.TestCases.LandingPageTest - verifyUserPassword Method is started
+21:28:37.396 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:28:44.840 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:28:44.841 [main] INFO  com.TestCases.LandingPageTest - verifyLoginBtn Method is started
+21:28:56.756 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:29:04.446 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:29:04.448 [main] INFO  com.TestCases.LandingPageTest - verifyMouseLink Method is started
+21:29:46.145 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:29:54.022 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:29:54.025 [main] INFO  com.TestCases.LandingPageTest - verifyinteractionChatIcon Method is started
+21:30:33.857 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:30:40.036 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:30:40.038 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+21:31:07.608 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+21:31:12.672 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+21:31:12.675 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+21:31:33.088 [main] DEBUG com.TestCases.FourTest - Browser got launched
+21:31:39.993 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+21:31:39.995 [main] INFO  com.TestCases.FourTest - testFour Method is started
+21:31:40.917 [main] DEBUG com.TestCases.FourTest - Browser got launched
+21:31:57.559 [main] DEBUG com.TestCases.FourTest - Browser got launched
+21:32:07.387 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+21:32:07.389 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+21:32:26.125 [main] DEBUG com.TestCases.FourTest - Browser got launched
+21:32:33.628 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+21:32:33.630 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+22:17:56.395 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:18:06.761 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:18:06.942 [main] INFO  com.TestCases.LandingPageTest - verifyMouseLink Method is started
+22:18:34.213 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:18:44.549 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:18:44.552 [main] INFO  com.TestCases.LandingPageTest - verifyinteractionChatIcon Method is started
+22:19:11.427 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:19:25.224 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:19:25.226 [main] INFO  com.TestCases.FourTest - testFour Method is started
+22:19:25.639 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:19:49.416 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:19:55.827 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:19:55.829 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+22:20:38.690 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:21:21.889 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:21:21.891 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+22:23:19.090 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:23:29.466 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:23:29.533 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method is started
+22:23:39.666 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:23:56.822 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:23:56.826 [main] INFO  com.TestCases.LandingPageTest - verifyCRMLogo Method is started
+22:24:09.598 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:24:17.739 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:24:17.741 [main] INFO  com.TestCases.LandingPageTest - verifyUserName Method is started
+22:24:30.053 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:24:38.471 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:24:38.473 [main] INFO  com.TestCases.LandingPageTest - verifyUserPassword Method is started
+22:24:50.608 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:25:03.467 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:25:03.469 [main] INFO  com.TestCases.LandingPageTest - verifyLoginBtn Method is started
+22:25:14.766 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:25:24.019 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:25:24.022 [main] INFO  com.TestCases.LandingPageTest - verifyMouseLink Method is started
+22:25:37.355 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:25:51.350 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:25:51.351 [main] INFO  com.TestCases.LandingPageTest - verifyinteractionChatIcon Method is started
+22:26:09.283 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:26:16.810 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:26:16.811 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+22:26:38.008 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+22:26:48.158 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+22:26:48.160 [main] INFO  com.TestCases.LandingPageTest - verifyBrokenlinks Method is started
+22:27:15.092 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:27:24.227 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:27:24.229 [main] INFO  com.TestCases.FourTest - testFour Method is started
+22:27:24.438 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:27:39.688 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:27:48.313 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:27:48.315 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+22:28:10.903 [main] DEBUG com.TestCases.FourTest - Browser got launched
+22:28:20.319 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+22:28:20.321 [main] INFO  com.TestCases.FourTest - verifyBrokenlinks Method is started
+12:37:38.725 [main] DEBUG com.TestCases.FourTest - Browser got launched
+12:37:58.313 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+12:37:58.352 [main] INFO  com.TestCases.FourTest - testFour Method is started
+12:37:58.630 [main] DEBUG com.TestCases.FourTest - Browser got launched
+12:39:05.949 [main] DEBUG com.TestCases.FourTest - Browser got launched
+12:39:20.903 [main] DEBUG com.TestCases.FourTest - Navigated to application URL
+12:39:20.929 [main] INFO  com.TestCases.FourTest - testFour Method is started
+12:39:21.159 [main] DEBUG com.TestCases.FourTest - Browser got launched

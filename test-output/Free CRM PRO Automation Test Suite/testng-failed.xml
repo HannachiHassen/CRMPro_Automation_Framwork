@@ -8,7 +8,7 @@
     <classes>
       <class name="com.TestCases.FourTest">
         <methods>
-          <include name="verifyBrokenlinks"/>
+          <include name="testFour"/>
           <include name="setUP"/>
           <include name="tearDown"/>
         </methods>

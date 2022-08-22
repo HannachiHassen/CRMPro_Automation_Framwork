@@ -36,52 +36,52 @@ public class BaseClass{
     	FileInputStream fis=null;
     	prop=new Properties();
     	
-    	String envName = (prop.getProperty("env"));
-    	
-		System.out.println("Running tests on environment: " + envName);
-		//log.info("Running tests on environment: " + envName);
-		
-		if (envName == null) {
-			System.out.println("No env is given ..... hence running it on QA");
-			try {
-				 fis=new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-		}else {
-			try {
-				switch (envName.toLowerCase()) {
-				case Environment.ENV_QA:
-					fis= new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-					break;
-				case Environment.ENV_DEV:
-					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-					break;
-				case Environment.ENV_STAGE:
-					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-					break;
-				case Environment.ENV_UAT:
-					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-					break;
-				case Environment.ENV_PROD:
-					fis =new FileInputStream(System.getProperty("user.dir") + "./resources/data.properties");
-					break;
-				default:
-					System.out.println("Please pass the right enviroment value ..."+ envName);
-					//log.error("please pass the right environment value..." + envName);
-					throw new FrameworkException("no env found...");
-				}
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}catch (FrameworkException e) {
-				e.printStackTrace();
-			}
+    	try {
+    		//String envName= System.getenv("env");
+    		String envName = (System.getProperty("env"));
+    		System.out.println("Running tests on environment: ---->" + envName);
+    		//log.info("Running tests on environment: " + envName);
+    		if (envName == null) {
+    			System.out.println("No env is given ..... hence running it on QA");
+    			try {
+    				fis=new FileInputStream(System.getProperty("user.dir") + "./resources/config.properties");
+    			} catch (FileNotFoundException e) {
+    				e.printStackTrace();
+    			}
+    		}else {
+    			try {
+    				switch (envName.toLowerCase()) {
+    				case Environment.ENV_QA:
+    					fis= new FileInputStream(System.getProperty("user.dir") + "./resources/qa.config.properties");
+    					break;
+    				case Environment.ENV_DEV:
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/dev.config.properties");
+    					break;
+    				case Environment.ENV_STAGE:
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/stage.config.properties");
+    					break;
+    				case Environment.ENV_UAT:
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/uat.config.properties");
+    					break;
+    				case Environment.ENV_PROD:
+    					fis =new FileInputStream(System.getProperty("user.dir") + "./resources/prod.config.properties");
+    					break;
+    				default:
+    					System.out.println("Please pass the right enviroment value ..."+ envName);
+    					//log.error("please pass the right environment value..." + envName);
+    					throw new FrameworkException("no env found...");
+    				}
+    			} catch (FileNotFoundException e) {
+    				e.printStackTrace();
+    			}catch (FrameworkException e) {
+    				e.printStackTrace();
+    			}				
 		}
-		
-    	try {	        
-	         prop.load(fis);
+    		prop.load(fis);
 	         System.out.println("Page URL : "+ prop.getProperty("url"));
 	         System.out.println("Browser used is :" + prop.getProperty("browser"));
+    	} catch (FileNotFoundException e) {
+			e.printStackTrace();     
 		}catch (IOException io) {
 			io.printStackTrace();
 		}

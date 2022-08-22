@@ -1,5 +1,7 @@
 package com.TestCases;
 
+import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +14,7 @@ import com.Base.BaseClass;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
+import com.Utils.BrokenImages;
 import com.Utils.BrokenLinks;
 import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
@@ -19,6 +22,8 @@ import com.aventstack.extentreports.Status;
 public class LandingPageTest extends BaseClass {
 	public WebDriver driver;
 	Logger log;
+	public Properties prop;
+	public BaseClass baseClass;
 	
     public LandingPage landingPage;
     public LoginPage loginPage;
@@ -33,7 +38,10 @@ public class LandingPageTest extends BaseClass {
     public void setUp(){
     	log = LogManager.getLogger(LandingPageTest.class.getName());
     	
-        driver=initializeBrowser();
+    	baseClass=new BaseClass();	
+    	prop = baseClass.initializeProperties();
+		driver = baseClass.initializeBrowser();
+		
         log.debug("Browser got launched");
     	driver.get(prop.getProperty("url"));
     	log.debug("Navigated to application URL");
@@ -112,8 +120,7 @@ public class LandingPageTest extends BaseClass {
     	log.info("verifyMouseLink Method is started");
     	
    		Assert.assertTrue(landingPage.verifyclickMouseLink().isDisplayed());
-   		Assert.assertTrue(landingPage.verifyclickMouseLink().isEnabled());
-   		landingPage.verifyclickMouseLink().click();
+   		Assert.assertTrue(landingPage.verifyclickMouseLink().isEnabled());   		
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyMouseLink method ");
@@ -125,8 +132,7 @@ public class LandingPageTest extends BaseClass {
     	log.info("verifyinteractionChatIcon Method is started");
     	
    		Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
-   		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled()); 
-   		landingPage.verifyChatIcon().click();
+   		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled());    		
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyinteractionChatIcon method ");
@@ -143,6 +149,18 @@ public class LandingPageTest extends BaseClass {
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    	}
+    
+    @Test(priority=8, description = "Find broken images on a web page")
+   	public void verifyBrokenImages(){
+    	log.info("verifyBrokenlinks Method is started");
+    	
+    	BrokenImages.validateInvalidImages();
+    	
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenImages method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   	}
+	
         
     @AfterMethod //--this method will be executed after every test method
 	public void tearDown() {
