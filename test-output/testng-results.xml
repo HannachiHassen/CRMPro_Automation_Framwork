@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-22T12:38:50 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-22T12:39:25 EDT" duration-ms="35428">
+  <suite started-at="2022-08-22T12:48:17 EDT" name="Free CRM PRO Automation Test Suite" finished-at="2022-08-22T12:48:36 EDT" duration-ms="19020">
     <groups>
     </groups>
-    <test started-at="2022-08-22T12:38:50 EDT" name="CRM PRO LandingPage" finished-at="2022-08-22T12:39:25 EDT" duration-ms="35428">
+    <test started-at="2022-08-22T12:48:17 EDT" name="CRM PRO LandingPage" finished-at="2022-08-22T12:48:36 EDT" duration-ms="19020">
       <class name="com.TestCases.FourTest">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:38:50 EDT" name="setUP" finished-at="2022-08-22T12:39:20 EDT" duration-ms="30443" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:48:17 EDT" name="setUP" finished-at="2022-08-22T12:48:32 EDT" duration-ms="15421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:39:20 EDT" name="testFour" description="This is a description for testFour" finished-at="2022-08-22T12:39:23 EDT" duration-ms="2263" status="FAIL">
+        <test-method signature="testFour()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:48:32 EDT" name="testFour" description="This is a description for testFour" finished-at="2022-08-22T12:48:35 EDT" duration-ms="2443" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -57,7 +57,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFour -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:39:23 EDT" name="tearDown" finished-at="2022-08-22T12:39:25 EDT" duration-ms="2155" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TestCases.FourTest@3b8f0a79]" started-at="2022-08-22T12:48:35 EDT" name="tearDown" finished-at="2022-08-22T12:48:36 EDT" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
