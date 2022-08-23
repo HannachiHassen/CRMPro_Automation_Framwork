@@ -22,9 +22,9 @@ import com.aventstack.extentreports.Status;
 
 public class LandingPageTest {
 	public WebDriver driver;
-	Logger log;
-	public Properties prop;
 	public BasePage baseClass;
+	public Properties prop;
+    Logger log;
 	
     public LandingPage landingPage;
     public LoginPage loginPage;
@@ -35,7 +35,7 @@ public class LandingPageTest {
   		super();   //Call the Constructor of the Super class - BaseClass
   	}
     
-    @BeforeMethod	//this method will be executed before every @test method
+    @BeforeMethod(alwaysRun = true)	//this method will be executed before every @test method
     @Parameters(value={"browser"})
 	public void setUP(String browser) {
     	log = LogManager.getLogger(LandingPageTest.class.getName());
@@ -50,6 +50,7 @@ public class LandingPageTest {
 			browserName = browser;		
 		}
 		driver = baseClass.initializeBrowser(browserName);
+		log.info("****************************** Browser is launched *****************************************");
 		
         log.debug("Browser got launched");
     	driver.get(prop.getProperty("url"));
@@ -60,34 +61,38 @@ public class LandingPageTest {
 
     @Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
+    	log.info("****************************** Starting Test Case verifyTitle *****************************************");
+		
     	String title=landingPage.validateHomePageTitle();
     	Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.", "Home Page Title does not Matche");
     	
-    	log.info("verifyTitle Method is started");
+    	log.info("verifyTitle Method Started");
 		
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyTitle method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test").assignDevice("Windows HP");
-    
-    	System.out.println("Landing Page Title :"+ title);	
+		
+		log.info("****************************** Ending Test Case verifyTitle *****************************************");
+		System.out.println("Landing Page Title : " + title );	
 	}
 	
     @Test(priority=1, description = "Verify CRM Logo Image is Present in Home Page")
 	public void verifyCRMLogo() {
-    	
-    	log.info("verifyCRMLogo Method is started");
-    	
+    	log.info("****************************** Starting Test Case verifyCRMLogo *****************************************");
+    	    	
 		Boolean b = landingPage.validateCRMImage();
 		Assert.assertTrue(b);
 		
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCRMLogo method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+		
+		log.info("****************************** Ending Test Case verifyCRMLogo *****************************************");
 	}
     
     @Test(priority=2, description = "Verify User name box is displayed")
 	public void verifyUserName(){
-    	log.info("verifyUserName Method is started");
+    	log.info("****************************** Starting Test Case verifyUserName *****************************************");
     	
 		//testUtil.switchToFrame();
 		Assert.assertTrue(landingPage.verifyUserName().isDisplayed());
@@ -96,11 +101,13 @@ public class LandingPageTest {
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserName method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+		
+		log.info("****************************** Ending Test Case verifyUserName *****************************************");
 	}
     
     @Test(priority=3, description = "Verify User password box is displayed")
    	public void verifyUserPassword(){
-    	log.info("verifyUserPassword Method is started");
+    	log.info("****************************** Starting Test Case verifyUserPassword *****************************************");
     	
    		//testUtil.switchToFrame();
    		Assert.assertTrue(landingPage.verifyUserPassword().isDisplayed());
@@ -109,11 +116,13 @@ public class LandingPageTest {
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyUserPassword method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyUserPassword *****************************************");
    	}
     
-    @Test(priority=4, description = "Verify Login Button is displayed")
+   /* @Test(priority=4, description = "Verify Login Button is displayed")
    	public void verifyLoginBtn(){
-    	log.info("verifyLoginBtn Method is started");
+    	log.info("****************************** Starting Test Case verifyLoginBtn *****************************************");
     	
    		//testUtil.switchToFrame();
     	Assert.assertTrue(landingPage.verifyLoginBtn().isDisplayed());   		
@@ -122,11 +131,13 @@ public class LandingPageTest {
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyLoginBtn method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyLoginBtn *****************************************");
    	}
     
     @Test(priority=5, description = "Verify Mouse Link is displayed")
    	public void verifyMouseLink(){
-    	log.info("verifyMouseLink Method is started");
+    	log.info("****************************** Starting Test Case verifyMouseLink *****************************************");
     	
    		Assert.assertTrue(landingPage.verifyclickMouseLink().isDisplayed());
    		Assert.assertTrue(landingPage.verifyclickMouseLink().isEnabled());   		
@@ -134,11 +145,13 @@ public class LandingPageTest {
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyMouseLink method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyMouseLink *****************************************");
    	}
     
     @Test(priority=6, description = "Verify interaction Chat Icon is displayed")
    	public void verifyinteractionChatIcon(){
-    	log.info("verifyinteractionChatIcon Method is started");
+    	log.info("****************************** Starting Test Case verifyinteractionChatIcon *****************************************");
     	
    		Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
    		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled());    		
@@ -146,35 +159,56 @@ public class LandingPageTest {
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyinteractionChatIcon method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyinteractionChatIcon *****************************************");
    	}
     
-    @Test(priority=7, description = "Verify Broken links")
+    @Test(priority=7, description = "Verify interaction Chat Icon is displayed")
+   	public void verifyCarouslImageBtn(){
+    	log.info("****************************** Starting Test Case verifyCarouslImageBtn *****************************************");
+    	
+   		Assert.assertTrue(landingPage.verifyclickCarouselBtn().isDisplayed());   		
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCarouslImageBtn method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyCarouslImageBtn *****************************************");
+   	}
+    
+    @Test(priority=8, description = "Verify Broken links")
    	public void verifyBrokenlinks(){
-    	log.info("verifyBrokenlinks Method is started");
+    	log.info("****************************** Starting Test Case verifyBrokenlinks *****************************************");
     	
     	BrokenLinks.myBrokenLinks();
     	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyBrokenlinks *****************************************");
    	}
     
-    @Test(priority=8, description = "Find broken images on a web page")
+    @Test(priority=9, description = "Find broken images on a web page")
    	public void verifyBrokenImages(){
-    	log.info("verifyBrokenlinks Method is started");
+    	log.info("****************************** Starting Test Case verifyBrokenImages *****************************************");
     	
     	BrokenImages.validateInvalidImages();
     	
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenImages method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
-   	}
-	
-        
-    /*@AfterMethod //--this method will be executed after every test method
+   		
+   		log.info("****************************** Ending Test Case verifyBrokenImages *****************************************");
+   	}	
+        */
+    @AfterMethod(alwaysRun = true) //--this method will be executed after every test method
 	public void tearDown() {
+    	driver.close();
 		if (driver != null) {
-			driver.close();;
-		}		
-	}*/
+			driver.quit();
+		}
+	log.info("****************************** Browser is Closed *****************************************");
+		
+	}
 }

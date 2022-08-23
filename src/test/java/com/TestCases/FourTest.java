@@ -100,8 +100,7 @@ public class FourTest{
 		driver.close();
 		if (driver != null) {
 			driver.quit();
-		}
-		
+		}		
 	log.info("****************************** Browser is closed *****************************************");
 	} 
 }

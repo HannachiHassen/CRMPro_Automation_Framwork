@@ -1,0 +1,79 @@
+15:21:32.426 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:21:32.464 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:21:42.773 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:21:42.775 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyMouseLink *****************************************
+15:21:43.942 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:21:48.600 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:21:48.630 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:22:08.443 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:22:08.445 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyinteractionChatIcon *****************************************
+15:22:09.691 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:22:14.477 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:22:14.478 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:22:29.533 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:22:29.537 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyCarouslImageBtn *****************************************
+15:22:30.801 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:22:36.632 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:22:36.632 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:23:27.376 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:23:27.383 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:23:36.410 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:23:36.443 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyTitle *****************************************
+15:23:37.679 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:26:13.917 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:26:13.921 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:26:26.825 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:26:26.852 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyTitle *****************************************
+15:26:26.863 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method Started
+15:26:26.874 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyTitle *****************************************
+15:26:27.648 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:29:43.154 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:29:43.165 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:29:53.966 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:29:54.010 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyTitle *****************************************
+15:29:54.020 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method Started
+15:29:54.035 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyTitle *****************************************
+15:29:55.089 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:30:01.886 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:30:01.887 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:30:12.045 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:30:12.047 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyCRMLogo *****************************************
+15:30:14.722 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:30:20.787 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:30:20.787 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:30:34.935 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:30:34.938 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyUserName *****************************************
+15:30:36.119 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:31:52.022 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:31:52.034 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:32:05.487 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:32:05.515 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyTitle *****************************************
+15:32:05.524 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method Started
+15:32:05.532 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyTitle *****************************************
+15:32:06.298 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:32:11.468 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:32:11.468 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:32:19.416 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:32:19.419 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyCRMLogo *****************************************
+15:32:19.573 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyCRMLogo *****************************************
+15:32:20.314 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:32:24.617 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:32:24.618 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:32:33.846 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:32:33.849 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyUserName *****************************************
+15:32:34.185 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyUserName *****************************************
+15:32:34.949 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:35:04.443 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:35:04.451 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:35:16.068 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:35:16.101 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyTitle *****************************************
+15:35:16.112 [main] INFO  com.TestCases.LandingPageTest - verifyTitle Method Started
+15:35:16.128 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyTitle *****************************************
+15:35:16.932 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:35:21.919 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+15:35:21.919 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+15:35:35.096 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+15:35:35.099 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyCRMLogo *****************************************
+15:35:35.224 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyCRMLogo *****************************************
+15:35:36.066 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+15:35:40.549 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
