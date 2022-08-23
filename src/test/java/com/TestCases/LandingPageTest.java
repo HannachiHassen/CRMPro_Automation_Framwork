@@ -8,10 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.Base.BasePage;
-import com.Base.BaseTest;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
@@ -20,7 +20,7 @@ import com.Utils.BrokenLinks;
 import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
-public class LandingPageTest extends BaseTest {
+public class LandingPageTest {
 	public WebDriver driver;
 	Logger log;
 	public Properties prop;
@@ -35,20 +35,28 @@ public class LandingPageTest extends BaseTest {
   		super();   //Call the Constructor of the Super class - BaseClass
   	}
     
-    /*@BeforeMethod	//this method will be executed before every @test method
-    public void setUp(){
+    @BeforeMethod	//this method will be executed before every @test method
+    @Parameters(value={"browser"})
+	public void setUP(String browser) {
     	log = LogManager.getLogger(LandingPageTest.class.getName());
     	
+    	String browserName = null;
     	baseClass=new BasePage();	
-    	prop = baseClass.initializeProperties();
-		driver = baseClass.initializeBrowser();
+        prop = baseClass.initializeProperties();
+		
+		if (browser == null) {
+			prop.setProperty("browser", browser);
+		}else {
+			browserName = browser;		
+		}
+		driver = baseClass.initializeBrowser(browserName);
 		
         log.debug("Browser got launched");
     	driver.get(prop.getProperty("url"));
     	log.debug("Navigated to application URL");
     	
     	landingPage=new LandingPage();        
-    }*/
+    }
 
     @Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
