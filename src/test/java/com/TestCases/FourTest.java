@@ -1,5 +1,7 @@
 package com.TestCases;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +18,8 @@ import com.Listeners.Listener;
 import com.Utils.BrokenImages;
 import com.Utils.BrokenLinks;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.model.Media;
 
 public class FourTest{
 	
@@ -55,7 +59,7 @@ public class FourTest{
 		System.out.println("TestFour");		
 		
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
-		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started testFour method ");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo testFourTest Method Started ");		
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");		
 		
 		log.debug("Browser got launched");
@@ -74,10 +78,11 @@ public class FourTest{
 		log.info("****************************** starting test case verifyBrokenlinks *****************************************");
     	    	
     	BrokenImages.validateInvalidImages();
-    	
-   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenImages method ");
-   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+	    	
+   		Listener.extentTestThread.get()
+   		 .log(Status.INFO, " Hey I'm in FourTest")
+   		 .log(Status.INFO, "Hellooo validateInvalidImages Method Started ")
+    	 .assignAuthor("QA Tester 1").assignCategory("Dummy Test");
    		
    		log.info("****************************** ending test case verifyBrokenImages *****************************************");
    	}
@@ -88,9 +93,14 @@ public class FourTest{
 		
     	BrokenLinks.myBrokenLinks();
     	
-   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyBrokenlinks method ");
+    	Listener.extentTestThread.get().createNode("INFO")
+		 .log(Status.INFO, " Hey I'm in FourTest")
+		 .log(Status.INFO, "Hellooo verifyBrokenImages Method Started ");    	
+  	
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+   		
+   		List<Object> items = Arrays.asList(new Object[] {"Hey I'm in FourTest", "Hellooo started verifyBrokenlinks method"});
+		Listener.extentTestThread.get().createNode("INFO").info(MarkupHelper.createOrderedList(items));
    		
    		log.info("****************************** ending test case verifyBrokenlinks *****************************************");
    	}

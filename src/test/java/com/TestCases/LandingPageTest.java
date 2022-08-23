@@ -120,7 +120,7 @@ public class LandingPageTest {
    		log.info("****************************** Ending Test Case verifyUserPassword *****************************************");
    	}
     
-   /* @Test(priority=4, description = "Verify Login Button is displayed")
+    @Test(priority=4, description = "Verify Login Button is displayed")
    	public void verifyLoginBtn(){
     	log.info("****************************** Starting Test Case verifyLoginBtn *****************************************");
     	
@@ -201,7 +201,7 @@ public class LandingPageTest {
    		
    		log.info("****************************** Ending Test Case verifyBrokenImages *****************************************");
    	}	
-        */
+        
     @AfterMethod(alwaysRun = true) //--this method will be executed after every test method
 	public void tearDown() {
     	driver.close();

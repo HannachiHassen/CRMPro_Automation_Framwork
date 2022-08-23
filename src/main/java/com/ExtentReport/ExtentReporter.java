@@ -9,8 +9,10 @@ import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReporter {
+	private static ExtentSparkReporter reporter;
 	static ExtentReports extentReport;
 	static String outputDirectory;
+	static String extentReportPath;
 
 	public static ExtentReports getExtentReport() {
 		try {
@@ -20,8 +22,8 @@ public class ExtentReporter {
 			e.printStackTrace();
 		   }
 		
-		String extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\HTMLExtentReportTestNG.html";
-		ExtentSparkReporter reporter = new ExtentSparkReporter(extentReportPath);
+		extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\HTMLExtentReportTestNG.html";
+		reporter = new ExtentSparkReporter(extentReportPath);	    
 		
 		extentReport = new ExtentReports();
 		
