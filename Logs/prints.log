@@ -37,3 +37,12 @@
 16:24:48.614 [main] INFO  com.TestCases.FourTest - ****************************** starting test case verifyBrokenlinks *****************************************
 16:24:58.266 [main] INFO  com.TestCases.FourTest - ****************************** ending test case verifyBrokenlinks *****************************************
 16:24:59.127 [main] INFO  com.TestCases.FourTest - ****************************** Browser is closed *****************************************
+18:39:17.658 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:39:27.835 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:39:34.972 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:43:07.493 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:43:43.985 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:44:22.308 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:46:54.392 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:47:32.833 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+18:48:13.936 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************

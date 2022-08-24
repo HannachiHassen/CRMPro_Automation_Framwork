@@ -22,7 +22,7 @@ public class ExtentReporter {
 			e.printStackTrace();
 		   }
 		
-		extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\HTMLExtentReportTestNG.html";
+		extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\ExtentReport.html";
 		reporter = new ExtentSparkReporter(extentReportPath);	    
 		
 		extentReport = new ExtentReports();

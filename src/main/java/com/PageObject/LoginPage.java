@@ -1,6 +1,5 @@
 package com.PageObject;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.Base.BasePage;
 
 public class LoginPage extends BasePage{
-	
-	private WebDriver driver;
 
 	//Load PageFactory(OR - Object Repository)
 	@FindBy(name="username")
@@ -29,15 +26,15 @@ public class LoginPage extends BasePage{
 
 	//Initializing PageFactory
 	public LoginPage() {
-		PageFactory.initElements(driver, this); //this --> points to current class object.
+		PageFactory.initElements(getDriver(), this); //this --> points to current class object.
 	}
 
 	public String validateLoginPageTitle() {
-		return driver.getTitle();
+		return getDriver().getTitle();
 	}
 
 	public Boolean validateCRMImage() {
-		return freeCRMLogo.isEnabled();
+		return freeCRMLogo.isDisplayed();
 	}
 
 	public LandingPage login(String uname , String pwd) {

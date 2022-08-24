@@ -7,13 +7,15 @@
   <test thread-count="5" name="CRM PRO LandingPage(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.TestCases.FourTest">
+      <class name="com.TestCases.LoginPageTest">
         <methods>
-          <include name="testFourTest"/>
+          <include name="loginPageTitleTest"/>
           <include name="setUP"/>
           <include name="tearDown"/>
+          <include name="CRMLogoImageTest"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.TestCases.FourTest -->
+      </class> <!-- com.TestCases.LoginPageTest -->
     </classes>
   </test> <!-- CRM PRO LandingPage(failed) -->
 </suite> <!-- Failed suite [Free CRM PRO Automation Test Suite] -->

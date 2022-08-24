@@ -56,7 +56,7 @@ public class BasePage{
     		if (envName == null) {
     			System.out.println("No env is given ..... hence running it on QA");
     			try {
-    				fis=new FileInputStream(System.getProperty("user.dir") + "./resources/config.properties");
+    				fis=new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/config.properties");
     			} catch (FileNotFoundException e) {
     				e.printStackTrace();
     			}
@@ -64,19 +64,19 @@ public class BasePage{
     			try {
     				switch (envName.toLowerCase()) {
     				case Environment.ENV_QA:
-    					fis= new FileInputStream(System.getProperty("user.dir") + "./resources/qa.config.properties");
+    					fis= new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/qa.config.properties");
     					break;
     				case Environment.ENV_DEV:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/dev.config.properties");
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/dev.config.properties");
     					break;
     				case Environment.ENV_STAGE:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/stage.config.properties");
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/stage.config.properties");
     					break;
     				case Environment.ENV_UAT:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./resources/uat.config.properties");
+    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/uat.config.properties");
     					break;
     				case Environment.ENV_PROD:
-    					fis =new FileInputStream(System.getProperty("user.dir") + "./resources/prod.config.properties");
+    					fis =new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/prod.config.properties");
     					break;
     				default:
     					System.out.println("Please pass the right enviroment value ..."+ envName);

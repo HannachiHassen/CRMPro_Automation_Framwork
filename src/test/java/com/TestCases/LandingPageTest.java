@@ -22,7 +22,7 @@ import com.aventstack.extentreports.Status;
 
 public class LandingPageTest {
 	public WebDriver driver;
-	public BasePage baseClass;
+	public BasePage basePage;
 	public Properties prop;
     Logger log;
 	
@@ -41,15 +41,15 @@ public class LandingPageTest {
     	log = LogManager.getLogger(LandingPageTest.class.getName());
     	
     	String browserName = null;
-    	baseClass=new BasePage();	
-        prop = baseClass.initializeProperties();
+    	basePage=new BasePage();	
+        prop = basePage.initializeProperties();
 		
 		if (browser == null) {
 			prop.setProperty("browser", browser);
 		}else {
 			browserName = browser;		
 		}
-		driver = baseClass.initializeBrowser(browserName);
+		driver = basePage.initializeBrowser(browserName);
 		log.info("****************************** Browser is launched *****************************************");
 		
         log.debug("Browser got launched");
@@ -65,9 +65,7 @@ public class LandingPageTest {
 		
     	String title=landingPage.validateHomePageTitle();
     	Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.", "Home Page Title does not Matche");
-    	
-    	log.info("verifyTitle Method Started");
-		
+    	   
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyTitle method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test").assignDevice("Windows HP");

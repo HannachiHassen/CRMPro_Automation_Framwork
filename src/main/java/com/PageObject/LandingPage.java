@@ -1,8 +1,8 @@
 package com.PageObject;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,16 +13,22 @@ import com.Utils.ElementUtils;
 public class LandingPage extends BasePage {
 
 	By CRMLog = By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
+	@CacheLookup
 
 	By userNameLabel = By.xpath("//input[@name='username']");
+	@CacheLookup
 
 	By userPasswordLabel = By.xpath("//input[@name='password']");
+	@CacheLookup
 
 	By loginBtn = By.xpath("//input[@type='submit']");
+	@CacheLookup
 
 	By singUpLink = By.xpath("//a[contains(text(),'Sign Up')]");
+	@CacheLookup
 
 	By pricingLink = By.xpath("//a[contains(text(),'Pricing')]");
+	@CacheLookup
 
 	By featuresLink = By.xpath("//a[contains(text(),'Features')]");
 
