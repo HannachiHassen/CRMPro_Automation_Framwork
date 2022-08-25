@@ -5,3 +5,24 @@
 13:10:50.531 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifyBrokenImages *****************************************
 13:10:52.884 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifyBrokenImages *****************************************
 13:10:53.747 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+14:23:06.508 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+14:23:06.683 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:23:17.594 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:23:18.054 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifySignUpLink *****************************************
+14:23:23.675 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+14:30:59.338 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+14:30:59.344 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:31:03.742 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:31:03.841 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifySignUpLink *****************************************
+14:31:03.891 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifySignUpLink *****************************************
+14:31:04.735 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is Closed *****************************************
+14:31:59.926 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+14:31:59.931 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:32:03.109 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:32:03.147 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifySignUpLink *****************************************
+14:32:03.256 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifySignUpLink *****************************************
+14:44:50.473 [main] INFO  com.TestCases.LandingPageTest - ****************************** Browser is launched *****************************************
+14:44:50.693 [main] DEBUG com.TestCases.LandingPageTest - Browser got launched
+14:44:53.160 [main] DEBUG com.TestCases.LandingPageTest - Navigated to application URL
+14:44:53.309 [main] INFO  com.TestCases.LandingPageTest - ****************************** Starting Test Case verifySignUpLink *****************************************
+14:44:54.341 [main] INFO  com.TestCases.LandingPageTest - ****************************** Ending Test Case verifySignUpLink *****************************************

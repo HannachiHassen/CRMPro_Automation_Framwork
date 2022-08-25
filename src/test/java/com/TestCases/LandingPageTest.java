@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -15,9 +16,9 @@ import com.Base.BasePage;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
 import com.PageObject.LoginPage;
+import com.PageObject.SignUpPage;
 import com.Utils.BrokenImages;
 import com.Utils.BrokenLinks;
-import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
 public class LandingPageTest {
@@ -28,7 +29,7 @@ public class LandingPageTest {
 	
     public LandingPage landingPage;
     public LoginPage loginPage;
-    public ElementUtils elementUtils;
+    public SignUpPage signUpPage;
     
   //Initializing PageFactory
   	public LandingPageTest() {
@@ -59,7 +60,7 @@ public class LandingPageTest {
     	landingPage=new LandingPage();        
     }
 
-    @Test(priority=0, description = "Verify Home Page Title")
+    /*@Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
     	log.info("****************************** Starting Test Case verifyTitle *****************************************");
 		
@@ -229,9 +230,22 @@ public class LandingPageTest {
    		System.out.println(footertext);   		
    		
    		log.info("****************************** Ending Test Case verifyFooterText *****************************************");
+   	}*/
+    
+    @Test(priority=12, description = "Verify SignUp Link")
+   	public void verifySignUpLink(){
+    	log.info("****************************** Starting Test Case verifySignUpLink *****************************************");
+    	
+    	Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifySignUpLink Method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		signUpPage=landingPage.clickOnSignUpLink();
+   		
+   		log.info("****************************** Ending Test Case verifySignUpLink *****************************************");
    	}
     
-    @Test(priority=12, description = "Verify Broken links")
+    /*@Test(priority=13, description = "Verify Broken links")
    	public void verifyBrokenlinks(){
     	log.info("****************************** Starting Test Case verifyBrokenlinks *****************************************");
     	
@@ -244,7 +258,7 @@ public class LandingPageTest {
    		log.info("****************************** Ending Test Case verifyBrokenlinks *****************************************");
    	}
     
-    @Test(priority=13, description = "Find broken images on a web page")
+    @Test(priority=14, description = "Find broken images on a web page")
    	public void verifyBrokenImages(){
     	log.info("****************************** Starting Test Case verifyBrokenImages *****************************************");
     	
@@ -265,5 +279,5 @@ public class LandingPageTest {
 		}
 	log.info("****************************** Browser is Closed *****************************************");
 		
-	}
+	}*/
 }

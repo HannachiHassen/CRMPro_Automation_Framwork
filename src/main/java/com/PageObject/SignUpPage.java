@@ -60,17 +60,5 @@ public class SignUpPage extends BasePage {
 
 	public Boolean validateCRMImage() {
 		return SignUpLogo.isDisplayed();
-	}
-	
-	public boolean name() {
-		return edition.isDisplayed();		
-	}
-
-	public boolean selectEditionAbove() {
-		return selectEditionAbove.isDisplayed();
 	}	
-	
-	public boolean isDisplayed() {
-		return allFieldsAreRequired.isDisplayed();
-	}		
 }

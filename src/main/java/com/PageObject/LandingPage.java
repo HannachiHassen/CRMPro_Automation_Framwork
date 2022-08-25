@@ -3,6 +3,7 @@ package com.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,10 +23,11 @@ public class LandingPage extends BasePage {
 	@CacheLookup
 
 	By loginBtn = By.xpath("//input[@type='submit']");
+	
+	
+	@FindBy(xpath="//a[contains(text(),'Sign Up')]")
 	@CacheLookup
-
-	By singUpLink = By.xpath("//a[contains(text(),'Sign Up')]");
-	@CacheLookup
+	private WebElement signUpLink;
 
 	By pricingLink = By.xpath("//a[contains(text(),'Pricing')]");
 	@CacheLookup
@@ -91,9 +93,13 @@ public class LandingPage extends BasePage {
 		return ElementUtils.waitForElementPresence(getDriver(), interactionChat, 30);
 	}	
 
-	public void clickSigninLink() {
+	public SignUpPage clickOnSignUpLink() {
 		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.elementToBeClickable(singUpLink));
+		wait.until(ExpectedConditions.visibilityOf(signUpLink));
+		
+		signUpLink.click();
+		
+		return new SignUpPage();
 	}
 
 	public void clickOnPricingLink() {
