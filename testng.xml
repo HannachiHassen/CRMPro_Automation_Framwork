@@ -8,7 +8,7 @@
     <test name="CRM PRO LandingPage">
         <parameter name="browser" value="chrome" />
         <classes>        
-            <class name="com.TestCases.LoginPageTest"/> 
+            <class name="com.TestCases.LandingPageTest"/> 
             
         </classes>
     </test> <!-- Test -->

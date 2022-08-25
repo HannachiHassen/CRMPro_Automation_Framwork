@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">ExtentReports - CRMPro Automation</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 23, 2022 06:46:39 PM</span></a>
+<a href="#"><span class="badge badge-primary">Aug 25, 2022 01:06:11 PM</span></a>
 </li>
 </ul>
 </div>
@@ -50,6 +50,21 @@
 <li class="nav-item dropdown" onclick="toggleView('exception-view')">
 <a id="nav-exception" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -71,87 +86,83 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">QATester1</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">LandingPageTest</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">WindowsHP</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
-          author=""
-          tag=""
-          device="">
+        <li class="test-item"  status="pass" test-id="1"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="WindowsHP">
           <div class="test-detail">
-            <p class="name">com.TestCases.LoginPageTest @ loginPageTitleTest @ </p>
+            <p class="name">com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title</p>
             <p class="text-sm">
-              <span>6:46:52 PM</span> / <span>00:00:00:603</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>1:06:24 PM</span> / <span>00:00:00:027</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">com.TestCases.LoginPageTest @ loginPageTitleTest @ </h5>
-<span class='badge badge-success'>08.23.2022 6:46:52 PM</span>
-<span class='badge badge-danger'>08.23.2022 6:46:53 PM</span>
-<span class='badge badge-default'>00:00:00:603</span>
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title</h5>
+<span class='badge badge-success'>08.25.2022 1:06:24 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:06:24 PM</span>
+<span class='badge badge-default'>00:00:00:027</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span>
+<span class="badge badge-pill badge-default">WindowsHP</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginPageTitleTest.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginPageTitleTest.png">
-    <div class="title">loginPageTitleTest</div>
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:46:52 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:24 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: Home Page Title does not Matche expected [CRMPRO - CRM software for customer relationship management, sales, and support.] but found []
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at com.TestCases.LoginPageTest.loginPageTitleTest(LoginPageTest.java:44)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:24 PM</td>
+        <td>
+          Hellooo started verifyTitle method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:06:24 PM</td>
+        <td>
+          verifyTitle Test Passed
         </td>
       </tr>
   </tbody>
@@ -159,70 +170,344 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="2"
-          author=""
-          tag=""
+        <li class="test-item"  status="pass" test-id="2"
+          author="QATester1"
+          tag="LandingPageTest"
           device="">
           <div class="test-detail">
-            <p class="name">com.TestCases.LoginPageTest @ CRMLogoImageTest @ </p>
+            <p class="name">com.TestCases.LandingPageTest @ verifyCRMLogo @ Verify CRM Logo Image is Present in Home Page</p>
             <p class="text-sm">
-              <span>6:47:00 PM</span> / <span>00:00:31:292</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>1:06:37 PM</span> / <span>00:00:00:130</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">com.TestCases.LoginPageTest @ CRMLogoImageTest @ </h5>
-<span class='badge badge-success'>08.23.2022 6:47:00 PM</span>
-<span class='badge badge-danger'>08.23.2022 6:47:31 PM</span>
-<span class='badge badge-default'>00:00:31:292</span>
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyCRMLogo @ Verify CRM Logo Image is Present in Home Page</h5>
+<span class='badge badge-success'>08.25.2022 1:06:37 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:06:37 PM</span>
+<span class='badge badge-default'>00:00:00:130</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:37 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:37 PM</td>
+        <td>
+          Hellooo started verifyCRMLogo method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:06:37 PM</td>
+        <td>
+          verifyCRMLogo Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyUserName @ Verify User name box is displayed</p>
+            <p class="text-sm">
+              <span>1:06:52 PM</span> / <span>00:00:00:181</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyUserName @ Verify User name box is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:06:52 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:06:52 PM</span>
+<span class='badge badge-default'>00:00:00:181</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:52 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:06:52 PM</td>
+        <td>
+          Hellooo started verifyUserName method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:06:52 PM</td>
+        <td>
+          verifyUserName Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyUserPassword @ Verify User password box is displayed</p>
+            <p class="text-sm">
+              <span>1:07:24 PM</span> / <span>00:00:00:101</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyUserPassword @ Verify User password box is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:07:24 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:07:24 PM</span>
+<span class='badge badge-default'>00:00:00:101</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:07:24 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:07:24 PM</td>
+        <td>
+          Hellooo started verifyUserPassword method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:07:24 PM</td>
+        <td>
+          verifyUserPassword Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyLoginBtn @ Verify Login Button is displayed</p>
+            <p class="text-sm">
+              <span>1:07:58 PM</span> / <span>00:00:00:154</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyLoginBtn @ Verify Login Button is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:07:58 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:07:58 PM</span>
+<span class='badge badge-default'>00:00:00:154</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:07:58 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:07:58 PM</td>
+        <td>
+          Hellooo started verifyLoginBtn method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:07:58 PM</td>
+        <td>
+          verifyLoginBtn Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyMouseLink @ Verify Mouse Link is displayed</p>
+            <p class="text-sm">
+              <span>1:08:36 PM</span> / <span>00:00:00:106</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyMouseLink @ Verify Mouse Link is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:08:36 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:08:36 PM</span>
+<span class='badge badge-default'>00:00:00:106</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:08:36 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:08:36 PM</td>
+        <td>
+          Hellooo started verifyMouseLink method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:08:36 PM</td>
+        <td>
+          verifyMouseLink Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed</p>
+            <p class="text-sm">
+              <span>1:08:56 PM</span> / <span>00:00:02:451</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:08:56 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:08:58 PM</span>
+<span class='badge badge-default'>00:00:02:451</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\CRMLogoImageTest.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\CRMLogoImageTest.png">
-    <div class="title">CRMLogoImageTest</div>
+<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyinteractionChatIcon.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyinteractionChatIcon.png">
+    <div class="title">verifyinteractionChatIcon</div>
     </div></div>
 <div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:47:31 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:08:56 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[contains(@class,'img-responsive')]"}
-  (Session info: chrome=104.0.5112.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HASSEN-HP', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HASSEN\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59123}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 32d71a47f5de016c6f3445920cdc91bc
-*** Element info: {Using=xpath, value=//img[contains(@class,'img-responsive')]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy29.isDisplayed(Unknown Source)
-	at com.PageObject.LoginPage.validateCRMImage(LoginPage.java:37)
-	at com.TestCases.LoginPageTest.CRMLogoImageTest(LoginPageTest.java:51)
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:08:56 PM</td>
+        <td>
+          Hellooo started verifyinteractionChatIcon method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:08:57 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.TestCases.LandingPageTest.verifyinteractionChatIcon(LandingPageTest.java:158)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -260,14 +545,238 @@ Session ID: 32d71a47f5de016c6f3445920cdc91bc
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="3"
-          author=""
-          tag=""
+        <li class="test-item"  status="pass" test-id="8"
+          author="QATester1"
+          tag="LandingPageTest"
           device="">
           <div class="test-detail">
-            <p class="name">com.TestCases.LoginPageTest @ loginTest @ </p>
+            <p class="name">com.TestCases.LandingPageTest @ verifyCarouslRightBtn @ Verify Carsoul Right Button is displayed</p>
             <p class="text-sm">
-              <span>6:47:42 PM</span> / <span>00:00:30:233</span>
+              <span>1:09:12 PM</span> / <span>00:00:00:063</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyCarouslRightBtn @ Verify Carsoul Right Button is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:09:12 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:09:12 PM</span>
+<span class='badge badge-default'>00:00:00:063</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:12 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:12 PM</td>
+        <td>
+          Hellooo started verifyCarouslRightBtn method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:09:12 PM</td>
+        <td>
+          verifyCarouslRightBtn Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyCarouslLeftBtn @ Verify Carsoul Left Button is displayed</p>
+            <p class="text-sm">
+              <span>1:09:27 PM</span> / <span>00:00:00:055</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyCarouslLeftBtn @ Verify Carsoul Left Button is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:09:27 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:09:27 PM</span>
+<span class='badge badge-default'>00:00:00:055</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:27 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:27 PM</td>
+        <td>
+          Hellooo started verifyclickCarouselLeftBtn method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:09:27 PM</td>
+        <td>
+          verifyCarouslLeftBtn Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyForgetPasswordLink @ Verify Forget Password Link is displayed</p>
+            <p class="text-sm">
+              <span>1:09:42 PM</span> / <span>00:00:00:065</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyForgetPasswordLink @ Verify Forget Password Link is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:09:42 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:09:42 PM</span>
+<span class='badge badge-default'>00:00:00:065</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:42 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:42 PM</td>
+        <td>
+          Hellooo Started verifyForgetPasswordLink Method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:09:42 PM</td>
+        <td>
+          verifyForgetPasswordLink Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyGoToTopBtn @ Verify Go To Top Button is displayed</p>
+            <p class="text-sm">
+              <span>1:09:55 PM</span> / <span>00:00:00:065</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyGoToTopBtn @ Verify Go To Top Button is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:09:55 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:09:55 PM</span>
+<span class='badge badge-default'>00:00:00:065</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:55 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:09:55 PM</td>
+        <td>
+          Hellooo Started verifyGoToTopBtn Method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:09:55 PM</td>
+        <td>
+          verifyGoToTopBtn Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed</p>
+            <p class="text-sm">
+              <span>1:10:09 PM</span> / <span>00:00:00:250</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -275,55 +784,51 @@ Session ID: 32d71a47f5de016c6f3445920cdc91bc
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">com.TestCases.LoginPageTest @ loginTest @ </h5>
-<span class='badge badge-success'>08.23.2022 6:47:42 PM</span>
-<span class='badge badge-danger'>08.23.2022 6:48:12 PM</span>
-<span class='badge badge-default'>00:00:30:233</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<h5 class="test-status text-fail">com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed</h5>
+<span class='badge badge-success'>08.25.2022 1:10:09 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:10:10 PM</span>
+<span class='badge badge-default'>00:00:00:250</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginTest.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginTest.png">
-    <div class="title">loginTest</div>
+<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyFooterText.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyFooterText.png">
+    <div class="title">verifyFooterText</div>
     </div></div>
 <div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:48:12 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:09 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=104.0.5112.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HASSEN-HP', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HASSEN\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 81ee44bdd837e5c844735f9db6c6674c
-*** Element info: {Using=name, value=username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByName.findElement(By.java:284)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy29.sendKeys(Unknown Source)
-	at com.PageObject.LoginPage.login(LoginPage.java:41)
-	at com.TestCases.LoginPageTest.loginTest(LoginPageTest.java:57)
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:09 PM</td>
+        <td>
+          Hellooo Started verifyGoToTopBtn Method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:10:09 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:45)
+	at com.Utils.ElementUtils.waitForElementPresence(ElementUtils.java:48)
+	at com.PageObject.LandingPage.verifyFoorter(LandingPage.java:131)
+	at com.TestCases.LandingPageTest.verifyFooterText(LandingPageTest.java:225)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -354,6 +859,118 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </textarea>
           
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyBrokenlinks @ Verify Broken links</p>
+            <p class="text-sm">
+              <span>1:10:26 PM</span> / <span>00:00:07:114</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyBrokenlinks @ Verify Broken links</h5>
+<span class='badge badge-success'>08.25.2022 1:10:26 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:10:33 PM</span>
+<span class='badge badge-default'>00:00:07:114</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:33 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:33 PM</td>
+        <td>
+          Hellooo started verifyBrokenlinks method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:10:33 PM</td>
+        <td>
+          verifyBrokenlinks Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author="QATester1"
+          tag="LandingPageTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">com.TestCases.LandingPageTest @ verifyBrokenImages @ Find broken images on a web page</p>
+            <p class="text-sm">
+              <span>1:10:50 PM</span> / <span>00:00:02:356</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">com.TestCases.LandingPageTest @ verifyBrokenImages @ Find broken images on a web page</h5>
+<span class='badge badge-success'>08.25.2022 1:10:50 PM</span>
+<span class='badge badge-danger'>08.25.2022 1:10:52 PM</span>
+<span class='badge badge-default'>00:00:02:356</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
+<span class="badge badge-pill badge-default">LandingPageTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:52 PM</td>
+        <td>
+           Hey I'm in LandingPageTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:10:52 PM</td>
+        <td>
+          Hellooo started verifyBrokenImages method 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:10:52 PM</td>
+        <td>
+          verifyBrokenImages Test Passed
         </td>
       </tr>
   </tbody>
@@ -381,46 +998,6 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:47:00 PM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>com.TestCases.LoginPageTest @ CRMLogoImageTest @ </a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:47:42 PM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>com.TestCases.LoginPageTest @ loginTest @ </a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
@@ -442,9 +1019,375 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:46:52 PM</td>
+<td>13:08:56 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>com.TestCases.LoginPageTest @ loginPageTitleTest @ </a>
+<a href="#" class="linked" test-id='7' id='7'>com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:10:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>12</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">LandingPageTest</p>
+<p class="duration text-sm">14 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>LandingPageTest</h4>
+<span status="pass" class='badge log pass-bg'>12 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>com.TestCases.LandingPageTest @ verifyCRMLogo @ Verify CRM Logo Image is Present in Home Page</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>com.TestCases.LandingPageTest @ verifyUserName @ Verify User name box is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>com.TestCases.LandingPageTest @ verifyUserPassword @ Verify User password box is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>com.TestCases.LandingPageTest @ verifyLoginBtn @ Verify Login Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:08:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>com.TestCases.LandingPageTest @ verifyMouseLink @ Verify Mouse Link is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>com.TestCases.LandingPageTest @ verifyCarouslRightBtn @ Verify Carsoul Right Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>com.TestCases.LandingPageTest @ verifyCarouslLeftBtn @ Verify Carsoul Left Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>com.TestCases.LandingPageTest @ verifyForgetPasswordLink @ Verify Forget Password Link is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>com.TestCases.LandingPageTest @ verifyGoToTopBtn @ Verify Go To Top Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:10:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>com.TestCases.LandingPageTest @ verifyBrokenlinks @ Verify Broken links</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>com.TestCases.LandingPageTest @ verifyBrokenImages @ Find broken images on a web page</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">WindowsHP</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>WindowsHP</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>12</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">QATester1</p>
+<p class="duration text-sm">14 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>QATester1</h4>
+<span status="pass" class='badge log pass-bg'>12 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>com.TestCases.LandingPageTest @ verifyCRMLogo @ Verify CRM Logo Image is Present in Home Page</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>com.TestCases.LandingPageTest @ verifyUserName @ Verify User name box is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>com.TestCases.LandingPageTest @ verifyUserPassword @ Verify User password box is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>com.TestCases.LandingPageTest @ verifyLoginBtn @ Verify Login Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:08:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>com.TestCases.LandingPageTest @ verifyMouseLink @ Verify Mouse Link is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>com.TestCases.LandingPageTest @ verifyCarouslRightBtn @ Verify Carsoul Right Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>com.TestCases.LandingPageTest @ verifyCarouslLeftBtn @ Verify Carsoul Left Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>com.TestCases.LandingPageTest @ verifyForgetPasswordLink @ Verify Forget Password Link is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:09:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>com.TestCases.LandingPageTest @ verifyGoToTopBtn @ Verify Go To Top Button is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:10:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>com.TestCases.LandingPageTest @ verifyBrokenlinks @ Verify Broken links</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>com.TestCases.LandingPageTest @ verifyBrokenImages @ Find broken images on a web page</a>
 </td>
 </tr>
 </tbody>
@@ -464,25 +1407,25 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 23, 2022 06:46:39 PM</h3>
+<h3>Aug 25, 2022 01:06:11 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 23, 2022 06:48:14 PM</h3>
+<h3>Aug 25, 2022 01:10:53 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>0</h3>
+<h3>12</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>3</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -498,12 +1441,12 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> tests passed
+<div><small data-tooltip='85%'>
+<b>12</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>3</b> tests failed,
+<small data-tooltip='14%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -521,10 +1464,10 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='28%'><b>12</b> events passed</small></div>
 <div>
-<small data-tooltip='100%'><b>3</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='4%'><b>2</b> events failed,
+<b data-tooltip='%'>28</b> others
 </small>
 </div>
 </div>
@@ -540,10 +1483,63 @@ Session ID: 81ee44bdd837e5c844735f9db6c6674c
 </div></div>
 <script>
 var timeline = {
-"com.TestCases.LoginPageTest @ loginPageTitleTest @ ":0.603,"com.TestCases.LoginPageTest @ CRMLogoImageTest @ ":31.292,"com.TestCases.LoginPageTest @ loginTest @ ":30.233
+"com.TestCases.LandingPageTest @ verifyTitle @ Verify Home Page Title":0.027,"com.TestCases.LandingPageTest @ verifyCRMLogo @ Verify CRM Logo Image is Present in Home Page":0.13,"com.TestCases.LandingPageTest @ verifyUserName @ Verify User name box is displayed":0.181,"com.TestCases.LandingPageTest @ verifyUserPassword @ Verify User password box is displayed":0.101,"com.TestCases.LandingPageTest @ verifyLoginBtn @ Verify Login Button is displayed":0.154,"com.TestCases.LandingPageTest @ verifyMouseLink @ Verify Mouse Link is displayed":0.106,"com.TestCases.LandingPageTest @ verifyinteractionChatIcon @ Verify interaction Chat Icon is displayed":2.451,"com.TestCases.LandingPageTest @ verifyCarouslRightBtn @ Verify Carsoul Right Button is displayed":0.063,"com.TestCases.LandingPageTest @ verifyCarouslLeftBtn @ Verify Carsoul Left Button is displayed":0.055,"com.TestCases.LandingPageTest @ verifyForgetPasswordLink @ Verify Forget Password Link is displayed":0.065,"com.TestCases.LandingPageTest @ verifyGoToTopBtn @ Verify Go To Top Button is displayed":0.065,"com.TestCases.LandingPageTest @ verifyFooterText @ Verify Footer is displayed":0.25,"com.TestCases.LandingPageTest @ verifyBrokenlinks @ Verify Broken links":7.114,"com.TestCases.LandingPageTest @ verifyBrokenImages @ Find broken images on a web page":2.356
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>QATester1</td>
+<td>12</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>85.714%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>LandingPageTest</td>
+<td>12</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>85.714%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>WindowsHP</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -595,8 +1591,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 3,
+passParent: 12,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -612,11 +1608,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 3,
+passEvents: 12,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 28
 };
 </script>        </div>
       </div>

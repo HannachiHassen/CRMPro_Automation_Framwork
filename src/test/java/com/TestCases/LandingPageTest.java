@@ -151,30 +151,87 @@ public class LandingPageTest {
    	public void verifyinteractionChatIcon(){
     	log.info("****************************** Starting Test Case verifyinteractionChatIcon *****************************************");
     	
-   		Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
-   		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled());    		
-   		
-   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+    	Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyinteractionChatIcon method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+    	Assert.assertTrue(landingPage.verifyChatIcon().isDisplayed());
+   		Assert.assertTrue(landingPage.verifyChatIcon().isEnabled()); 
    		
    		log.info("****************************** Ending Test Case verifyinteractionChatIcon *****************************************");
    	}
     
-    @Test(priority=7, description = "Verify interaction Chat Icon is displayed")
-   	public void verifyCarouslImageBtn(){
-    	log.info("****************************** Starting Test Case verifyCarouslImageBtn *****************************************");
+    @Test(priority=7, description = "Verify Carsoul Right Button is displayed")
+   	public void verifyCarouslRightBtn(){
+    	log.info("****************************** Starting Test Case verifyCarouslRightBtn *****************************************");
     	
-   		Assert.assertTrue(landingPage.verifyclickCarouselBtn().isDisplayed());   		
+   		Assert.assertTrue(landingPage.verifyclickCarouselRightBtn().isDisplayed());   		
    		
    		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCarouslImageBtn method ");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCarouslRightBtn method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    		
-   		log.info("****************************** Ending Test Case verifyCarouslImageBtn *****************************************");
+   		log.info("****************************** Ending Test Case verifyCarouslRightBtn *****************************************");
    	}
     
-    @Test(priority=8, description = "Verify Broken links")
+    @Test(priority=8, description = "Verify Carsoul Left Button is displayed")
+   	public void verifyCarouslLeftBtn(){
+    	log.info("****************************** Starting Test Case verifyclickCarouselLeftBtn *****************************************");
+    	
+   		Assert.assertTrue(landingPage.verifyclickCarouselLeftBtn().isDisplayed());   		
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyclickCarouselLeftBtn method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyclickCarouselLeftBtn *****************************************");
+   	}
+    
+    
+    @Test(priority=9, description = "Verify Forget Password Link is displayed")
+   	public void verifyForgetPasswordLink(){
+    	log.info("****************************** Starting Test Case verifyForgetPasswordLink *****************************************");
+    	
+   		Assert.assertTrue(landingPage.clickforgetPasswordLink().isDisplayed());   		
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifyForgetPasswordLink Method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyForgetPasswordLink *****************************************");
+   	}
+    
+    @Test(priority=10, description = "Verify Go To Top Button is displayed")
+   	public void verifyGoToTopBtn(){
+    	log.info("****************************** Starting Test Case verifyGoToTopBtn *****************************************");
+    	
+   		Assert.assertTrue(landingPage.clickGoTopBtn().isDisplayed());   		
+   		
+   		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifyGoToTopBtn Method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		log.info("****************************** Ending Test Case verifyGoToTopBtn *****************************************");
+   	}
+    
+    @Test(priority=11, description = "Verify Footer is displayed")
+   	public void verifyFooterText(){
+    	log.info("****************************** Starting Test Case verifyFooterText *****************************************");
+    	
+    	Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifyGoToTopBtn Method ");
+   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		Assert.assertTrue(landingPage.verifyFoorter().isDisplayed());
+   		Assert.assertTrue(false, landingPage.verifyFoorter().getText());
+   		
+   		String footertext= landingPage.verifyFoorter().getText();
+   		System.out.println(footertext);   		
+   		
+   		log.info("****************************** Ending Test Case verifyFooterText *****************************************");
+   	}
+    
+    @Test(priority=12, description = "Verify Broken links")
    	public void verifyBrokenlinks(){
     	log.info("****************************** Starting Test Case verifyBrokenlinks *****************************************");
     	
@@ -187,7 +244,7 @@ public class LandingPageTest {
    		log.info("****************************** Ending Test Case verifyBrokenlinks *****************************************");
    	}
     
-    @Test(priority=9, description = "Find broken images on a web page")
+    @Test(priority=13, description = "Find broken images on a web page")
    	public void verifyBrokenImages(){
     	log.info("****************************** Starting Test Case verifyBrokenImages *****************************************");
     	
