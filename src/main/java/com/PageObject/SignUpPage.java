@@ -1,43 +1,76 @@
 package com.PageObject;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 import com.Base.BasePage;
 
-public class SignUpPage extends BasePage{
+public class SignUpPage extends BasePage {
+
+	@FindBy(xpath="//img[@src='https://classic.crmpro.com/img/logo.png']")
+	@CacheLookup 
+	private WebElement SignUpLogo;
 	
-	@FindBy(xpath="//a[@class='navbar-brand']")
-	WebElement SignUpLogo ;
+	@FindBy(xpath="//select[@id='payment_plan_id']") 
+	@CacheLookup 
+	private WebElement edition;
 	
-	//select[@id='payment_plan_id']
+	@FindBy(xpath="//div[@id='editionText']") 
+	@CacheLookup 
+	private WebElement selectEditionAbove;
+
+	@FindBy(xpath = "//input[@placeholder='First Name']")
+	WebElement FirstName;
+
+	@FindBy(xpath="//input[@placeholder='Last Name']")
+	WebElement LastName;
+
+	@FindBy(xpath="//input[@placeholder='Email']")
+	WebElement Email;
+
+	@FindBy(xpath="//input[@placeholder='Confirm Email']")
+	WebElement ConfirmEmail;
+
+	@FindBy(xpath="//input[@placeholder='Username']") 
+	WebElement Username;
+
+	@FindBy(xpath="//input[@placeholder='Password']")
+	WebElement Password;
 	
-	//input[@placeholder='First Name']
+	@FindBy(xpath="//input[@placeholder='Confirm Password']")
+	WebElement ConfirmPassword;
 	
-	//input[@placeholder='Last Name']
+	@FindBy(xpath="//form[@id='multipleForm']//div//span") 
+	@CacheLookup 
+	private WebElement allFieldsAreRequired;
 	
-	//input[@placeholder='Email']
+	@FindBy(xpath="//input[@name='agreeTerms']")
+	WebElement agreeTerms;
 	
-	//input[@placeholder='Confirm Email']
+	@FindBy(xpath="//div[@class='myButton']")
+	WebElement myButton;
 	
-	//input[@placeholder='Username']
+	@FindBy(xpath="//a[normalize-space()='Forgot Password?']")
+	WebElement ForgotPassword;
 	
-	//input[@placeholder='Password']
-	
-	//input[@placeholder='Confirm Password']
-	
-	//input[@name='agreeTerms']
-	
-	//div[@class='myButton']
-	
-	//a[normalize-space()='Forgot Password?']
-	
-		
 	public String validateLoginPageTitle() {
 		return getDriver().getTitle();
 	}
-	
+
 	public Boolean validateCRMImage() {
 		return SignUpLogo.isDisplayed();
 	}
+	
+	public boolean name() {
+		return edition.isDisplayed();		
+	}
+
+	public boolean selectEditionAbove() {
+		return selectEditionAbove.isDisplayed();
+	}	
+	
+	public boolean isDisplayed() {
+		return allFieldsAreRequired.isDisplayed();
+	}		
 }

@@ -128,6 +128,6 @@ public class LandingPage extends BasePage {
 	}	
 	
 	public WebElement verifyFoorter() {
-		return ElementUtils.waitForElementPresence(e_driver, footer, 30);		
+		return ElementUtils.waitForElementPresence(getDriver(), footer, 30);		
 	}
 }
