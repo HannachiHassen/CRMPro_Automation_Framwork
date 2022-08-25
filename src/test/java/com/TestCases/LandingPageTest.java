@@ -79,12 +79,12 @@ public class LandingPageTest {
 	public void verifyCRMLogo() {
     	log.info("****************************** Starting Test Case verifyCRMLogo *****************************************");
     	    	
-		Boolean b = landingPage.validateCRMImage();
-		Assert.assertTrue(b);
-		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
+    	Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyCRMLogo method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+		    	
+		Boolean b = landingPage.validateCRMImage();
+		Assert.assertTrue(b);		
 		
 		log.info("****************************** Ending Test Case verifyCRMLogo *****************************************");
 	}
@@ -239,6 +239,8 @@ public class LandingPageTest {
     	Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifySignUpLink Method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
+   		
+   		Assert.assertTrue(landingPage.verifySignUpLink().isDisplayed());
    		
    		signUpPage=landingPage.clickOnSignUpLink();
    		

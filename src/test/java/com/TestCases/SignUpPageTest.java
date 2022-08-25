@@ -13,9 +13,7 @@ import org.testng.annotations.Test;
 import com.Base.BasePage;
 import com.Listeners.Listener;
 import com.PageObject.LandingPage;
-import com.PageObject.LoginPage;
 import com.PageObject.SignUpPage;
-import com.Utils.ElementUtils;
 import com.aventstack.extentreports.Status;
 
 public class SignUpPageTest extends BasePage{
@@ -25,10 +23,8 @@ public class SignUpPageTest extends BasePage{
     Logger log;
 	
     public LandingPage landingPage;
-    public LoginPage loginPage;
     public SignUpPage signUpPage;
-    public ElementUtils elementUtils;  
-    
+     
     public SignUpPageTest() {
 		super();
 	}
@@ -54,8 +50,7 @@ public class SignUpPageTest extends BasePage{
     	driver.get(prop.getProperty("url"));
     	log.debug("Navigated to application URL");
     	
-		signUpPage = new SignUpPage();
-		
+    	landingPage=new LandingPage();
 		signUpPage=landingPage.clickOnSignUpLink();
 	}
     
@@ -83,8 +78,7 @@ public class SignUpPageTest extends BasePage{
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifyCRMLogo Method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("SignUpPage Test");
    		
-		Boolean b = signUpPage.validateCRMImage();
-		Assert.assertTrue(b);
+		Assert.assertTrue(signUpPage.validateCRMImage());
 		
 		log.info("****************************** Ending Test Case verifyCRMLogo *****************************************");
 	}

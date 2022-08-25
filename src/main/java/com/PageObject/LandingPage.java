@@ -3,7 +3,6 @@ package com.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,13 +23,9 @@ public class LandingPage extends BasePage {
 
 	By loginBtn = By.xpath("//input[@type='submit']");
 	
-	
-	@FindBy(xpath="//a[contains(text(),'Sign Up')]")
-	@CacheLookup
-	private WebElement signUpLink;
+	By signUpLink = By.xpath("//a[contains(text(),'Sign Up')]");
 
 	By pricingLink = By.xpath("//a[contains(text(),'Pricing')]");
-	@CacheLookup
 
 	By featuresLink = By.xpath("//a[contains(text(),'Features')]");
 
@@ -92,37 +87,34 @@ public class LandingPage extends BasePage {
 	public WebElement verifyChatIcon() {
 		return ElementUtils.waitForElementPresence(getDriver(), interactionChat, 30);
 	}	
+	
+	public WebElement verifySignUpLink() {
+		return ElementUtils.waitForElementPresence(getDriver(), signUpLink, 30);		
+	}
 
-	public SignUpPage clickOnSignUpLink() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.visibilityOf(signUpLink));
-		
-		signUpLink.click();
-		
+	public SignUpPage clickOnSignUpLink() {		
+		verifySignUpLink().click();		
 		return new SignUpPage();
+	}
+	
+	public WebElement verifyPricingLink() {
+		return ElementUtils.waitForElementPresence(getDriver(), pricingLink, 30);		
 	}
 
 	public void clickOnPricingLink() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
-		
+		verifyPricingLink().click();				
 	}
 
 	public void clickOnFeaturesLink() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
 		
 	}
 
 	public void clickOnCustomersLink() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
 		
 	}
 
 	public void clickOnContactsLink() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-		wait.until(ExpectedConditions.elementToBeClickable(loginBtn));		
+			
 	}
 	
 	public WebElement clickforgetPasswordLink() {
