@@ -1,4 +1,4 @@
-package com.TestCases;
+package com.testCases;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,13 +13,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.Base.BasePage;
-import com.Listeners.Listener;
-import com.Utils.BrokenImages;
-import com.Utils.BrokenLinks;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.model.Media;
+import com.base.BasePage;
+import com.listeners.Listener;
+import com.utils.BrokenImages;
+import com.utils.BrokenLinks;
 
 public class FourTest{
 	

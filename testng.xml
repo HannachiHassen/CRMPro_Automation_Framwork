@@ -6,10 +6,11 @@
   </listeners>
   
     <test name="CRM PRO LandingPage">
-        <parameter name="browser" value="firefox" />
-        <classes>        
+        <parameter name="browser" value="chrome" />
+        <classes>
+        	<class name="com.TestCases.FastTest"/>       
             <class name="com.TestCases.LandingPageTest"/> 
-            <class name="com.TestCases.SignUpPageTest"/>
+            <class name="com.TestCases.SignUpPageTest"/>            
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

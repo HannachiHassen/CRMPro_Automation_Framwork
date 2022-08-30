@@ -1,4 +1,4 @@
-package com.Utils;
+package com.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.Base.BasePage;
+import com.base.BasePage;
 
 public class WebEventListener extends BasePage implements WebDriverEventListener{
 

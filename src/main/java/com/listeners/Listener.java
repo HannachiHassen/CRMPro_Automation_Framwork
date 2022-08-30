@@ -1,4 +1,4 @@
-package com.Listeners;
+package com.listeners;
 
 import java.io.IOException;
 
@@ -7,12 +7,11 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.Base.BasePage;
-import com.ExtentReport.ExtentReporter;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.base.BasePage;
+import com.extentReport.ExtentReporter;
 
 
 public class Listener extends BasePage implements ITestListener{

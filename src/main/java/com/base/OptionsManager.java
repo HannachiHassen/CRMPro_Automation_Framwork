@@ -1,4 +1,4 @@
-package com.Base;
+package com.base;
 
 import java.util.Properties;
 

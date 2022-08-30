@@ -1,4 +1,4 @@
-package com.TestCases;
+package com.testCases;
 
 import java.util.Properties;
 
@@ -6,15 +6,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.Base.BasePage;
-import com.Listeners.Listener;
-import com.PageObject.LandingPage;
-import com.PageObject.SignUpPage;
 import com.aventstack.extentreports.Status;
+import com.base.BasePage;
+import com.listeners.Listener;
+import com.pageObject.LandingPage;
+import com.pageObject.SignUpPage;
+import com.utils.TestUtil;
 
 public class SignUpPageTest extends BasePage{
 	public WebDriver driver;
@@ -52,6 +54,7 @@ public class SignUpPageTest extends BasePage{
     	
     	landingPage=new LandingPage();
 		signUpPage=landingPage.clickOnSignUpLink();
+		TestUtil.multipleChildWinows();
 	}
     
     @Test(priority=1)
@@ -78,8 +81,18 @@ public class SignUpPageTest extends BasePage{
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo Started verifyCRMLogo Method ");
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("SignUpPage Test");
    		
-		Assert.assertTrue(signUpPage.validateCRMImage());
+   		Boolean b = landingPage.validateCRMImage();
+		Assert.assertTrue(b);	
 		
 		log.info("****************************** Ending Test Case verifyCRMLogo *****************************************");
 	}
+	
+	@AfterMethod(alwaysRun = true) //--this method will be executed after every test method
+	public void tearDown() {
+    	driver.close();
+		if (driver != null) {
+			driver.quit();
+		}
+	log.info("****************************** Browser is Closed *****************************************");
+  }
 }

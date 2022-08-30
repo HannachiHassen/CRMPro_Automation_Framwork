@@ -1,6 +1,8 @@
 
 Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
+:heavy_exclamation_mark: `NOTE: This is my learning and practicing project. All comments and suggestions are more than welcome!`
+
 # CRMPro_Automation_Framwork
 
 ## Getting Started

@@ -1,19 +1,21 @@
-package com.PageObject;
+package com.pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import com.Base.BasePage;
+import com.base.BasePage;
+import com.utils.ElementUtils;
 
 public class SignUpPage extends BasePage {
 
-	@FindBy(xpath="//img[@src='https://classic.crmpro.com/img/logo.png']")
-	@CacheLookup 
-	private WebElement SignUpLogo;
-	
+	By CRMLog = By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
+	@CacheLookup
+		
 	@FindBy(xpath="//select[@id='payment_plan_id']") 
-	@CacheLookup 
+	
 	private WebElement edition;
 	
 	@FindBy(xpath="//div[@id='editionText']") 
@@ -54,11 +56,16 @@ public class SignUpPage extends BasePage {
 	@FindBy(xpath="//a[normalize-space()='Forgot Password?']")
 	WebElement ForgotPassword;
 	
+	public SignUpPage() {
+		PageFactory.initElements(getDriver(), this);
+	}
+	
 	public String validateLoginPageTitle() {
 		return getDriver().getTitle();
 	}
 
 	public Boolean validateCRMImage() {
-		return SignUpLogo.isDisplayed();
-	}	
+		ElementUtils.waitForElementPresence(getDriver(), CRMLog, 5);
+		return getDriver().findElement(CRMLog).isDisplayed();
+	}
 }

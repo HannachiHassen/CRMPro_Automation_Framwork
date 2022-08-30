@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">ExtentReports - CRMPro Automation</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 25, 2022 04:06:17 PM</span></a>
+<a href="#"><span class="badge badge-primary">Aug 25, 2022 08:18:07 PM</span></a>
 </li>
 </ul>
 </div>
@@ -95,7 +95,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">SignUpPageTest</a>
+<a class="dropdown-item" href="#">DummyTest</a>
 </ul>
 </li>
 </ul>
@@ -103,12 +103,12 @@
       <ul class="test-list-item">
         <li class="test-item"  status="fail" test-id="1"
           author="QATester1"
-          tag="SignUpPageTest"
+          tag="DummyTest"
           device="">
           <div class="test-detail">
-            <p class="name">com.TestCases.SignUpPageTest @ loginPageTitleTest @ </p>
+            <p class="name">com.TestCases.FastTest @ verifyTest @ </p>
             <p class="text-sm">
-              <span>4:07:25 PM</span> / <span>00:00:01:213</span>
+              <span>8:18:08 PM</span> / <span>00:00:13:440</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -116,50 +116,59 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">com.TestCases.SignUpPageTest @ loginPageTitleTest @ </h5>
-<span class='badge badge-success'>08.25.2022 4:07:25 PM</span>
-<span class='badge badge-danger'>08.25.2022 4:07:26 PM</span>
-<span class='badge badge-default'>00:00:01:213</span>
+<h5 class="test-status text-fail">com.TestCases.FastTest @ verifyTest @ </h5>
+<span class='badge badge-success'>08.25.2022 8:18:08 PM</span>
+<span class='badge badge-danger'>08.25.2022 8:18:22 PM</span>
+<span class='badge badge-default'>00:00:13:440</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
-<span class="badge badge-pill badge-default">SignUpPageTest</span></div>
+<span class="badge badge-pill badge-default">DummyTest</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginPageTitleTest.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\loginPageTitleTest.png">
-    <div class="title">loginPageTitleTest</div>
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>4:07:25 PM</td>
+        <td>8:18:21 PM</td>
         <td>
-           Hey I'm in SignUpPageTest
+           Hey I'm in FastTest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>4:07:25 PM</td>
+        <td>8:18:21 PM</td>
         <td>
-          Hellooo Started loginPageTitleTest Method 
+          Hellooo verifyTest Method Started 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:07:25 PM</td>
+        <td>8:18:22 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: Home Page Title does not Matche expected [Free CRM - CRM Pro for customer relationship management, sales, and support] but found [CRMPRO - CRM software for customer relationship management, sales, and support.]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at com.TestCases.SignUpPageTest.loginPageTitleTest(SignUpPageTest.java:68)
+          <textarea readonly class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://classic.freecrm.com/register/" target="_blank">...</a> is not clickable at point (629, 45). Other element would receive the click: <div id="preloader" style="opacity: 1;">...</div>
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HASSEN-HP', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\HASSEN\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59567}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: badbb9d6efa356135a61f1e77a2ff5d9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.TestCases.FastTest.verifyTest(FastTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,72 +201,16 @@
           
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="2"
-          author="QATester1"
-          tag="SignUpPageTest"
-          device="">
-          <div class="test-detail">
-            <p class="name">com.TestCases.SignUpPageTest @ verifyCRMLogo @ </p>
-            <p class="text-sm">
-              <span>4:08:03 PM</span> / <span>00:00:00:787</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">com.TestCases.SignUpPageTest @ verifyCRMLogo @ </h5>
-<span class='badge badge-success'>08.25.2022 4:08:03 PM</span>
-<span class='badge badge-danger'>08.25.2022 4:08:04 PM</span>
-<span class='badge badge-default'>00:00:00:787</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">QATester1</span>
-<span class="badge badge-pill badge-default">SignUpPageTest</span></div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyCRMLogo.png' src="C:\Users\HASSEN\workspace\CRM_Automation_Framework\Execution Reports\FailedTestScreenshots\verifyCRMLogo.png">
-    <div class="title">verifyCRMLogo</div>
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>4:08:03 PM</td>
-        <td>
-           Hey I'm in SignUpPageTest
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>4:08:03 PM</td>
-        <td>
-          Hellooo Started verifyCRMLogo Method 
-        </td>
-      </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:08:03 PM</td>
+        <td>8:18:22 PM</td>
         <td>
           <textarea readonly class="code-block">java.lang.NullPointerException
-	at com.PageObject.SignUpPage.validateCRMImage(SignUpPage.java:62)
-	at com.TestCases.SignUpPageTest.verifyCRMLogo(SignUpPageTest.java:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at com.Base.BasePage.takeScreenshot(BasePage.java:166)
+	at com.Listeners.Listener.onTestFailure(Listener.java:61)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -311,39 +264,6 @@
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:07:25 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>com.TestCases.SignUpPageTest @ loginPageTitleTest @ </a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
 <p class="name">java.lang.NullPointerException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
@@ -363,9 +283,42 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:08:03 PM</td>
+<td>20:18:08 PM</td>
 <td>
-<a href="#" class="linked" test-id='2' id='2'>com.TestCases.SignUpPageTest @ verifyCRMLogo @ </a>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.FastTest @ verifyTest @ </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:18:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.FastTest @ verifyTest @ </a>
 </td>
 </tr>
 </tbody>
@@ -391,15 +344,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">SignUpPageTest</p>
-<p class="duration text-sm">2 tests</p>
+<p class="name">DummyTest</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>SignUpPageTest</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<h4>DummyTest</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -412,16 +365,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:07:25 PM</td>
+<td>20:18:08 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>com.TestCases.SignUpPageTest @ loginPageTitleTest @ </a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:08:03 PM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>com.TestCases.SignUpPageTest @ verifyCRMLogo @ </a>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.FastTest @ verifyTest @ </a>
 </td>
 </tr>
 </tbody>
@@ -447,15 +393,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">QATester1</p>
-<p class="duration text-sm">2 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>QATester1</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -468,16 +414,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:07:25 PM</td>
+<td>20:18:08 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>com.TestCases.SignUpPageTest @ loginPageTitleTest @ </a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:08:03 PM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>com.TestCases.SignUpPageTest @ verifyCRMLogo @ </a>
+<a href="#" class="linked" test-id='1' id='1'>com.TestCases.FastTest @ verifyTest @ </a>
 </td>
 </tr>
 </tbody>
@@ -497,13 +436,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 25, 2022 04:06:17 PM</h3>
+<h3>Aug 25, 2022 08:18:07 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 25, 2022 04:08:05 PM</h3>
+<h3>Aug 25, 2022 08:18:22 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -515,7 +454,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -536,7 +475,7 @@
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>2</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -556,8 +495,8 @@
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='33%'><b>2</b> events failed,
-<b data-tooltip='%'>4</b> others
+<small data-tooltip='50%'><b>2</b> events failed,
+<b data-tooltip='%'>2</b> others
 </small>
 </div>
 </div>
@@ -573,7 +512,7 @@
 </div></div>
 <script>
 var timeline = {
-"com.TestCases.SignUpPageTest @ loginPageTitleTest @ ":1.213,"com.TestCases.SignUpPageTest @ verifyCRMLogo @ ":0.787
+"com.TestCases.FastTest @ verifyTest @ ":13.44
 };
 </script>
 <div class="row">
@@ -586,7 +525,7 @@ var timeline = {
 <tr>
 <td>QATester1</td>
 <td>0</td>
-<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0%</td>
@@ -601,9 +540,9 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>SignUpPageTest</td>
+<td>DummyTest</td>
 <td>0</td>
-<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0%</td>
@@ -664,7 +603,7 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 2,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -684,7 +623,7 @@ passEvents: 0,
 failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 4
+infoEvents: 2
 };
 </script>        </div>
       </div>

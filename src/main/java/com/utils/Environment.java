@@ -1,4 +1,4 @@
-package com.Utils;
+package com.utils;
 
 public class Environment {
 	public static final String ENV_QA = "qa";

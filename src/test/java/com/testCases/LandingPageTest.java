@@ -1,4 +1,4 @@
-package com.TestCases;
+package com.testCases;
 
 import java.util.Properties;
 
@@ -12,14 +12,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.Base.BasePage;
-import com.Listeners.Listener;
-import com.PageObject.LandingPage;
-import com.PageObject.LoginPage;
-import com.PageObject.SignUpPage;
-import com.Utils.BrokenImages;
-import com.Utils.BrokenLinks;
 import com.aventstack.extentreports.Status;
+import com.base.BasePage;
+import com.listeners.Listener;
+import com.pageObject.LandingPage;
+import com.pageObject.LoginPage;
+import com.pageObject.SignUpPage;
+import com.utils.BrokenImages;
+import com.utils.BrokenLinks;
+import com.utils.TestUtil;
 
 public class LandingPageTest {
 	public WebDriver driver;
@@ -60,7 +61,7 @@ public class LandingPageTest {
     	landingPage=new LandingPage();        
     }
 
-    /*@Test(priority=0, description = "Verify Home Page Title")
+    @Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
     	log.info("****************************** Starting Test Case verifyTitle *****************************************");
 		
@@ -89,7 +90,7 @@ public class LandingPageTest {
 		log.info("****************************** Ending Test Case verifyCRMLogo *****************************************");
 	}
     
-    @Test(priority=2, description = "Verify User name box is displayed")
+    /*@Test(priority=2, description = "Verify User name box is displayed")
 	public void verifyUserName(){
     	log.info("****************************** Starting Test Case verifyUserName *****************************************");
     	
@@ -230,7 +231,7 @@ public class LandingPageTest {
    		System.out.println(footertext);   		
    		
    		log.info("****************************** Ending Test Case verifyFooterText *****************************************");
-   	}*/
+   	}
     
     @Test(priority=12, description = "Verify SignUp Link")
    	public void verifySignUpLink(){
@@ -242,12 +243,12 @@ public class LandingPageTest {
    		
    		Assert.assertTrue(landingPage.verifySignUpLink().isDisplayed());
    		
-   		signUpPage=landingPage.clickOnSignUpLink();
+   		signUpPage=landingPage.clickOnSignUpLink();   		
    		
    		log.info("****************************** Ending Test Case verifySignUpLink *****************************************");
    	}
     
-    /*@Test(priority=13, description = "Verify Broken links")
+    @Test(priority=13, description = "Verify Broken links")
    	public void verifyBrokenlinks(){
     	log.info("****************************** Starting Test Case verifyBrokenlinks *****************************************");
     	
@@ -271,7 +272,7 @@ public class LandingPageTest {
    		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test");
    		
    		log.info("****************************** Ending Test Case verifyBrokenImages *****************************************");
-   	}	
+   	}	*/
         
     @AfterMethod(alwaysRun = true) //--this method will be executed after every test method
 	public void tearDown() {
@@ -281,5 +282,5 @@ public class LandingPageTest {
 		}
 	log.info("****************************** Browser is Closed *****************************************");
 		
-	}*/
+	}
 }

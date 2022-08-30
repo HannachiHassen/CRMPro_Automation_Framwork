@@ -1,11 +1,11 @@
-package com.Utils;
+package com.utils;
 
 public class Constants {
 	
-	public static long PAGE_LOAD_TIMEOUT=60;
-    public static long IMPLICIT_WAIT=30;    
+	public static final long PAGE_LOAD_TIMEOUT=60;
+    public static final long IMPLICIT_WAIT=30;    
     
-    public final static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+ "src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
+    public static final String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+ "src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
     
     public static final String LOGIN_PAGE_TITLE = "";
 	public static final String HOME_PAGE_TITLE = "";

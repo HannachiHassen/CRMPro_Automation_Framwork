@@ -1,18 +1,16 @@
-package com.PageObject;
+package com.pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Base.BasePage;
-import com.Utils.ElementUtils;
+import com.base.BasePage;
+import com.utils.ElementUtils;
 
 public class LandingPage extends BasePage {
 
-	By CRMLog = By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
+	By crmLog = By.xpath("//img[@src='https://classic.freecrm.com/img/logo.png']");
 	@CacheLookup
 
 	By userNameLabel = By.xpath("//input[@name='username']");
@@ -23,7 +21,7 @@ public class LandingPage extends BasePage {
 
 	By loginBtn = By.xpath("//input[@type='submit']");
 	
-	By signUpLink = By.xpath("//a[contains(text(),'Sign Up')]");
+	By signUpLink = By.cssSelector("li:nth-child(2) > a");
 
 	By pricingLink = By.xpath("//a[contains(text(),'Pricing')]");
 
@@ -56,8 +54,8 @@ public class LandingPage extends BasePage {
 	}
 
 	public Boolean validateCRMImage() {
-		ElementUtils.waitForElementPresence(getDriver(), CRMLog, 5);
-		return getDriver().findElement(CRMLog).isDisplayed();
+		ElementUtils.waitForElementPresence(getDriver(), crmLog, 5);
+		return getDriver().findElement(crmLog).isDisplayed();
 	}
 
 	public WebElement verifyUserName() {

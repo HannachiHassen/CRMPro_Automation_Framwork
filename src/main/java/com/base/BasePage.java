@@ -1,4 +1,4 @@
-package com.Base;
+package com.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,11 +20,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-import com.Utils.Constants;
-import com.Utils.Environment;
-import com.Utils.WebEventListener;
+import com.customException.FrameworkException;
+import com.utils.Constants;
+import com.utils.Environment;
+import com.utils.WebEventListener;
 
-import customexception.FrameworkException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage{

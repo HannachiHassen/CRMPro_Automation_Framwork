@@ -1,4 +1,4 @@
-package com.TestCases;
+package com.testCases;
 
 import java.util.Properties;
 
@@ -11,9 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.Base.BasePage;
-import com.PageObject.LandingPage;
-import com.PageObject.LoginPage;
+import com.base.BasePage;
+import com.pageObject.LandingPage;
+import com.pageObject.LoginPage;
 
 public class LoginPageTest extends BasePage{
 	public WebDriver driver;

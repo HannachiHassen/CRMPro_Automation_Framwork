@@ -1,4 +1,4 @@
-package com.Utils;
+package com.utils;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -9,7 +9,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.Base.BasePage;
+import com.base.BasePage;
 
 public class BrokenLinks extends BasePage{
 	

@@ -1,4 +1,4 @@
-package com.ExtentReport;
+package com.extentReport;
 
 import java.io.File;
 import java.net.InetAddress;
