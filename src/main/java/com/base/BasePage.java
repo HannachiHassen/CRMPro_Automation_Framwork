@@ -20,8 +20,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import com.constants.FrameworkConstants;
 import com.customException.FrameworkException;
-import com.utils.Constants;
 import com.utils.Environment;
 import com.utils.WebEventListener;
 
@@ -137,8 +137,8 @@ public class BasePage{
 		
 		getDriver().manage().window().maximize();
 		getDriver().manage().deleteAllCookies();
-		getDriver().manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		getDriver().manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().pageLoadTimeout(FrameworkConstants.getPageLoadTimeout(), TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(FrameworkConstants.getImplicitWait(), TimeUnit.SECONDS);
 		
 		return getDriver();
 	}
