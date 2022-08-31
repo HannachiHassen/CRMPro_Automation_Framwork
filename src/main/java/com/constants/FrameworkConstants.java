@@ -9,20 +9,54 @@ public final class FrameworkConstants {
 	private static final int PAGELOADTIMEOUT=60;
 	private static final int IMPLICITWAIT=30;    
 	
-	private static final String RESOURCESPATH= System.getProperty("user.dir") +"/CRM_Automation_Framework/";
-	private static final String CONFIGFILEPATH= RESOURCESPATH + "/src/main/java/com/Config/config.properties";
-	private static final String EXCELFILEPATH = RESOURCESPATH + "/testdata/HubSpotTestData.xlsx";
+	private static final int SHORTWAIT = 3000;
+	private static final int MEDIUMWAIT = 6000;
+	private static final int LONGWAIT = 10000;	
+
+	private static final String RESOURCESPATH= System.getProperty("user.dir") +"/resources/";
 	
-	public static final int SHORT_WAIT = 3000;
-	public static final int MEDIUM_WAIT = 6000;
-	public static final int LONG_WAIT = 10000;
+	private static final String CHROMEDRIVERPATH= RESOURCESPATH + "/executables/chromedriver.exe";
+	private static final String FIREFOXDRIVERPATH= RESOURCESPATH + "/executables/geckodriver.exe";	
+	private static final String CONFIGFILEPATH= RESOURCESPATH + "/config/config.properties";
+	private static final String QACONFIGPATH= RESOURCESPATH + "/config/qa.config.properties";
+	private static final String DEVCONFIGPATH= RESOURCESPATH + "/config/dev.config.properties";
+	private static final String STAGECONFIGPATH= RESOURCESPATH + "/config/stage.config.properties";
+	private static final String UATCONFIGPATH= RESOURCESPATH + "/config/uat.config.properties";
+	private static final String PRODCONFIGPATH= RESOURCESPATH + "/config/prod.config.properties";	
+
+	private static final String EXCELFILEPATH = RESOURCESPATH + "/testData/HubSpotTestData.xlsx";
 	
-	public static long getPageLoadTimeout() {
+	private static final String QAENV = "qa";
+	private static final String STAGEENV = "stage";
+	private static final String DEVENV = "dev";
+	private static final String UATENV = "uat";
+	private static final String PRODENV = "prod";	
+	
+	public static int getPageLoadTimeout() {
 		return PAGELOADTIMEOUT;
 	}
 
-	public static long getImplicitWait() {
+	public static  int getImplicitWait() {
 		return IMPLICITWAIT;
+	}
+	
+	public static int getShortwait() {
+		return SHORTWAIT;
+	}
+
+	public static int getMediumwait() {
+		return MEDIUMWAIT;
+	}
+
+	public static int getLongwait() {
+		return LONGWAIT;
+	}
+	public static String getChromedriverpath() {
+		return CHROMEDRIVERPATH;
+	}
+
+	public static String getFirefoxdriverpath() {
+		return FIREFOXDRIVERPATH;
 	}
 	
 	public static String getConfigfilepath() {
@@ -31,5 +65,46 @@ public final class FrameworkConstants {
 
 	public static String getTestdatasheetpath() {
 		return EXCELFILEPATH;
+	}	
+
+	public static String getQaenv() {
+		return QAENV;
 	}
+
+	public static String getStageenv() {
+		return STAGEENV;
+	}
+
+	public static String getDevenv() {
+		return DEVENV;
+	}
+
+	public static String getUatenv() {
+		return UATENV;
+	}
+
+	public static String getProdenv() {
+		return PRODENV;
+	}
+	
+	public static String getQaconfigfilepath() {
+		return QACONFIGPATH;
+	}
+
+	public static String getDevconfigfilepath() {
+		return DEVCONFIGPATH;
+	}
+
+	public static String getStageconfigfilepath() {
+		return STAGECONFIGPATH;
+	}
+
+	public static String getUatconfigfilepath() {
+		return UATCONFIGPATH;
+	}
+
+	public static String getProdconfigfilepath() {
+		return PRODCONFIGPATH;
+	}
+	
 }

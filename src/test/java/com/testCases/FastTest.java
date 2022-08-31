@@ -2,46 +2,30 @@ package com.testCases;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
+import com.driver.DriverManager;
 import com.listeners.Listener;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class FastTest {
-	
-	public WebDriver driver;
-		
+public class FastTest extends BaseTest{	
+			
 	@Test
 	public void verifyTest() {
-		ChromeOptions chromeOptions = new ChromeOptions();
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(chromeOptions);
-		
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://classic.crmpro.com/index.html");
 		
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FastTest");
    		Listener.extentTestThread.get().log(Status.INFO, "Hellooo verifyTest Method Started ");		
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
 		
-		driver.findElement(By.cssSelector("li:nth-child(2) > a")).click();
+		DriverManager.getDriver().findElement(By.cssSelector("li:nth-child(2) > a")).click();
         
-		String mainWindow = driver.getWindowHandle();
+		String mainWindow = DriverManager.getDriver().getWindowHandle();
 	    System.out.println("Main window handle is " + mainWindow);
 	    
 	    // To handle all new opened window
-	    Set<String> allWindowHandles = driver.getWindowHandles();
+	    Set<String> allWindowHandles = DriverManager.getDriver().getWindowHandles();
 	    System.out.println("Child window handle is" + allWindowHandles);
 	    
 	    Iterator<String> iterator = allWindowHandles.iterator();  
@@ -50,13 +34,13 @@ public class FastTest {
 	    while (iterator.hasNext()) {
 	          String ChildWindow = iterator.next();
 	          if (!mainWindow.equalsIgnoreCase(ChildWindow)) {
-	        	  driver.switchTo().window(ChildWindow);
+	        	  DriverManager.getDriver().switchTo().window(ChildWindow);
 	           }	         
 	      }
 		
-		String title=driver.getTitle();
+		String title=DriverManager.getDriver().getTitle();
 		System.out.println(title);	
 		
-		driver.close();
+		DriverManager.getDriver().close();
 	}
 }

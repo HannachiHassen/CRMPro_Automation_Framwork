@@ -15,7 +15,6 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.model.Media;
 import com.base.BasePage;
 import com.listeners.Listener;
 import com.utils.BrokenImages;

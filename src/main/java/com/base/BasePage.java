@@ -22,7 +22,6 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.constants.FrameworkConstants;
 import com.customException.FrameworkException;
-import com.utils.Environment;
 import com.utils.WebEventListener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -33,7 +32,7 @@ public class BasePage{
     public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
           
-    public static Properties prop;
+    public static Properties property;
     public static boolean highlighElement;
     OptionsManager optionsManager;
 	
@@ -45,7 +44,7 @@ public class BasePage{
     
     public Properties initializeProperties() {
     	FileInputStream fis=null;
-    	prop=new Properties();
+    	property=new Properties();
     	String envName = null;
     	
     	try {
@@ -56,27 +55,27 @@ public class BasePage{
     		if (envName == null) {
     			System.out.println("No env is given ..... hence running it on QA");
     			try {
-    				fis=new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/config.properties");
+    				fis=new FileInputStream(FrameworkConstants.getConfigfilepath());
     			} catch (FileNotFoundException e) {
     				e.printStackTrace();
     			}
     		}else {
     			try {
     				switch (envName.toLowerCase()) {
-    				case Environment.ENV_QA:
-    					fis= new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/qa.config.properties");
+    				case FrameworkConstants.getQaenv():
+    					fis= new FileInputStream(FrameworkConstants.getQaconfigfilepath());
     					break;
-    				case Environment.ENV_DEV:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/dev.config.properties");
+    				case FrameworkConstants.getDevenv():
+    					fis = new FileInputStream(FrameworkConstants.getDevconfigfilepath());
     					break;
-    				case Environment.ENV_STAGE:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/stage.config.properties");
+    				case FrameworkConstants.getStageenv():
+    					fis = new FileInputStream(FrameworkConstants.getStageconfigfilepath());
     					break;
-    				case Environment.ENV_UAT:
-    					fis = new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/uat.config.properties");
+    				case FrameworkConstants.getUatenv():
+    					fis = new FileInputStream(FrameworkConstants.getUatconfigfilepath());
     					break;
-    				case Environment.ENV_PROD:
-    					fis =new FileInputStream(System.getProperty("user.dir") + "./src/main/java/com/Config/prod.config.properties");
+    				case FrameworkConstants.getProdenv():
+    					fis =new FileInputStream(FrameworkConstants.getProdconfigfilepath());
     					break;
     				default:
     					System.out.println("Please pass the right enviroment value ..."+ envName);
@@ -89,28 +88,28 @@ public class BasePage{
     				e.printStackTrace();
     			}				
 		}
-    		prop.load(fis);	         
+    		property.load(fis);	         
     	} catch (FileNotFoundException e) {
 			e.printStackTrace();     
 		}catch (IOException io) {
 			io.printStackTrace();
 		}
-    	System.out.println("Page URL : "+ prop.getProperty("url"));
-        System.out.println("Enviroment used is :" + prop.getProperty("env"));
+    	System.out.println("Page URL : "+ property.getProperty("url"));
+        System.out.println("Enviroment used is :" + property.getProperty("env"));
         
-		return prop;
+		return property;
     }
     
 	public WebDriver initializeBrowser(String browserName) {	
 		
-		highlighElement = prop.getProperty("highlight").equals("yes") ? true : false;
+		highlighElement = property.getProperty("highlight").equals("yes") ? true : false;
 		System.out.println("browser name is : " + browserName);
 		//log.info("browser name is : " + browserName);
 		
-		optionsManager =new OptionsManager(prop);
+		optionsManager =new OptionsManager(property);
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
-			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			if (Boolean.parseBoolean(property.getProperty("remote"))) {
 				init_remoteDriver("chrome");
 			}else {
 			WebDriverManager.chromedriver().setup();
@@ -118,7 +117,7 @@ public class BasePage{
 			}
 			
 		}else if (browserName.equalsIgnoreCase("firefox")) {
-			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			if (Boolean.parseBoolean(property.getProperty("remote"))) {
 				init_remoteDriver("firefox");
 			}else {
 				WebDriverManager.firefoxdriver().setup();
@@ -148,14 +147,14 @@ public class BasePage{
 		if (browserName.equalsIgnoreCase("chrome")) {
 			try {
 				tldriver.set(
-						new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getChromeOptions()));
+						new RemoteWebDriver(new URL(property.getProperty("huburl")), optionsManager.getChromeOptions()));
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}
 		}else if(browserName.equals("firefox")) {
 			try {
 				tldriver.set(
-						 new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getFirefoxOptions()));
+						 new RemoteWebDriver(new URL(property.getProperty("huburl")), optionsManager.getFirefoxOptions()));
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}			
