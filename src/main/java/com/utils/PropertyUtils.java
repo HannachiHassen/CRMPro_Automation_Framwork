@@ -4,9 +4,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Properties;
 
 import com.constants.FrameworkConstants;
+import com.enums.ConfigProperties;
 
 public final class PropertyUtils {
 
@@ -31,4 +33,11 @@ public final class PropertyUtils {
 		}		
 		
 		}
+	
+	public static String get(ConfigProperties key) throws Exception {
+		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
+			throw new Exception("Property name "+ key +" is not fournd. Please check config.properties");
+		}
+		return CONFIGMAP.get(key.name().toLowerCase());
+	}
 }
