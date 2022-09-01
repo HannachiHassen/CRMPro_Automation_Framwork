@@ -1,58 +1,62 @@
-package com.extentReport;
+package com.reports;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.net.InetAddress;
+import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.constants.FrameworkConstants;
 
-public class ExtentReporter {
-	private static ExtentSparkReporter reporter;
-	static ExtentReports extentReport;
-	static String outputDirectory;
-	static String extentReportPath;
-
-	public static ExtentReports getExtentReport() {
-		try {
-			 outputDirectory = System.getProperty("user.dir") + "\\Execution Reports\\";
-			 new File(outputDirectory).mkdir();
-		   } catch (Exception e) {
-			e.printStackTrace();
-		   }
+public final class ExtentReport{
+	
+	private ExtentReport() {
 		
-		extentReportPath = outputDirectory + File.separator + ".\\Graphic Reports\\ExtentReport.html";
-		reporter = new ExtentSparkReporter(extentReportPath);	    
-		
-		extentReport = new ExtentReports();
-		
-		reporter.config().setDocumentTitle("Test Results");
-		reporter.config().setReportName("ExtentReports - CRMPro Automation");
-		reporter.config().setTheme(Theme.STANDARD);	
-		reporter.config().setEncoding("utf-8");
-        reporter.config().setProtocol(Protocol.HTTPS);
-		
-		extentReport.attachReporter(reporter);
-		
-		extentReport.setSystemInfo("Tested By","Hassen Hannachi");		
-        extentReport.setSystemInfo("GUI Testing", "QA");
-        extentReport.setSystemInfo("Application","crmpro.com/index.html");
-        extentReport.setSystemInfo("Browser", "Chrome");
-        extentReport.setSystemInfo("OS Architecture", "Microsoft");
-        extentReport.setSystemInfo("Operating System","Windows");        
-        
-        try {        	
-        	extentReport.setSystemInfo("OS Version", System.getProperty("os.version"));
-        	extentReport.setSystemInfo("JAVA Version", System.getProperty("java.version")); 
-            extentReport.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostName());            
-        } catch (Exception e) {
-        	e.printStackTrace();
-        }
-        
-		System.out.println("Test Report Path - " + outputDirectory);
-		System.out.println(("Extent Reports Test Suite is ending!"));
-
-		return extentReport;
 	}
+	
+	private static ExtentReports extent;	
+	
+	public static void initReports() throws Exception {
+		if (Objects.isNull(extent)) {
+			extent=new ExtentReports();
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
+			extent.attachReporter(spark);
+			
+			spark.config().setDocumentTitle("Test Results");
+			spark.config().setReportName("ExtentReports - CRMPro Automation");
+			spark.config().setTheme(Theme.STANDARD);	
+			spark.config().setEncoding("utf-8");
+			spark.config().setProtocol(Protocol.HTTPS);
+			
+			extent.setSystemInfo("Tested By","Hassen Hannachi");		
+	        extent.setSystemInfo("GUI Testing", "QA");
+	        extent.setSystemInfo("Application","crmpro.com/index.html");
+	        extent.setSystemInfo("Browser", "Chrome");
+	        extent.setSystemInfo("OS Architecture", "Microsoft");
+	        extent.setSystemInfo("Operating System","Windows");
+	        try {        	
+	        	extent.setSystemInfo("OS Version", System.getProperty("os.version"));
+	        	extent.setSystemInfo("JAVA Version", System.getProperty("java.version")); 
+	            extent.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostName());            
+	        } catch (Exception e) {
+	        	e.printStackTrace();
+	        }
+		}
+	}
+	
+	public static void flushReports() throws Exception {
+		if (Objects.nonNull(extent)) {
+			extent.flush();
+		}		
+		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());		
+	}	
+	
+	public static void createTest(String testcasename) {
+		ExtentTest test =extent.createTest(testcasename);
+		ExtentManager.setExtentTest(test);
+	}	
 }

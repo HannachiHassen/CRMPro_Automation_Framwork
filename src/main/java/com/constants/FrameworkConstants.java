@@ -1,5 +1,8 @@
 package com.constants;
 
+import com.tmb.enums.ConfigProperties;
+import com.tmb.utils.PropertyUtlis;
+
 public final class FrameworkConstants {
 	
 	private FrameworkConstants() {
@@ -12,6 +15,12 @@ public final class FrameworkConstants {
 	private static final int SHORTWAIT = 3000;
 	private static final int MEDIUMWAIT = 6000;
 	private static final int LONGWAIT = 10000;	
+	
+	private static final String QAENV = "qa";
+	private static final String STAGEENV = "stage";
+	private static final String DEVENV = "dev";
+	private static final String UATENV = "uat";
+	private static final String PRODENV = "prod";	
 
 	private static final String RESOURCESPATH= System.getProperty("user.dir") +"/resources/";
 	
@@ -26,12 +35,25 @@ public final class FrameworkConstants {
 
 	private static final String EXCELFILEPATH = RESOURCESPATH + "/testData/HubSpotTestData.xlsx";
 	
-	private static final String QAENV = "qa";
-	private static final String STAGEENV = "stage";
-	private static final String DEVENV = "dev";
-	private static final String UATENV = "uat";
-	private static final String PRODENV = "prod";	
+	private static final String EXTENTREPORTFOLDERPATH= System.getProperty("user.dir") +"/extent-test-output/";
+	private static String extentReportFilePath= "";
 	
+	public static String getExtentReportFilePath() throws Exception {
+		if (extentReportFilePath.isEmpty()) {
+			return extentReportFilePath=createReportPath();
+		}
+		return extentReportFilePath;
+	}
+	
+	private static String createReportPath() throws Exception {
+		if (PropertyUtlis.get(ConfigProperties.OVERRIDERRPORTS).equals("no")) {
+			return EXTENTREPORTFOLDERPATH + System.currentTimeMillis()+ "/index.html";
+		}
+		else {
+			return EXTENTREPORTFOLDERPATH + "/index.html";
+		}
+	}
+
 	public static int getPageLoadTimeout() {
 		return PAGELOADTIMEOUT;
 	}

@@ -11,7 +11,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.base.BasePage;
-import com.extentReport.ExtentReporter;
 
 
 public class Listener extends BasePage implements ITestListener{
@@ -24,7 +23,6 @@ public class Listener extends BasePage implements ITestListener{
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		//String testMethodName=result.getName();
 		//extentTest=extentReport.createTest(testMethodName+ " Execution started");
 		extentTest=extentReport.createTest(result.getTestClass().getName()+ " @ "+ result.getMethod().getMethodName()+ " @ " + result.getMethod().getDescription());
 		extentTestThread.set(extentTest);
