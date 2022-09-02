@@ -15,41 +15,19 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.base.BasePage;
-import com.listeners.Listener;
+import com.reports.ExtentLogger;
+import com.reports.ExtentManager;
+import com.reports.ExtentReport;
 import com.utils.BrokenImages;
 import com.utils.BrokenLinks;
 
-public class FourTest{
-	
-	public WebDriver driver;
-	public BasePage baseClass;
-	public Properties prop;
-    Logger log;
-	
-	@BeforeMethod(alwaysRun = true)
-	@Parameters(value={"browser"})
-	public void setUP(String browser) {
-		log = LogManager.getLogger(FourTest.class.getName());
-		log.info("****************************** Starting test cases execution *****************************************");
+public class FourTest extends BaseTest{
+
+    private FourTest() {
 		
-		String browserName = null;
-		
-		baseClass=new BasePage();		
-		prop = baseClass.initializeProperties();
-		
-		if (browser == null) {
-			prop.setProperty("browser", browser);
-		}else {
-			browserName = browser;		
-		}
-		driver = baseClass.initializeBrowser(browserName);
-		
-		log.info("****************************** Browser is launched *****************************************");
-		log.debug("Browser got launched");
-		driver.get(prop.getProperty("url"));
-		log.debug("Navigated to application URL");
 	}
+
+	Logger log = LogManager.getLogger(FourTest.class.getName());	
 	
 	@Test(priority=0, description = "This is a description for testFour")
 	public void testFourTest() throws InterruptedException {
@@ -57,13 +35,13 @@ public class FourTest{
 		log.info("****************************** starting test case testFourTest *****************************************");
 		System.out.println("TestFour");		
 		
-		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in FourTest");
-   		Listener.extentTestThread.get().log(Status.INFO, "Hellooo testFourTest Method Started ");		
-		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");		
+		ExtentLogger.log(Status.INFO, " Hey I'm in FourTest");
+		ExtentLogger.log(Status.INFO, "Hellooo testFourTest Method Started ");
 		
-		log.debug("Browser got launched");
-		//driver.get("https://classic.crmpro.com/index.html");
-		log.debug("Navigated to application URL");
+		ExtentReport.addAuthors('QA', 'Tester', '1');
+		
+		ExtentReport.addAuthors("QA Tester 1");
+		ExtentRepor.assignCategory("Dummy Test");		
 		
 		Thread.sleep(2000);
 		Assert.assertTrue(false);
@@ -77,11 +55,10 @@ public class FourTest{
 		log.info("****************************** starting test case verifyBrokenlinks *****************************************");
     	    	
     	BrokenImages.validateInvalidImages();
-	    	
-   		Listener.extentTestThread.get()
-   		 .log(Status.INFO, " Hey I'm in FourTest")
-   		 .log(Status.INFO, "Hellooo validateInvalidImages Method Started ")
-    	 .assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+	    
+    	ExtentLogger.log(Status.INFO," Hey I'm in FourTest");
+   		ExtentLogger.log(Status.INFO, " Hey I'm in FourTest");
+   		ExtentLogger.log(Status.INFO, "Hellooo validateInvalidImages Method Started ");
    		
    		log.info("****************************** ending test case verifyBrokenImages *****************************************");
    	}
@@ -92,24 +69,16 @@ public class FourTest{
 		
     	BrokenLinks.myBrokenLinks();
     	
-    	Listener.extentTestThread.get().createNode("INFO")
+    	ExtentManager.getExtentTest().createNode("INFO")
 		 .log(Status.INFO, " Hey I'm in FourTest")
 		 .log(Status.INFO, "Hellooo verifyBrokenImages Method Started ");    	
   	
-   		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("Dummy Test");
+    	ExtentReport.addAuthors(["QA Tester 1"]);
+    	ExtentReport.assignCategory("Dummy Test");
    		
    		List<Object> items = Arrays.asList(new Object[] {"Hey I'm in FourTest", "Hellooo started verifyBrokenlinks method"});
-		Listener.extentTestThread.get().createNode("INFO").info(MarkupHelper.createOrderedList(items));
+   		ExtentManager.getExtentTest().createNode("INFO").info(MarkupHelper.createOrderedList(items));
    		
    		log.info("****************************** ending test case verifyBrokenlinks *****************************************");
    	}
-	
-	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-		driver.close();
-		if (driver != null) {
-			driver.quit();
-		}		
-	log.info("****************************** Browser is closed *****************************************");
-	} 
 }

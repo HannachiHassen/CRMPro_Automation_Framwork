@@ -1,6 +1,7 @@
 package com.reports;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.enums.ConfigProperties;
 import com.utils.PropertyUtils;
 import com.utils.ScreenshotUtils;
@@ -21,6 +22,10 @@ public class ExtentLogger {
 
 	public static void skip(String message) {
 		ExtentManager.getExtentTest().skip(message);
+	}
+	
+	public static void log(Status info, String message) {
+		ExtentManager.getExtentTest().log(info, message);
 	}
 	
 	public static void pass(String message, boolean isScreenshotNeeded) throws Exception {

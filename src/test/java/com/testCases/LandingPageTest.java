@@ -13,53 +13,23 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.base.BasePage;
-import com.listeners.Listener;
 import com.pageObject.LandingPage;
 import com.pageObject.LoginPage;
 import com.pageObject.SignUpPage;
+import com.reports.ExtentManager;
 import com.utils.BrokenImages;
 import com.utils.BrokenLinks;
 import com.utils.TestUtil;
 
-public class LandingPageTest {
-	public WebDriver driver;
-	public BasePage basePage;
-	public Properties prop;
-    Logger log;
+public class LandingPageTest extends BaseTest{
 	
-    public LandingPage landingPage;
+	private LandingPageTest() {
+  	}
+	
+	Logger log = LogManager.getLogger(LandingPageTest.class.getName());
+    public LandingPage landingPage=new LandingPage();;
     public LoginPage loginPage;
     public SignUpPage signUpPage;
-    
-  //Initializing PageFactory
-  	public LandingPageTest() {
-  		super();   //Call the Constructor of the Super class - BaseClass
-  	}
-    
-    @BeforeMethod(alwaysRun = true)	//this method will be executed before every @test method
-    @Parameters(value={"browser"})
-	public void setUP(String browser) {
-    	log = LogManager.getLogger(LandingPageTest.class.getName());
-    	
-    	String browserName = null;
-    	basePage=new BasePage();	
-        prop = basePage.initializeProperties();
-		
-		if (browser == null) {
-			prop.setProperty("browser", browser);
-		}else {
-			browserName = browser;		
-		}
-		driver = basePage.initializeBrowser(browserName);
-		log.info("****************************** Browser is launched *****************************************");
-		
-        log.debug("Browser got launched");
-    	driver.get(prop.getProperty("url"));
-    	log.debug("Navigated to application URL");
-    	
-    	landingPage=new LandingPage();        
-    }
 
     @Test(priority=0, description = "Verify Home Page Title")
 	public void verifyTitle() {
@@ -67,7 +37,8 @@ public class LandingPageTest {
 		
     	String title=landingPage.validateHomePageTitle();
     	Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.", "Home Page Title does not Matche");
-    	   
+    	ExtentManager.getExtentTest().log(Status.INFO, " Hey I'm in LandingPageTest");
+    	
 		Listener.extentTestThread.get().log(Status.INFO, " Hey I'm in LandingPageTest");
 		Listener.extentTestThread.get().log(Status.INFO, "Hellooo started verifyTitle method ");
 		Listener.extentTestThread.get().assignAuthor("QA Tester 1").assignCategory("LandingPage Test").assignDevice("Windows HP");
@@ -273,14 +244,5 @@ public class LandingPageTest {
    		
    		log.info("****************************** Ending Test Case verifyBrokenImages *****************************************");
    	}	*/
-        
-    @AfterMethod(alwaysRun = true) //--this method will be executed after every test method
-	public void tearDown() {
-    	driver.close();
-		if (driver != null) {
-			driver.quit();
-		}
-	log.info("****************************** Browser is Closed *****************************************");
-		
-	}
+ 
 }

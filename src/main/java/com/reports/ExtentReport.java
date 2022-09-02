@@ -3,6 +3,7 @@ package com.reports;
 import java.awt.Desktop;
 import java.io.File;
 import java.net.InetAddress;
+import java.util.Iterator;
 import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -11,6 +12,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.constants.FrameworkConstants;
+import com.enums.CategoryType;
 
 public final class ExtentReport{
 	
@@ -51,12 +53,29 @@ public final class ExtentReport{
 	public static void flushReports() throws Exception {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
-		}		
-		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());		
+		}
+		try {
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}			
 	}	
 	
 	public static void createTest(String testcasename) {
 		ExtentTest test =extent.createTest(testcasename);
 		ExtentManager.setExtentTest(test);
-	}	
+	}
+	
+	public static void addAuthors(String[] authors) {
+		for (String temp : authors) {
+			ExtentManager.getExtentTest().assignAuthor(temp);
+		}
+	}
+	
+	public static void addCategories(CategoryType[] categories) {
+		for(CategoryType temp:categories) {
+			ExtentManager.getExtentTest().assignCategory(temp.toString());
+		}
+	}
+	
 }
